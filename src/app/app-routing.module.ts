@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'music', component: MusicComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'photography/:album', component: AlbumComponent },
+  { path: 'photography/:album/:page', component: AlbumComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'data-privacy', component: DataPrivacyComponent },
   { path: '',   component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,

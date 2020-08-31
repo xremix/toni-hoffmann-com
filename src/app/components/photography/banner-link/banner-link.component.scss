@@ -1,0 +1,53 @@
+
+.gallery-link-card {
+  width:100%;
+  height:60vh;
+  position: relative;
+  overflow: hidden;
+  a{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .content{
+    position: absolute;
+    bottom: 8vh;
+    left: 0;
+    right: 0;
+    padding: 15px 50px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 100;
+    color: white;
+    text-transform: uppercase;
+    line-height: 0.8em;
+    background: linear-gradient(to right, rgba(0,0,0, 0.2) 0%,rgba(0,0,0, 0.4) 3%,rgba(0,0,0, 0.4) 15%,rgba(0,0,0, 0.0) 50%);
+
+  }
+  .content .subtitle{
+    font-size: 0.4em;
+  }
+  img{
+    display: none;
+  }
+  &:hover .gallery-link-backgroundimage{
+    transform: scale(1.05);
+  }
+  .gallery-link-backgroundimage {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: all 1s;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+}

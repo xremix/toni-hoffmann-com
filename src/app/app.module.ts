@@ -15,7 +15,9 @@ import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 import { GhostButtonComponent } from './components/shared/ghost-button/ghost-button.component';
 import { AlbumComponent } from './components/photography/album/album.component';
-import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component'
+import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component'
 
 
 @NgModule({
@@ -33,11 +35,13 @@ import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/proje
     DataPrivacyComponent,
     GhostButtonComponent,
     AlbumComponent,
-    XGallerifyComponent
+    XGallerifyComponent,
+    BannerLinkComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
