@@ -2,9 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DevelopmentComponent } from './components/development/development.component';
+import { MusicComponent } from './components/music/music.component';
+import { PhotographyComponent } from './components/photography/photography.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'development', component: DevelopmentComponent },
+  { path: 'music', component: MusicComponent },
+  { path: 'photography', component: PhotographyComponent },
   { path: '',   component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
