@@ -1,0 +1,143 @@
+// TODO move to one var file
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$headerHeight: 60vh;
+$headerBackgroundHeight: 70vh;
+$headerTextTop: 10vh;
+
+.header-portrait-image{
+	margin-bottom:20px;
+	display:inline-block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	img{
+		height:100%;
+		position: absolute; left: 0px;
+	}
+	transform: scale(0);
+	// when, lengtht, how, delay, ?, direction
+	animation: appear .4s ease-out 0.5s 1 forwards;
+}
+@keyframes appear{
+	0%{
+		transform: scale(0);
+	}
+	80%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.header-image{
+	height: $headerBackgroundHeight;
+	min-height:300px;
+	background-position: 100% 100%;
+	background-repeat:no-repeat;
+	background-size: cover;
+	margin-top: 0px !important;
+	z-index: 1;
+    position:relative;width:100%;
+    // TODO include again
+    // background-image: url('../images/work2.jpg');
+    background-image: url('https://www.toni-hoffmann.com/images/work2.jpg');
+	filter: brightness(1.1); //to make text better readable
+}
+
+.header{
+	position: fixed;
+	z-index: 1;
+	height:$headerHeight;
+	top:0px;
+	left:0px;
+	right:0px;
+	.back-button{
+		position:absolute;
+		left:30px;
+		top:20px;
+		z-index:999;
+		width:120px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}
+#header-vertical-container{
+	display:table;
+	position: absolute;
+	z-index: 3;
+	height:100%;
+	width:100%;
+}
+#header-vertical-content{
+	display: table-cell;
+	vertical-align: middle;
+	padding-left:auto;
+
+	@media(min-width: $screen-md-min) {
+		padding-left: 5%;
+	}
+}
+.fixed-header-text{
+	text-align: center;
+	z-index:2;
+	max-width: 800px;
+	margin: auto;
+	@media(min-width: $screen-md-min) {
+		margin: 0;
+	}
+	a.ghost-button-semi-transparent{
+		// text-decoration:none; // TODO implement this if no animation
+		width:200px;
+		// text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+		font-size: 1.2em;
+		margin:5px;
+		@media(min-width: $screen-sm-min) {
+			margin:0px 20px;
+		}
+	}
+
+	h1, h2{
+		margin:0px 8px;
+		@media(min-width: $screen-sm-min) {
+			padding:inherit;
+		}
+	}
+	hr{
+		color:#fff;
+		// box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		padding:0px 4px;
+		@media(min-width: $screen-sm-min) {
+			padding:inherit;
+		}
+	}
+}
+@media(max-height: 360px) {
+	.header-portrait-image{
+		display: none;
+	}
+}
+@media(max-width: $screen-sm-min) {
+	.header-portrait-image{
+		display: none;
+	}
+}
+@media(max-height: 470px) {
+	.header-portrait-image{
+		width: 80px;
+		height: 80px;
+	}
+	h1{
+		font-size: 30px;
+	}
+	.fixed-header-text{
+		a.ghost-button-semi-transparent{
+			font-size: 1em;
+			margin: 4px;
+		}
+	}
+}

@@ -12,6 +12,7 @@ import { PhotographyComponent } from './components/photography/photography.compo
 import { MusicComponent } from './components/music/music.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
+import { GhostButtonComponent } from './components/shared/ghost-button/ghost-button.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DataPrivacyComponent } from './components/data-privacy/data-privacy.com
     PhotographyComponent,
     MusicComponent,
     ImprintComponent,
-    DataPrivacyComponent
+    DataPrivacyComponent,
+    GhostButtonComponent
   ],
   imports: [
     BrowserModule,

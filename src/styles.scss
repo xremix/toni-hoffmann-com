@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+.hide{
+	display:none;
+}
+.text-center{
+	text-align: center;
+}
+
+.text-underline{
+	text-decoration: underline;
+}
+
+
+// /////// GENERAL ///////
+body{
+	font-weight: 100;
+	letter-spacing: 1px;
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	// -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+	background-color:white;
+	color:#535353;
+	font-size:16px;
+	// letter-spacing: 1px; // TODO verify if a letter spacing looks better
+}
+h1, h2, h3{
+	font-weight: 100;
+	letter-spacing: 4px;
+}
+h1{
+	font-size: 2.5rem;
+	@media(min-width: $screen-sm-min) {
+		font-size: 3rem;
+	}
+}
+h2{
+	font-size: 2rem;
+	@media(min-width: $screen-sm-min) {
+		font-size: 2.2rem;
+	}
+}
+h3{
+	font-size: 1.5rem;
+	@media(min-width: $screen-sm-min) {
+		font-size: 1.5rem;
+	}
+}
+a{
+	color:#b3b3b3;
+	font-weight:200;
+}
+a:hover, a:active{
+	color:#848484;
+}
