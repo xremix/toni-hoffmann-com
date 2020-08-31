@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HeaderBannerComponent } from './components/header-banner/header-banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -14,11 +15,14 @@ import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 import { GhostButtonComponent } from './components/shared/ghost-button/ghost-button.component';
 import { AlbumComponent } from './components/photography/album/album.component';
+import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    HeaderBannerComponent,
     FooterComponent,
     HomeComponent,
     PageNotFoundComponent,
@@ -28,11 +32,12 @@ import { AlbumComponent } from './components/photography/album/album.component';
     ImprintComponent,
     DataPrivacyComponent,
     GhostButtonComponent,
-    AlbumComponent
+    AlbumComponent,
+    XGallerifyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
