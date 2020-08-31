@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { DevelopmentComponent } from './components/development/development.component';
 import { PhotographyComponent } from './components/photography/photography.component';
 import { MusicComponent } from './components/music/music.component';
+import { ImprintComponent } from './components/imprint/imprint.component';
+import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MusicComponent } from './components/music/music.component';
     PageNotFoundComponent,
     DevelopmentComponent,
     PhotographyComponent,
-    MusicComponent
+    MusicComponent,
+    ImprintComponent,
+    DataPrivacyComponent
   ],
   imports: [
     BrowserModule,
