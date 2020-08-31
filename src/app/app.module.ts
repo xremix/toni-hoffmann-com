@@ -13,6 +13,7 @@ import { MusicComponent } from './components/music/music.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 import { GhostButtonComponent } from './components/shared/ghost-button/ghost-button.component';
+import { AlbumComponent } from './components/photography/album/album.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GhostButtonComponent } from './components/shared/ghost-button/ghost-but
     MusicComponent,
     ImprintComponent,
     DataPrivacyComponent,
-    GhostButtonComponent
+    GhostButtonComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
