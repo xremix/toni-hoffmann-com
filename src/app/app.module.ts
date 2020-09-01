@@ -17,7 +17,8 @@ import { GhostButtonComponent } from './components/shared/ghost-button/ghost-but
 import { AlbumComponent } from './components/photography/album/album.component';
 import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component'
+import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
+import { NavigationComponent } from './components/shared/navigation/navigation.component'
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BannerLinkComponent } from './components/photography/banner-link/banner
     GhostButtonComponent,
     AlbumComponent,
     XGallerifyComponent,
-    BannerLinkComponent
+    BannerLinkComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
