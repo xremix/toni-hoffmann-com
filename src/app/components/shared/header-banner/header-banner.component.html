@@ -1,10 +1,37 @@
+<ng-template [ngIf]="showDefaultHeader">
+<div class="header">
+  <div id="header-vertical-container">
+    <div id="header-vertical-content">
+      <div class="fixed-header-text no-hidden" [style.opacity]="contentOpacity">
+        <div class="header-portrait-image">
+          <a href="/">
+            <img src="https://www.toni-hoffmann.com/images/portrait.jpg" alt="Toni Hoffmann Portrait" title="Toni Hoffmann Portrait">
+          </a>
+        </div>
+        <h1>Toni Hoffmann</h1>
+        <hr class="seperator">
+        <div style="margin-top:20px; font-size:1.3em">
+          <span style="padding-left: 20px; padding-right: 20px; border-right: 1px solid gray;">Software Developer</span>
+          <span style="padding-left: 20px; padding-right: 20px; border-right: 1px solid gray;">Photographer</span>
+          <span style="padding-left: 20px; padding-right: 20px; ">Musician</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-image"></div>
+</div>
+</ng-template>
+
+
+
+<ng-template [ngIf]="!showDefaultHeader">
 <div class="header">
   <a href="/" class="ghost-button ghost-button-transparent-light mb-5 mt-1 back-button">
     <span><i class="fas fa-chevron-left mr-2"></i>Back</span>
   </a>
   <div style="display:table;position: absolute;z-index: 3; height:100%; width:100%;">
     <div style="display: table-cell; vertical-align: middle;">
-      <div class="fixed-header-text no-hidden" style="color:white; max-width:100%; background: linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 0.4) 40%,rgba(0,0,0, 0.4) 60%,rgba(0,0,0, 0.0) 100%); text-transform: uppercase;">
+      <div class="fixed-header-text no-hidden" style="color:white; max-width:100%; background: linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 0.4) 40%,rgba(0,0,0, 0.4) 60%,rgba(0,0,0, 0.0) 100%); text-transform: uppercase;" [style.opacity]="contentOpacity">
         <div class="p-2">
           <h1 class="p-0">Toni Hoffmann</h1>
           <h2 class="p-0">{{galleryTitle}}</h2>
@@ -15,3 +42,4 @@
   </div>
   <div class="header-image" style="background-image:url('{{galleryImage}}')"></div>
 </div>
+</ng-template>

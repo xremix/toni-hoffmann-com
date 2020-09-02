@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header-banner',
@@ -6,11 +6,22 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header-banner.component.scss']
 })
 export class HeaderBannerComponent implements OnInit {
+  public contentOpacity: number = 1;
+
+  @Input() galleryTitle: string;
+  @Input() gallerySubtitle: string;
+  @Input() galleryImage: string;
+  @Input() showDefaultHeader: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  @Input() galleryTitle: string;
-  @Input() gallerySubtitle: string;
-  @Input() galleryImage: string;
+
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    var headerFadeOut = screen.height * 0.2;
+    this.contentOpacity = 1 - (window.scrollY / headerFadeOut);
+  }
 }
