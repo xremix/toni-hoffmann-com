@@ -2,7 +2,7 @@
 
 Open Source has always a passion, so why not open sourcing my private portfolio website?!
 
-You can see the results at [toni-hoffmann.com](https://wwtoni-hoffmann.com).
+You can see the results at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
 ## Setup
 
