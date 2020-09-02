@@ -2,7 +2,7 @@
 [galleryTitle]="'Photography'"
 [galleryImage]="'https://farm2.staticflickr.com/1766/29475665848_4d18a74b73_b.jpg'"
 ></app-header-banner>
-<div class="content container">
+<div class="content container-fluid">
   <div>
       <app-banner-link *ngFor="let album of albums" [title]="album.title" [subTitle]="album.subTitle" [imageUrl]="album.imageUrl" [href]="album.url"></app-banner-link>
   </div>
