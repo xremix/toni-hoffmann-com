@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { PhotoService } from '../../../services/photo.service';
 
 @Component({
   selector: 'app-album',
@@ -8,37 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
-  constructor() { }
+  public title: string;
+  public subTitle: string;
+  public images: Array<any>;
+  private sub: any;
 
-  public images: Array<any> = [
-    {
-      src: "https://farm66.staticflickr.com/65535/49489692872_a202029a13_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49489489251_21a1775a60_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49489694752_f8d8745a85_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49488995108_5283113839_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49488995108_5283113839_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49489694752_f8d8745a85_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49488995108_5283113839_b.jpg",
-    },
-    {
-      src: "https://farm66.staticflickr.com/65535/49488995108_5283113839_b.jpg",
-    }
-  ];
-
+  constructor(private route: ActivatedRoute, private photoService: PhotoService) { }
 
   ngOnInit(): void {
+    this.sub = this.route.params.subscribe(params => {
+      var albumParameter = params['album']; // (+) converts string 'id' to a number
+      var album = this.photoService.getAlbum(albumParameter);
+      this.images = album.photos;
+      this.title = album.title;
+      this.subTitle = album.subTitle;
+      // In a real app: dispatch action to load the details here.
+    });
   }
-
 }

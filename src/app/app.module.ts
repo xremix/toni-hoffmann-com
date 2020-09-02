@@ -19,6 +19,7 @@ import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/proje
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
+import {PhotoService} from './services/photo.service';
 
 
 @NgModule({
@@ -43,9 +44,9 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [PhotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
