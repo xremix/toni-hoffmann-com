@@ -19,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
 import {PhotoService} from './services/photo.service';
+import {SafePipe} from './safe-pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {PhotoService} from './services/photo.service';
     AlbumComponent,
     XGallerifyComponent,
     BannerLinkComponent,
-    NavigationComponent
+    NavigationComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
