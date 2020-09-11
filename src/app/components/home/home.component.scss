@@ -1,0 +1,23 @@
+.hover-container{
+  z-index: 0;
+
+  .hover-child{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .scale-image{
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover{
+    z-index: 1;
+    .hover-child{
+      opacity: 1;
+    }
+    .scale-image{
+      transform: scale(1.05);
+
+    }
+  }
+
+}
