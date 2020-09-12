@@ -1,27 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-  <a class="navbar-brand" href="/">Toni Hoffmann</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav navbar-nav navbar-right">
+    <a class="navbar-brand" href="/">Toni Hoffmann</a>
 
-      <li ngbDropdown class="nav-item" ngbDropdown #myDrop="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop.close();">
-        <a href="/photography" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();">Photography</a>
-        <div ngbDropdownMenu>
-          <a ngbDropdownItem href="{{album.url}}" *ngFor="let album of photoService.getAlbumOverview()">{{album.title}}</a>
-        </div>
-      </li>
+    <!-- Spacer to push navigation to the right -->
+    <div class="mr-auto"></div>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/development">Software Development</a>
-      </li>
+    <div class="form-inline my-2 my-lg-0">
+      <ul class="nav navbar-nav navbar-right mr-md-5">
 
-      <li class="nav-item">
-        <a class="nav-link" href="/music">Music</a>
-      </li>
+        <li ngbDropdown class="nav-item" ngbDropdown #myDrop="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop.close();">
+          <a href="/photography" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();">Photography</a>
+          <div ngbDropdownMenu>
+            <a ngbDropdownItem href="{{album.url}}" *ngFor="let album of photoService.getAlbumOverview()">{{album.title}}</a>
+          </div>
+        </li>
 
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/development">Software Development</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/music">Music</a>
+        </li>
+
+      </ul>
+    </div>
   </div>
 </nav>
