@@ -1,20 +1,51 @@
 <app-header-banner [showDefaultHeader]="true"></app-header-banner>
-<div class="content container text-center pt-5">
-    <div class="mx-auto">
-      <p>
-        <i>Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</i>
-        <br/>
-        ~ Toni Hoffmann ~
-      </p>
+<div class="content">
+  <div class="container text-center pt-5 ">
+    <p>
+      <i>Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</i>
+      <br/>
+      ~ Toni Hoffmann ~
+    </p>
+    <p>
+      The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced the code of this website too. Here are some more samples of my open source contributions.
+    </p>
+
+    <!-- Designs -->
+
+    <!-- Open Source -->
+    <h2>Open Source Projects</h2>
+
+    <a href="https://github.com/xremix" class="btn btn-primary my-5">Github Profile</a>
+
+    <div class="card-group">
+      <ng-container *ngFor="let project of openSourceProjects">
+        <div class="col-md-4 px-2 pb-5">
+          <app-open-source-card [title]="project.title" [description]="project.description" [url]="project.url"></app-open-source-card>
+        </div>
+      </ng-container>
     </div>
+
+
+    <!-- leisure projects -->
+
+    <h2>Leisure Projects</h2>
+    <div class="row" >
+    		<div class="col-sm-4" *ngFor="let project of leisureProjects">
+    			<div style="width:100%" class="flex-content">
+    				<a href="{{project.url}}" target="_blank" class="taphover shadow-box" style="position:relative;">
+    					<img style="width:100%;" src="{{project.img}}" alt="{{project.imgAlt}}" title="{{project.imgAlt}}">
+    					<div class="flex-content-overlay">
+    						<div class="flex-content-overlay-container">
+    							<div class="flex-content-overlay-container-content">
+    								<div>{{project.description}}</div>
+    							</div>
+    						</div>
+    					</div>
+    				</a>
+    				<div style="margin-top:30px; font-size:1.3em;">{{project.title}}</div>
+    			</div>
+    		</div>
+    </div>
+
+  </div>
 </div>
-
-
-
-<!-- Designs -->
-
-<!-- Open Source -->
-
-The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced the code of this website too. Here are some more samples of my open source contributions.
-
-<!-- leisure projects -->

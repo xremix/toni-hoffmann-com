@@ -20,6 +20,7 @@ import { BannerLinkComponent } from './components/photography/banner-link/banner
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
 import {PhotoService} from './services/photo.service';
 import {SafePipe} from './safe-pipe';
+import { OpenSourceCardComponent } from './components/development/open-source-card/open-source-card.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {SafePipe} from './safe-pipe';
     XGallerifyComponent,
     BannerLinkComponent,
     NavigationComponent,
-    SafePipe
+    SafePipe,
+    OpenSourceCardComponent
   ],
   imports: [
     BrowserModule,
