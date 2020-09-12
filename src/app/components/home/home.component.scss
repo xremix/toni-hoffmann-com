@@ -3,7 +3,8 @@
 
   .hover-child{
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
   }
   .scale-image{
     transition: all 0.5s ease-in-out;
@@ -13,6 +14,7 @@
     z-index: 1;
     .hover-child{
       opacity: 1;
+      transform: scale(1.05);
     }
     .scale-image{
       transform: scale(1.05);

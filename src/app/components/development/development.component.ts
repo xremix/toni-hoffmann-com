@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-development',
@@ -75,11 +76,13 @@ export class DevelopmentComponent implements OnInit {
       'imgAlt':  'Website of the medieval group Kreuzfahrer Gruppe, Developed by Toni Hoffmann',
       'description': 'Website of the medieval group Kreuzfahrer from Dachau, that acts on the famous Kaltenberger Rittertunier'
     }
-];
+  ];
 
-    constructor() { }
-
-    ngOnInit(): void {
-    }
-
+  constructor(private titleService: Title ) {
+    titleService.setTitle('Toni Hoffmann - Fullstack Software Developer from Munich');
   }
+
+  ngOnInit(): void {
+  }
+
+}

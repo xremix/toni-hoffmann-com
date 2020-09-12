@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PhotoService } from '../../../services/photo.service';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-album',
@@ -15,7 +16,9 @@ export class AlbumComponent implements OnInit {
   private sub: any;
   private modalPhoto: any;
 
-  constructor(private route: ActivatedRoute, private photoService: PhotoService) { }
+  constructor(private titleService: Title, private photoService: PhotoService, private route: ActivatedRoute) {
+      titleService.setTitle('Toni Hoffmann - Passionated Landscape, Architecture and Portrait Photograph in Bavaria, Munich');
+  }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {

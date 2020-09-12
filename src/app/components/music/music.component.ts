@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-music',
@@ -8,13 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class MusicComponent implements OnInit {
   public songs: Array<string> = [];
 
-  constructor() { }
+  constructor(private titleService: Title ) {
+    titleService.setTitle('Toni Hoffmann - Hobby DJ in Munich');
+  }
 
   ngOnInit(): void {
     this.songs = [
-    '11300977',
-    '8715297',
-    '12938550'
+      '11300977',
+      '8715297',
+      '12938550'
     ];
   }
 
