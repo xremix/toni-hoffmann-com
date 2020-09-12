@@ -12,7 +12,7 @@ export class PhotoService {
       url: '/photography/landscapes',
       imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg'
     },{
-      title: 'Product Photography',
+      title: 'Products',
       subTitle: 'Accessories, Clothes and more',
       url: '/photography/product-photography',
       imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg'
@@ -22,7 +22,7 @@ export class PhotoService {
       url: '/photography/cityscapes',
       imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg'
     },{
-      title: 'Subway Stations',
+      title: 'Urban Subways',
       subTitle: 'Connecting Places',
       url: '/photography/subway-stations',
       imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg'
