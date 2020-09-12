@@ -25,22 +25,22 @@ export class AlbumComponent implements OnInit {
       this.title = album.title;
       this.subTitle = album.subTitle;
       // In a real app: dispatch action to load the details here.
-      
+
       // Show photo modal
       var photoIdParameter = params['photoId'];
       if(photoIdParameter){
         var photoFromParameter = null;
         // TODO search the correct photo from the this.images array
-        showPhotoModal(photoFromParamter);
+        this.showPhotoModal(photoFromParameter);
       }
-      
+
     });
   }
-  
+
   showPhotoModal(photo: any){
     // Show the Modal
   }
-  
+
   hidePhotoModal(){
   }
 }
