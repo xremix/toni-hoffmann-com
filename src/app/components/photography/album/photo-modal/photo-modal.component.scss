@@ -1,0 +1,49 @@
+.customimagemodal{
+	z-index: 1999;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	text-align: center;
+	background-color: rgba(0,0,0, 1);
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+	transition: visibility 0s, opacity 0.4s linear; //Don't forget to set the transition in JavaScript as well
+
+	.customimagemodal-container{
+		position:absolute;
+		left: 5%;
+		right: 5%;
+		bottom: calc(5% + 40px);
+		top: 5%;
+		.customimagemodal-imagecontainer{
+
+			position: static;
+			display: inline;
+			max-height:100%;
+			max-width:100%;
+			img{
+				max-height: 100%;
+				max-width: 100%;
+			}
+		}
+		.customimagemodal-title{
+			margin-top:10px;
+			color:white;
+			font-size: 26px;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
+	}
+	.customimagemodal-blurbackground{
+		background-size: 100% 100%;
+		position:fixed;
+		left: -100px;
+		right: -100px;
+		top: -100px;
+		bottom: -100px;
+		opacity: 0.8;
+		-webkit-filter: blur(40px);
+	}
+}

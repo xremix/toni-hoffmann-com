@@ -14,7 +14,7 @@ export class AlbumComponent implements OnInit {
   public subTitle: string;
   public images: Array<any>;
   private sub: any;
-  private modalPhoto: any;
+  public modalPhoto: any = null;
 
   constructor(private titleService: Title, private photoService: PhotoService, private route: ActivatedRoute) {
       titleService.setTitle('Toni Hoffmann - Passionated Landscape, Architecture and Portrait Photograph in Bavaria, Munich');
@@ -42,8 +42,10 @@ export class AlbumComponent implements OnInit {
 
   showPhotoModal(photo: any){
     // Show the Modal
+    this.modalPhoto = photo;
   }
 
   hidePhotoModal(){
+    this.modalPhoto = null;
   }
 }

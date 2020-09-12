@@ -21,6 +21,7 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
 import {PhotoService} from './services/photo.service';
 import {SafePipe} from './safe-pipe';
 import { OpenSourceCardComponent } from './components/development/open-source-card/open-source-card.component';
+import { PhotoModalComponent } from './components/photography/album/photo-modal/photo-modal.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { OpenSourceCardComponent } from './components/development/open-source-ca
     BannerLinkComponent,
     NavigationComponent,
     SafePipe,
-    OpenSourceCardComponent
+    OpenSourceCardComponent,
+    PhotoModalComponent
   ],
   imports: [
     BrowserModule,
