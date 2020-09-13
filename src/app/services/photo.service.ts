@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class PhotoService {
 
   private albums: Array<any> = [{
-    title: 'Landscape',
+    title: 'Landscapes',
     subTitle: 'Bavarian Alps, Austria, Italy and Portugal',
     id: 'landscapes',
     imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg'
