@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DevelopmentComponent } from './components/development/development.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { MusicComponent } from './components/music/music.component';
 import { PhotographyComponent } from './components/photography/photography.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
@@ -10,6 +11,7 @@ import { ImprintComponent } from './components/imprint/imprint.component';
 import { AlbumComponent } from './components/photography/album/album.component';
 
 const routes: Routes = [
+  { path: 'contact', component: ContactComponent },
   { path: 'development', component: DevelopmentComponent },
   { path: 'music', component: MusicComponent },
   { path: 'photography', component: PhotographyComponent },

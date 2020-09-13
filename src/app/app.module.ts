@@ -14,16 +14,17 @@ import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 import { GhostButtonComponent } from './components/shared/ghost-button/ghost-button.component';
 import { AlbumComponent } from './components/photography/album/album.component';
+// TODO move to npm
 import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
 import {PhotoService} from './services/photo.service';
 import {SafePipe} from './safe-pipe';
-import { OpenSourceCardComponent } from './components/development/open-source-card/open-source-card.component';
 import { PhotoModalComponent } from './components/photography/album/photo-modal/photo-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageCardComponent } from './components/shared/image-card/image-card.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -43,9 +44,9 @@ import { ImageCardComponent } from './components/shared/image-card/image-card.co
     BannerLinkComponent,
     NavigationComponent,
     SafePipe,
-    OpenSourceCardComponent,
     PhotoModalComponent,
-    ImageCardComponent
+    ImageCardComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
