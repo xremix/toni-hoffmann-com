@@ -1,6 +1,7 @@
 <app-header-banner [showDefaultHeader]="true"></app-header-banner>
 <div class="content">
   <div class="container text-center pt-5 ">
+    <h1>Software Development Portfolio</h1>
     <p>
       <i>Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</i>
       <br/>
@@ -19,7 +20,7 @@
     </p>
 
     <div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
-      <div class="card mx-2 border-left" *ngFor="let project of openSourceProjects">
+      <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
         <div class="card-body">
           <h5 class="card-title">{{project.title}}</h5>
           <p class="card-text">{{project.description}}</p>
