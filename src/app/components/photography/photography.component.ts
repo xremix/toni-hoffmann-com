@@ -18,4 +18,7 @@ export class PhotographyComponent implements OnInit {
     this.albums = this.photoService.getAlbumOverview();
   }
 
+  getAlbumUrl(albumId: string){
+    return `photography/${albumId}`;
+  }
 }

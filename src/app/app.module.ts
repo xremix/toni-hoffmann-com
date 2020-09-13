@@ -22,7 +22,7 @@ import {PhotoService} from './services/photo.service';
 import {SafePipe} from './safe-pipe';
 import { OpenSourceCardComponent } from './components/development/open-source-card/open-source-card.component';
 import { PhotoModalComponent } from './components/photography/album/photo-modal/photo-modal.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { PhotoModalComponent } from './components/photography/album/photo-modal/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
   ],
   providers: [PhotoService],
   bootstrap: [AppComponent]

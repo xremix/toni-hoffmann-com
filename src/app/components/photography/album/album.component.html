@@ -1,5 +1,8 @@
-<app-header-banner [galleryTitle]="title" [gallerySubtitle]="subTitle" [galleryImage]="'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg'"></app-header-banner>
-<div class="content bg-dark">
-  <ui-xGallerify [images]="images"></ui-xGallerify>
-</div>
-<app-photo-modal [photo]="modalPhoto"></app-photo-modal>
+<ng-container *ngIf="album">
+
+  <app-header-banner [galleryTitle]="album.title" [gallerySubtitle]="album.subTitle" [galleryImage]="album.imageUrl"></app-header-banner>
+  <div class="content bg-dark" *ngIf="images && images.length">
+    <ui-xGallerify [images]="images"></ui-xGallerify>
+  </div>
+  <app-photo-modal [photo]="modalPhoto"></app-photo-modal>
+</ng-container>

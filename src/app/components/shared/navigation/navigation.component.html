@@ -15,7 +15,7 @@
         <li ngbDropdown class="nav-item" ngbDropdown #myDrop="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop.close();">
           <a href="/photography" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();">Photography</a>
           <div ngbDropdownMenu>
-            <a ngbDropdownItem href="{{album.url}}" *ngFor="let album of photoService.getAlbumOverview()">{{album.title}}</a>
+            <a ngbDropdownItem href="photography/{{album.id}}" *ngFor="let album of photoService.getAlbumOverview()">{{album.title}}</a>
           </div>
         </li>
 

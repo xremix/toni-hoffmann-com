@@ -1,36 +1,52 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PhotoService {
 
+  private albums: Array<any> = [{
+    title: 'Landscape',
+    subTitle: 'Bavarian Alps, Austria, Italy and Portugal',
+    id: 'landscapes',
+    imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg'
+  },{
+    title: 'Products',
+    subTitle: 'Accessories, Clothes and more',
+    id: 'products',
+    imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg'
+  },{
+    title: 'Cityscapes',
+    subTitle: 'Big City Lights, Urban and Villages',
+    id: 'cityscapes',
+    imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg'
+  },{
+    title: 'Urban Subways',
+    subTitle: 'Connecting Places',
+    id: 'subways',
+    imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg'
+  }];
+
+  constructor(private http: HttpClient) { }
+
   public getAlbumOverview(): Array<any> {
-    return [{
-      title: 'Landscape',
-      subTitle: 'Bavarian Alps, Austria, Italy and Portugal',
-      url: '/photography/landscapes',
-      imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg'
-    },{
-      title: 'Products',
-      subTitle: 'Accessories, Clothes and more',
-      url: '/photography/product-photography',
-      imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg'
-    },{
-      title: 'Cityscapes',
-      subTitle: 'Big City Lights, Urban and Villages',
-      url: '/photography/cityscapes',
-      imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg'
-    },{
-      title: 'Urban Subways',
-      subTitle: 'Connecting Places',
-      url: '/photography/subway-stations',
-      imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg'
-    }];
+    return this.albums;
+  }
+
+  public getAlbumMetaData(albumId: string){
+    return this.albums.filter(a => a.id == albumId)[0];
   }
 
   // TODO use the model instead of any
   public getAlbum(album: string): any {
+    console.log(album);
+    console.log(album);
+    console.log(album);
+    console.log(album);
+    console.log(album);
+    return this.http.get(`https://www.toni-hoffmann.com/api/flickr/?gallery=${album}`);
     return {
       title: album,
       subTitle: 'Fancy Subtitle in here, you know!',
