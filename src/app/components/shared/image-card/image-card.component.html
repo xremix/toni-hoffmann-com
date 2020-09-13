@@ -1,12 +1,12 @@
-<div class="hover-container" style="position:relative;">
+<div class="hover-container text-center" style="position:relative;">
   <a href="{{href}}" target="{{target}}">
-    <img src="{{imageUrl}}" style="width:100%;" class="scale-image" />
+    <img src="{{imageUrl}}" style="width:100%;" class="scale-image" alt="{{description}}" />
     <div class="black-hover-box">
 
     </div>
     <div class="box-content text-white">
       <div class="hover-child box-description mb-2" [innerHtml]="description"></div>
-      <div class="box-title mb-3">{{title}}</div>
+      <div class="box-title mb-3" [ngClass]="{'box-title-hide': hideBoxTitle}">{{title}}</div>
     </div>
   </a>
 </div>

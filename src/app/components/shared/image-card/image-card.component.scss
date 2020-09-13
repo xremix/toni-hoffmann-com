@@ -1,19 +1,19 @@
 .black-hover-box{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    top:0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  top:0;
 
-    background-color: rgba(0,0,0,0.5);
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .hover-container{
   z-index: 0;
 
-  .hover-child, .box-title{
+  .hover-child, .box-title-hide{
     opacity: 0;
     transition: all 0.5s ease-in-out;
     transform: scale(0.9);
@@ -24,7 +24,7 @@
 
   &:hover{
     z-index: 1;
-    .hover-child, .box-title{
+    .hover-child, .box-title-hide{
       opacity: 1;
       transform: scale(1);
     }
@@ -33,23 +33,23 @@
     }
     .scale-image, .black-hover-box{
       transform: scale(1.05);
-
     }
   }
 }
 
 .box-content{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
 
-    .box-title{
-      font-size: 1.5em;
-      opacity: 0;
-    }
-
-    .box-description{
-      font-size: 1em;
-    }
+  .box-title{
+    font-size: 1.5em;
+  }
+  .box-title-hide{
+    opacity: 0;
+  }
+  .box-description{
+    font-size: 1em;
+  }
 }

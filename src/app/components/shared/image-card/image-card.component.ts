@@ -12,6 +12,7 @@ export class ImageCardComponent implements OnInit {
   @Input imageUrl: string;
   @Input href: string;
   @Input target: string = "_self";
+  @Input hideBoxTitle: boolean = false;
 
   constructor() { }
 
