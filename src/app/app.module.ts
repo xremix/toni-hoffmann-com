@@ -23,6 +23,7 @@ import {SafePipe} from './safe-pipe';
 import { OpenSourceCardComponent } from './components/development/open-source-card/open-source-card.component';
 import { PhotoModalComponent } from './components/photography/album/photo-modal/photo-modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ImageCardComponent } from './components/shared/image-card/image-card.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationComponent,
     SafePipe,
     OpenSourceCardComponent,
-    PhotoModalComponent
+    PhotoModalComponent,
+    ImageCardComponent
   ],
   imports: [
     BrowserModule,
