@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Title} from '@angular/platform-browser';
+import {UtilitiesService} from '../../services/utilities.service'
 
 @Component({
   selector: 'app-development',
@@ -83,6 +84,10 @@ export class DevelopmentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  openSourceProjectRows(){
+    return UtilitiesService.chunkArray(this.openSourceProjects, 3);
   }
 
 }

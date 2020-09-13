@@ -6,9 +6,6 @@
       <br/>
       ~ Toni Hoffmann ~
     </p>
-    <p>
-      The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
-    </p>
 
     <!-- Designs -->
 
@@ -17,14 +14,19 @@
 
     <a href="https://github.com/xremix" target="_blank" class="btn btn-primary my-5">Github Profile</a>
 
-    <div class="card-group">
-      <ng-container *ngFor="let project of openSourceProjects">
-        <div class="col-md-4 px-2 pb-5">
-          <app-open-source-card [title]="project.title" [description]="project.description" [url]="project.url"></app-open-source-card>
-        </div>
-      </ng-container>
-    </div>
+    <p>
+      The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
+    </p>
 
+    <div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
+      <div class="card mx-2 border-left" *ngFor="let project of openSourceProjects">
+        <div class="card-body">
+          <h5 class="card-title">{{project.title}}</h5>
+          <p class="card-text">{{project.description}}</p>
+          <a href="{{project.url}}" target="_blank" class="btn btn-primary">More</a>
+        </div>
+      </div>
+    </div>
 
     <!-- leisure projects -->
     <h2>Leisure Projects</h2>
