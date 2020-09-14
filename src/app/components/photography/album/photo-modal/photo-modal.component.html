@@ -1,5 +1,5 @@
-<div class="customimagemodal" style="visibility: visible; opacity: 1;" *ngIf="photo">
-	<div class="customimagemodal-blurbackground" style="background-image: url(&quot;https://farm66.staticflickr.com/65535/49489692872_a202029a13.jpg&quot;);"></div>
+<div class="customimagemodal" style="visibility: visible; opacity: 1;" *ngIf="photo" (click)="close()">
+	<div class="customimagemodal-blurbackground" style="background-image: url(&quot;{{photo.url}}&quot;);"></div>
 	<div class="customimagemodal-container">
 		<div class="customimagemodal-spinner" style="display: none;">
 				<div class="spinner">
@@ -12,8 +12,11 @@
 		</div>
 		<div class="customimagemodal-imagecontainer">
 			<!-- TODO put alt text here -->
-			<img class="customimagemodal-image" alt="Popup Image" data-bind="attr:{src: imageModaleUrl}" src="https://farm66.staticflickr.com/65535/49489692872_a202029a13_b.jpg" style="display: inline-block;">
+			<img class="customimagemodal-image" alt="Popup Image" data-bind="attr:{src: imageModaleUrl}" src="{{photo.url}}" style="display: inline-block;">
 		</div>
-		<div class="customimagemodal-title">Sylvensteinspeicher</div>
+		<div class="customimagemodal-title">{{photo.title}}</div>
+	</div>
+	<div class="absolute-top-right m-5 text-right text-white" style="font-size:2em">
+		<i class="fa fa-times"></i>
 	</div>
 </div>

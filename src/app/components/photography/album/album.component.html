@@ -1,8 +1,13 @@
 <ng-container *ngIf="album">
-
   <app-header-banner [galleryTitle]="album.title" [gallerySubtitle]="album.subTitle" [galleryImage]="album.imageUrl"></app-header-banner>
   <div class="content bg-dark" *ngIf="images && images.length">
-    <ui-xGallerify [images]="images"></ui-xGallerify>
+    <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" #myGallery></ui-xGallerify>
+    <ng-template #imageTemplate let-image="image">
+      <img class="xgallerify-img" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" (click)="showPhotoModal(image)">
+      <div class="absolute-bottom text-center p-3 text-white" style="background: rgba(0,0,0,0.5); font-size:1.3em;">
+      {{image.title}}
+      </div>
+    </ng-template>
   </div>
   <app-photo-modal [photo]="modalPhoto"></app-photo-modal>
 </ng-container>

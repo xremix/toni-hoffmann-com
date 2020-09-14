@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PhotoService } from '../../../services/photo.service';
 import {Title} from '@angular/platform-browser';
+import { XGallerifyComponent } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 
 @Component({
   selector: 'app-album',
@@ -52,4 +53,6 @@ export class AlbumComponent implements OnInit {
   hidePhotoModal(){
     this.modalPhoto = null;
   }
+
+
 }
