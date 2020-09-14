@@ -1,15 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-photo-modal',
   templateUrl: './photo-modal.component.html',
   styleUrls: ['./photo-modal.component.scss']
 })
-export class PhotoModalComponent implements OnInit {
+export class PhotoModalComponent {
   @Input() photo: any;
-  constructor() { }
 
-  ngOnInit(): void {
+  public close(){
+    this.photo = null;
   }
 
 }
