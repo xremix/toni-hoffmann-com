@@ -17,7 +17,8 @@ $headerTextTop: 10vh;
 	position: relative;
 	img{
 		height:100%;
-		position: absolute; left: 0px;
+		position: absolute;
+		left: 0px;
 	}
 	transform: scale(0);
 	// when, lengtht, how, delay, ?, direction
@@ -37,15 +38,14 @@ $headerTextTop: 10vh;
 .header-image{
 	height: $headerBackgroundHeight;
 	min-height:300px;
-	background-position: 100% 100%;
+	background-position: center center;
 	background-repeat:no-repeat;
 	background-size: cover;
 	margin-top: 0px !important;
 	z-index: 1;
-    position:relative;width:100%;
-    // TODO include again
-    // background-image: url('../images/work2.jpg');
-    background-image: url('https://www.toni-hoffmann.com/images/work2.jpg');
+	position:relative;
+	width:100%;
+	background-image: url('/assets/work2.jpg');
 	filter: brightness(1.1); //to make text better readable
 }
 

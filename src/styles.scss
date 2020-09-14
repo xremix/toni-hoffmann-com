@@ -1,7 +1,7 @@
 /* Importing Bootstrap SCSS file. */
 
 $theme-colors: (
-  "primary": #05b6ea
+  "primary": #09afe0
 );
 
 @import '~bootstrap/scss/bootstrap';
@@ -79,4 +79,25 @@ a:hover, a:active{
 	z-index: 2;
 	background-color:white;
 	box-shadow: 0px -8px 7px rgba(0, 0, 0, 0.1);
+}
+
+.absolute-fill{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.absolute-bottom{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.abslute-top-right{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
 }
