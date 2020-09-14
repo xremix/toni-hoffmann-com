@@ -21,11 +21,16 @@
 
     <div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
       <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
+
         <div class="card-body">
           <h5 class="card-title">{{project.title}}</h5>
           <p class="card-text">{{project.description}}</p>
+        </div>
+
+        <div class="card-footer">
           <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">More</a>
         </div>
+
       </div>
     </div>
 
