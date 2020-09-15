@@ -10,6 +10,7 @@ export class CallToActionComponent implements OnInit {
   @Input() public hide: boolean = false;
   @Input() public showScrollPosition: number;
   @Input() public showTimed: number;
+  @Input() public text: string;
 
   constructor(public analyaticsService: AnalyticsService) { }
 

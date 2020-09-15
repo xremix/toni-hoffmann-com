@@ -20,3 +20,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - Run `ng build` to build the project
 - Upload the artifacts in the `dist/` directory to your website
 - Make sure you have rewrite rules set up for your webserver
+- Make sure deploy the api, which is part of a private repository
