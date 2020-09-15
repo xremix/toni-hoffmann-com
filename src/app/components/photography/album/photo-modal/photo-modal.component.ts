@@ -13,4 +13,8 @@ export class PhotoModalComponent {
     this.photo = null;
   }
 
+  public show(photo: any){
+    this.photo = photo;
+  }
+
 }

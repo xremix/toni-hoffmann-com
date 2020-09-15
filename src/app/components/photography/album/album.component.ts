@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PhotoService } from 'src/app/services/photo.service';
 import {SeoService} from 'src/app/services/seo.service';
+import {PhotoModalComponent} from './photo-modal/photo-modal.component';
 import { XGallerifyComponent } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 
 @Component({
@@ -17,6 +18,8 @@ export class AlbumComponent implements OnInit {
   public album: any;
   private sub: any;
   public modalPhoto: any = null;
+
+  @ViewChild('photoModal') photoModal: PhotoModalComponent;
 
   constructor(private seoService: SeoService, private photoService: PhotoService, private route: ActivatedRoute) {
 
@@ -51,13 +54,7 @@ export class AlbumComponent implements OnInit {
   }
 
   showPhotoModal(photo: any){
-    // Show the Modal
-    this.modalPhoto = photo;
+    this.photoModal.show(photo);
   }
-
-  hidePhotoModal(){
-    this.modalPhoto = null;
-  }
-
 
 }
