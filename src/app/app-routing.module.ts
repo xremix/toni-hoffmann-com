@@ -12,6 +12,7 @@ import { AlbumComponent } from './components/photography/album/album.component';
 
 const routes: Routes = [
   { path: 'contact', component: ContactComponent },
+  { path: 'contact/:action', component: ContactComponent },
   { path: 'development', component: DevelopmentComponent },
   { path: 'music', component: MusicComponent },
   { path: 'photography', component: PhotographyComponent },
