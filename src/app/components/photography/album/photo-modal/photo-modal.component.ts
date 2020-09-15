@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild} from '@angular/core';
+import {HostListener, Component, Input, ViewChild} from '@angular/core';
 import {CallToActionComponent} from 'src/app/components/shared/call-to-action/call-to-action.component';
 
 @Component({
@@ -13,6 +13,10 @@ export class PhotoModalComponent {
   public hide: boolean = true;
 
   @ViewChild('callToAction') callToAction: CallToActionComponent;
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: any) {
+    this.close();
+  }
 
   public close(){
     this.hide = true;

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+import{AnalyticsService} from 'src/app/services/analytics.service';
 
 @Component({
   selector: 'app-call-to-action',
@@ -10,7 +11,7 @@ export class CallToActionComponent implements OnInit {
   @Input() public showScrollPosition: number;
   @Input() public showTimed: number;
 
-  constructor() { }
+  constructor(public analyaticsService: AnalyticsService) { }
 
   ngOnInit(): void {
     this.reset();
@@ -30,6 +31,10 @@ export class CallToActionComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
     this.hide = window.scrollY < this.showScrollPosition;
+  }
+
+  public clickCallToAction(){
+    this.analyaticsService.eventEmitter("button-click", "Album", "call-to-action", "click", 10);
   }
 
 }

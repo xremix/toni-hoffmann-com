@@ -1,13 +1,13 @@
-<div class="customimagemodal" [ngClass]="{'hide': hide}" (click)="close()">
+<div class="customimagemodal" [ngClass]="{'hide': hide}">
 	<div *ngIf="photo" class="customimagemodal-blurbackground" style="background-image: url(&quot;{{photo.url}}&quot;);"></div>
 	<div class="customimagemodal-container">
 		<app-spinner *ngIf="loading"></app-spinner>
 		<div class="customimagemodal-imagecontainer">
-			<img *ngIf="photo" class="d-inline-block" alt="{{photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo.url}}">
+			<img *ngIf="photo" class="d-inline-block" alt="{{photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo.url}}" (click)="close()">
 		</div>
 		<div *ngIf="photo" class="customimagemodal-title">{{photo.title}}</div>
 	</div>
-	<div class="absolute-top-right m-5 text-right text-white" style="font-size:2em">
+	<div class="absolute-top-right m-5 text-right text-white" style="font-size:2em" (click)="close()">
 		<i class="fas fa-times"></i>
 	</div>
 	<app-call-to-action [showTimed]="3000" #callToAction></app-call-to-action>
