@@ -13,6 +13,12 @@
       </div>
 
     </ng-template>
+
+    <div class="text-center p-3">
+      <a href="/photography/{{album.id}}/{{previousPage}}" [ngClass]="{'disabled': !hasPrevious}" class="btn btn-primary mr-2">Previous</a>
+      <a href="/photography/{{album.id}}/{{nextPage}}" [ngClass]="{'disabled': !hasNext}" class="btn btn-primary ml-2">Next</a>
+    </div>
+
   </div>
   <app-photo-modal #photoModal></app-photo-modal>
 </ng-container>
