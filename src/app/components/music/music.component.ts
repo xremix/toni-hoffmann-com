@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {SeoService} from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-music',
@@ -9,8 +9,8 @@ import {Title} from '@angular/platform-browser';
 export class MusicComponent implements OnInit {
   public songs: Array<string> = [];
 
-  constructor(private titleService: Title ) {
-    titleService.setTitle('Toni Hoffmann - Hobby DJ in Munich');
+  constructor(private _seoService: SeoService) {
+    this._seoService.updatePageMetaData('Hobby DJ in Munich, Bavaria, Germany', 'House, Techno and Tech House under the label Karl & Lexy');
   }
 
   ngOnInit(): void {

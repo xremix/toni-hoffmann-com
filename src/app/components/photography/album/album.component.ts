@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PhotoService } from '../../../services/photo.service';
-import {Title} from '@angular/platform-browser';
+import { PhotoService } from 'src/app/services/photo.service';
+import {SeoService} from 'src/app/services/seo.service';
 import { XGallerifyComponent } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 
 @Component({
@@ -18,14 +18,19 @@ export class AlbumComponent implements OnInit {
   private sub: any;
   public modalPhoto: any = null;
 
-  constructor(private titleService: Title, private photoService: PhotoService, private route: ActivatedRoute) {
-    titleService.setTitle('Toni Hoffmann - Passionated Landscape, Architecture and Portrait Photograph in Bavaria, Munich');
+  constructor(private seoService: SeoService, private photoService: PhotoService, private route: ActivatedRoute) {
+
   }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       var albumParameter = params['album'];
       this.album = this.photoService.getAlbumMetaData(albumParameter);
+      this.seoService.updatePageMetaData(
+        `${this.album.title} Photography by Toni Hoffmann`,
+        this.album.subTitle
+      );
+
       this.photoService.getAlbum(albumParameter).subscribe(data =>{
         // TODO the service should return an album!!
         this.album.photos = data;

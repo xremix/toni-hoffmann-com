@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from '@angular/platform-browser';
-import {UtilitiesService} from '../../services/utilities.service'
+import {SeoService} from 'src/app/services/seo.service';
+import {UtilitiesService} from 'src/app/services/utilities.service'
 
 @Component({
   selector: 'app-development',
@@ -79,8 +79,11 @@ export class DevelopmentComponent implements OnInit {
     }
   ];
 
-  constructor(private titleService: Title ) {
-    titleService.setTitle('Toni Hoffmann - Fullstack Software Developer from Munich');
+  constructor(private seoService: SeoService ) {
+    this.seoService.updatePageMetaData(
+      `Fullstack Software Developer from Munich`,
+      'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
+    );
   }
 
   ngOnInit(): void {
