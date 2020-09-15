@@ -4,10 +4,14 @@
     <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" #myGallery></ui-xGallerify>
     <ng-template #imageTemplate let-image="image">
       <!-- TODO check why you can't open the same image twice -->
-      <img class="xgallerify-img" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" (click)="showPhotoModal(image)">
-      <div class="absolute-bottom text-center p-3 text-white" style="background: rgba(0,0,0,0.5); font-size:1.3em;">
-      {{image.title}}
+      <div class="xgallerify-container">
+
+        <img class="xgallerify-img" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" (click)="showPhotoModal(image)">
+        <div class="absolute-bottom text-center p-3 text-white image-description">
+        {{image.title}}
+        </div>
       </div>
+
     </ng-template>
   </div>
   <app-photo-modal [photo]="modalPhoto"></app-photo-modal>

@@ -1,3 +1,17 @@
 .xgallerify-img:hover{
   cursor: pointer;
 }
+
+.xgallerify-container:hover .image-description{
+  opacity: 1;
+}
+.image-description{
+  // background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.5));
+  font-size:1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
