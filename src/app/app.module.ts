@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImageCardComponent } from './components/shared/image-card/image-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SpinnerComponent } from './components/shared/spinner/spinner.component';
+import { CallToActionComponent } from './components/shared/call-to-action/call-to-action.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SpinnerComponent } from './components/shared/spinner/spinner.component'
     PhotoModalComponent,
     ImageCardComponent,
     ContactComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CallToActionComponent
   ],
   imports: [
     BrowserModule,

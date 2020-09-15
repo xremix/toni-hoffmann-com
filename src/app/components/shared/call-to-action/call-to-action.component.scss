@@ -1,0 +1,10 @@
+.call-to-action-container{
+  margin-bottom: 70px ;
+  transition: all .3s ease-in-out;
+  opacity: 1;
+
+  &.hidethis{
+    margin-bottom: -200px ;
+    opacity: 0;
+  }
+}

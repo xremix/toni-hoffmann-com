@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild} from '@angular/core';
+import {CallToActionComponent} from 'src/app/components/shared/call-to-action/call-to-action.component';
 
 @Component({
   selector: 'app-photo-modal',
@@ -7,8 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class PhotoModalComponent {
   @Input() photo: any;
+
   public loading: boolean = false;
   public hide: boolean = true;
+
+  @ViewChild('callToAction') callToAction: CallToActionComponent;
 
   public close(){
     this.hide = true;
@@ -17,6 +21,7 @@ export class PhotoModalComponent {
   public show(photo: any){
     this.photo = photo;
     this.hide = false;
+    this.callToAction.reset();
   }
 
 }
