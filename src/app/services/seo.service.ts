@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Title, Meta} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
-import {HostListener, Component, Input, ViewChild} from '@angular/core';
-import {CallToActionComponent} from 'src/app/components/shared/call-to-action/call-to-action.component';
+import { HostListener, Component, Input, ViewChild } from '@angular/core';
+import { CallToActionComponent } from 'src/app/components/shared/call-to-action/call-to-action.component';
 
 @Component({
   selector: 'app-photo-modal',

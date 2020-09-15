@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PhotoService } from 'src/app/services/photo.service';
-import {SeoService} from 'src/app/services/seo.service';
-import {PhotoModalComponent} from './photo-modal/photo-modal.component';
+import { SeoService } from 'src/app/services/seo.service';
+import { PhotoModalComponent } from './photo-modal/photo-modal.component';
 import { XGallerifyComponent } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 
 @Component({

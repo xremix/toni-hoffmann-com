@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SeoService} from 'src/app/services/seo.service';
-import {UtilitiesService} from 'src/app/services/utilities.service'
+import { SeoService } from 'src/app/services/seo.service';
+import { UtilitiesService } from 'src/app/services/utilities.service'
 
 @Component({
   selector: 'app-development',

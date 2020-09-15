@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from 'src/app/services/photo.service';
-import {SeoService} from 'src/app/services/seo.service';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-photography',

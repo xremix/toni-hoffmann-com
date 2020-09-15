@@ -19,8 +19,8 @@ import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/proje
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
-import {PhotoService} from './services/photo.service';
-import {SafePipe} from './safe-pipe';
+import { PhotoService } from './services/photo.service';
+import { SafePipe } from './safe-pipe';
 import { PhotoModalComponent } from './components/photography/album/photo-modal/photo-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageCardComponent } from './components/shared/image-card/image-card.component';
