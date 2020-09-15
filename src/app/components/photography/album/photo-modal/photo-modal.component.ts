@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PhotoModalComponent {
   @Input() photo: any;
+  public loading: boolean = true;
 
   public close(){
     this.photo = null;

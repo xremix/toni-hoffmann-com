@@ -25,6 +25,7 @@ import { PhotoModalComponent } from './components/photography/album/photo-modal/
 import { HttpClientModule } from '@angular/common/http';
 import { ImageCardComponent } from './components/shared/image-card/image-card.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SpinnerComponent } from './components/shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ContactComponent } from './components/contact/contact.component';
     SafePipe,
     PhotoModalComponent,
     ImageCardComponent,
-    ContactComponent
+    ContactComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
