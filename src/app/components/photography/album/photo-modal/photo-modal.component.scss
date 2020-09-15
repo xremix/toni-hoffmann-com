@@ -1,3 +1,7 @@
+.point-cursor{
+	cursor: pointer;
+}
+
 .customimagemodal{
 	z-index: 1999;
 	position: fixed;
@@ -9,7 +13,6 @@
 	background-color: rgba(0,0,0, 1);
 	visibility: visible;
 	opacity: 1;
-	cursor: pointer;
 	transition: visibility 0s, opacity 0.4s linear; //Don't forget to set the transition in JavaScript as well
 
 	&.hide{
