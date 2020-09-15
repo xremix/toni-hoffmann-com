@@ -8,13 +8,15 @@ import { Component, Input } from '@angular/core';
 export class PhotoModalComponent {
   @Input() photo: any;
   public loading: boolean = false;
+  public hide: boolean = true;
 
   public close(){
-    this.photo = null;
+    this.hide = true;
   }
 
   public show(photo: any){
     this.photo = photo;
+    this.hide = false;
   }
 
 }
