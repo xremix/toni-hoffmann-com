@@ -13,6 +13,7 @@ export class ImageCardComponent implements OnInit {
   @Input() href: string;
   @Input() target: string = "_self";
   @Input() hideBoxTitle: boolean = false;
+  @Input() hoverAnimation: boolean = true;
 
   constructor() { }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoService } from 'src/app/services/seo.service';
 import { UtilitiesService } from 'src/app/services/utilities.service'
+import { isDevMode } from '@angular/core';
 
 @Component({
   selector: 'app-development',
@@ -8,6 +9,8 @@ import { UtilitiesService } from 'src/app/services/utilities.service'
   styleUrls: ['./development.component.scss']
 })
 export class DevelopmentComponent implements OnInit {
+
+  public showPreviewFeatures: boolean = isDevMode();
 
   public openSourceProjects: Array<any> = [
     {

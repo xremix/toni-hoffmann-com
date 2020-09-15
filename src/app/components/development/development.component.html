@@ -8,6 +8,25 @@
       ~ Toni Hoffmann ~
     </p>
 
+    <!-- Skills -->
+
+    <ng-container *ngIf="showPreviewFeatures">
+      <h2>Skills</h2>
+
+      <div class="row" style="font-size: 1.5em;">
+        <div class="col-md-4">
+          <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/web-projects/static-invivo-pobs.png'" [hoverAnimation]="false"></app-image-card>
+        </div>
+        <div class="col-md-4">
+          <app-image-card [title]="'Business Web Apps'" [imageUrl]="'assets/web-projects/static-invivo-pobs.png'" [hoverAnimation]="false"></app-image-card>
+        </div>
+        <div class="col-md-4">
+          <app-image-card [title]="'Design'" [imageUrl]="'assets/web-projects/static-invivo-pobs.png'" [hoverAnimation]="false"></app-image-card>
+        </div>
+      </div>
+    </ng-container>
+
+
     <!-- Designs -->
 
     <!-- Open Source -->
@@ -42,7 +61,7 @@
     </div>
 
     <div class="row">
-    		<div class="col-sm-4" *ngFor="let project of leisureProjects" style="font-size:0.9em;">
+    		<div class="col-md-4" *ngFor="let project of leisureProjects" style="font-size:0.9em;">
           <app-image-card [title]="project.title" [description]="project.description" [href]="project.url" [imageUrl]="project.img" [target]="'_blank'" [hideBoxTitle]="true"></app-image-card>
     		</div>
     </div>
