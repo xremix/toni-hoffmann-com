@@ -8,6 +8,8 @@ import { PhotoService } from 'src/app/services/photo.service';
 })
 export class NavigationComponent implements OnInit {
 
+  public isNavbarCollapsed = true;
+
   constructor(public photoService: PhotoService) { }
 
   ngOnInit(): void {

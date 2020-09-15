@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
     <a class="navbar-brand ml-md-3" href="/">Toni Hoffmann</a>
 
