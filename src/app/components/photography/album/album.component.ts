@@ -18,6 +18,7 @@ export class AlbumComponent implements OnInit {
   public album: any;
   private sub: any;
   public modalPhoto: any = null;
+  public callToAction = window.screen.height * 2;
 
   @ViewChild('photoModal') photoModal: PhotoModalComponent;
 

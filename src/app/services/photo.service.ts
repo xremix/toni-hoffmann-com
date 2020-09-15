@@ -48,7 +48,6 @@ export class PhotoService {
 
   // TODO use the model instead of any
   public getAlbum(album: string): any {
-    console.log("is dev mode" + isDevMode())
     if(isDevMode()){
       return this.http.get(`https://www.toni-hoffmann.com/api/flickr/?gallery=${album}`);
     }else{
