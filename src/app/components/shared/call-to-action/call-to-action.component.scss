@@ -1,11 +1,11 @@
 .call-to-action-container{
   z-index: 1998;
   margin-bottom: 70px ;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
   opacity: 1;
 
   &.hidethis{
-    margin-bottom: -200px ;
+    margin-bottom: -100px ;
     opacity: 0;
   }
 }
