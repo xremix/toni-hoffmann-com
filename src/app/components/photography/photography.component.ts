@@ -12,7 +12,7 @@ export class PhotographyComponent implements OnInit {
 
   constructor(private seoService: SeoService, private photoService: PhotoService) {
     this.seoService.updatePageMetaData(
-      `Photography Portfolio by Toni Hoffmann`,
+      'Photography Portfolio by Toni Hoffmann',
       'Passionated Landscape, Architecture and Portrait Photograph in Munich, Bavaria, Germany'
     );
   }
