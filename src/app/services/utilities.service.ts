@@ -7,7 +7,7 @@ export class UtilitiesService {
 
   constructor() { }
 
-  public static chunkArray(myArray, chunk_size) {
+  public static chunkArray(myArray: Array<any>, chunk_size: number): Array<any>{
     var index = 0;
     var arrayLength = myArray.length;
     var tempArray = [];
@@ -18,5 +18,9 @@ export class UtilitiesService {
     }
 
     return tempArray;
+  }
+
+  public static fillArray(length: number): Array<number>{
+    return Array(length).fill(1, 0, length).map((x,i)=>i)
   }
 }

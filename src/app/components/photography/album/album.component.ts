@@ -23,11 +23,7 @@ export class AlbumComponent implements OnInit {
 
   private pageSize: number = 21;
   private page: number = 0;
-  private nextPage: number = 1;
-  private previousPage: number = 0;
 
-  public hasNext: boolean = false;
-  public hasPrevious: boolean = false;
 
   public pages: Array<number> = [];
 
@@ -41,8 +37,6 @@ export class AlbumComponent implements OnInit {
       var albumParameter = params['album'];
       if(params['page']){
         this.page = +params['page'];
-        this.nextPage = this.page + 1;
-        this.previousPage = this.page - 1;
       }
       this.album = this.photoService.getAlbumMetaData(albumParameter);
       this.seoService.updatePageMetaData(
@@ -53,10 +47,7 @@ export class AlbumComponent implements OnInit {
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
         var pages = UtilitiesService.chunkArray(data, this.pageSize);
 
-        this.hasNext = (this.page + 1) < pages.length;
-        this.hasPrevious = this.page > 0;
-
-        this.pages = Array(pages.length).fill(1, 0, pages.length).map((x,i)=>i);
+        this.pages = UtilitiesService.fillArray(pages.length);
 
         // TODO make this clean
         this.album.photos = pages[this.page];
