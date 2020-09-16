@@ -30,10 +30,18 @@ export class AlbumComponent implements OnInit {
   @ViewChild('photoModal') photoModal: PhotoModalComponent;
 
   constructor(private seoService: SeoService, private photoService: PhotoService, private route: ActivatedRoute) {
+    route.params.subscribe(params => {
+    this.createGallery(params);
+  });
   }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
+      this.createGallery(params);
+    });
+  }
+
+  createGallery(params: any){
       var albumParameter = params['album'];
       if(params['page']){
         this.page = +params['page'];
@@ -43,14 +51,14 @@ export class AlbumComponent implements OnInit {
         `${this.album.title} Photography by Toni Hoffmann`,
         this.album.subTitle
       );
-
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
+
         data = data.map(i =>{
           i.bigurl = i.url;
           i.url = i.middleurl;
           return i;
         });
-        console.log(data);
+
         var pages = UtilitiesService.chunkArray(data, this.pageSize);
 
         this.pages = UtilitiesService.fillArray(pages.length);
@@ -59,20 +67,13 @@ export class AlbumComponent implements OnInit {
           window.location.href = '/404';
         }
 
-        // TODO make this clean
         this.album.photos = pages[this.page];
 
         this.images = this.album.photos;
-
-        // Show photo modal
-        // var photoIdParameter = params['photoId'];
-        // if(photoIdParameter){
-        //   var photoFromParameter = null;
-        //   // TODO search the correct photo from the this.images array
-        //   this.showPhotoModal(photoFromParameter);
-        // }
+        console.log("create gallery");
+        
       });
-    });
+
   }
 
   showPhotoModal(photo: any){
