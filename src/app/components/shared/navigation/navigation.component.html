@@ -7,7 +7,7 @@
 
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-    <a class="navbar-brand ml-md-3" href="/">Toni Hoffmann</a>
+    <a class="navbar-brand ml-md-3" routerLink="/">Toni Hoffmann</a>
 
     <!-- Spacer to push navigation to the right -->
     <div class="mr-auto"></div>
@@ -16,22 +16,22 @@
       <ul class="nav navbar-nav navbar-right mr-md-3">
 
         <li ngbDropdown class="nav-item" ngbDropdown #myDrop="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop.close();">
-          <a href="/photography" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();">Photography</a>
+          <a routerLink="/photography" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();" routerLinkActive="active">Photography</a>
           <div ngbDropdownMenu>
-            <a ngbDropdownItem href="photography/{{album.id}}" *ngFor="let album of photoService.getAlbumOverview()">{{album.title}}</a>
+            <a ngbDropdownItem routerLink="photography/{{album.id}}" *ngFor="let album of photoService.getAlbumOverview()" routerLinkActive="active">{{album.title}}</a>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/development">Software Development</a>
+          <a class="nav-link" routerLink="/development" routerLinkActive="active">Software Development</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/music">Music</a>
+          <a class="nav-link" routerLink="/music" routerLinkActive="active">Music</a>
         </li>
 
         <!-- <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" routerLink="/contact">Contact</a>
         </li> -->
 
       </ul>
