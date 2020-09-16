@@ -3,7 +3,7 @@
 	<div class="customimagemodal-container">
 		<app-spinner *ngIf="loading"></app-spinner>
 		<div class="customimagemodal-imagecontainer">
-			<img class="d-inline-block point-cursor" alt="{{photo && photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo && photo.url}}" (click)="close()">
+			<img class="d-inline-block point-cursor" alt="{{photo && photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo && photo.bigurl}}" (click)="close()">
 		</div>
 		<div class="customimagemodal-title">{{photo && photo.title}}</div>
 	</div>

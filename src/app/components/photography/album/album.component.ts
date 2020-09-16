@@ -45,6 +45,12 @@ export class AlbumComponent implements OnInit {
       );
 
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
+        data = data.map(i =>{
+          i.bigurl = i.url;
+          i.url = i.middleurl;
+          return i;
+        });
+        console.log(data);
         var pages = UtilitiesService.chunkArray(data, this.pageSize);
 
         this.pages = UtilitiesService.fillArray(pages.length);
