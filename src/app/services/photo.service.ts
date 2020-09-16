@@ -21,17 +21,17 @@ export class PhotoService {
     imageUrl: 'https://farm5.staticflickr.com/4649/39767964544_9ba2c3c3b8_b.jpg'
   },{
     title: 'Cityscapes',
-    subTitle: 'Big City Lights, Urban and Villages',
+    subTitle: 'Big City Lights, Urbans and Mountan Villages',
     id: 'cityscapes',
     imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg'
   },{
     title: 'Urban Subways',
-    subTitle: 'Connecting Places',
+    subTitle: 'Places that connect People',
     id: 'subways',
     imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg'
   },{
     title: 'Products',
-    subTitle: 'Accessories, Clothes and more',
+    subTitle: 'Products that trigger Emotions',
     id: 'products',
     imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg'
   }];
