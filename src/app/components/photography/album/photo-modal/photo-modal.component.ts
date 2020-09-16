@@ -21,10 +21,11 @@ export class PhotoModalComponent {
   public close(){
     this.hide = true;
     this.callToAction.hideMe();
+    this.photo = null;
   }
 
   public show(photo: any){
-    this.loading= true
+    this.loading = true
     this.photo = photo;
     this.hide = false;
     this.callToAction.reset();
