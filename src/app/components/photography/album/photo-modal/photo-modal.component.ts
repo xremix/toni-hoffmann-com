@@ -24,6 +24,7 @@ export class PhotoModalComponent {
   }
 
   public show(photo: any){
+    this.loading= true
     this.photo = photo;
     this.hide = false;
     this.callToAction.reset();

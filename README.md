@@ -4,6 +4,14 @@ Open Source has always a passion, so why not open sourcing my private portfolio 
 
 You can see the results at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
+## Technologies used
+
+- **Angular** is the root framework of this application
+- **Bootstrap** is used for the layout, buttons and navigation
+- **ng-xGallerify** is my gallery component that hosts the photography portfolio
+
+Everything else is developed from scratch.
+
 ## Setup
 
 - Install Node.js
