@@ -1,5 +1,6 @@
 <div class="text-center" [ngClass]="{'hover-container': hoverAnimation}" style="position:relative;">
-  <a href="{{href}}" target="{{target}}">
+  <!-- TODO if no href make this no link -->
+  <a [href]="href" target="{{target}}">
 
     <img src="{{imageUrl}}" class="w-100" alt="{{description}}" />
 

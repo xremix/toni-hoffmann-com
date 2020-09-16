@@ -81,6 +81,8 @@ a:hover, a:active{
 	box-shadow: 0px -8px 7px rgba(0, 0, 0, 0.1);
 }
 
+// Positioning
+
 .absolute-fill{
   position: absolute;
   bottom: 0;
@@ -107,4 +109,23 @@ a:hover, a:active{
   left:0;
   right: 0;
   bottom: 0;
+}
+
+
+// Tont Sizes
+
+.larger {
+  font-size: 1.3em;
+}
+
+.large{
+  font-size: 1.5em;
+}
+
+.huge{
+  font-size:2em;
+}
+
+.smaller{
+  font-size:0.9em;
 }
