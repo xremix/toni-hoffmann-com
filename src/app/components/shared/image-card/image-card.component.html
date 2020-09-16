@@ -8,6 +8,7 @@
 
     <div class="box-content text-white absolute-bottom" [ngClass]="{'bg-gradient-background': textBackground}" *ngIf="title || description">
       <div class="hover-show mb-3 px-2" [innerHtml]="description"></div>
+      <!-- TODO check if this should show on mobile -->
       <div class="box-title mb-2" [ngClass]="{'hover-show': hideBoxTitle}">{{title}}</div>
     </div>
 
