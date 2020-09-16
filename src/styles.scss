@@ -132,18 +132,16 @@ a:hover, a:active{
   font-size: 0.9em;
 }
 
-
-// TODO reuse these classes where possible
 //  Scale on hover
 .scale-hover-container{
   &.scale-hover-overflow-hidden{
     overflow: hidden;
   }
-  .scale-hover-child{
+  .scale-hover-child, &.scale-hover-child{
     transition: transform 1s ease-out;
   }
   &:hover{
-    .scale-hover-child{
+    .scale-hover-child, &.scale-hover-child{
       transform: scale(1.05);
     }
   }

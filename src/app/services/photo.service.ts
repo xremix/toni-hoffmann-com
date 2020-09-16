@@ -48,11 +48,9 @@ export class PhotoService {
 
   // TODO use the model instead of any
   public getPhotosFromAlbum(album: string): any {
-    if(isDevMode()){
-      return this.http.get(`https://www.toni-hoffmann.com/api/flickr/?gallery=${album}`);
-    }else{
-      return this.http.get(`/api/flickr/?gallery=${album}`);
-    }
+    var url = isDevMode() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
+
+    return this.http.get(url);
 
     // Example
     // {
