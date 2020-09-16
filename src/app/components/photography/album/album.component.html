@@ -7,7 +7,7 @@
       <div class="xgallerify-container" (click)="showPhotoModal(image)">
 
         <img class="xgallerify-img" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)">
-        <div class="absolute-bottom text-center p-3 text-white image-description">
+        <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
         {{image.title}}
         </div>
       </div>
