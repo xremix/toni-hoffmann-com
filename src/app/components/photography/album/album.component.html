@@ -18,7 +18,7 @@
       <a
       href="/photography/{{album.id}}/{{i == 0 ? '' : i}}"
       class="btn btn-outline-light ml-2"
-      [ngClass]="{'btn-outline-primary': i == page, 'btn-outline-light': i != page}"
+      [ngClass]="{'btn-light': i == page, 'btn-outline-light': i != page}"
       *ngFor="let i of pages">
         {{(+i + 1)}}
       </a>
