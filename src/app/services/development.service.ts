@@ -44,12 +44,17 @@ public getOpenSourceProjects(): Array<any>{
     {
       'title': 'Flashlight Plugins',
       'url': 'https://github.com/xremix/FlashlightPlugins',
-      'description': 'A extra repository for some Plugins of the Flashlight project.'
+      'description': 'A extra repository for Plugins, to be used with the Flashlight App for OS X.'
     },
     {
       'title': 'xGallerify',
       'url': 'https://github.com/xremix/xGallerify',
       'description': 'A lightweight, responsive, smart gallery based on jQuery'
+    },
+    {
+      'title': 'ng-xGallerify',
+      'url': 'https://github.com/xremix/ng-xGallerify',
+      'description': 'The second version of xGallerify, written for Angular Applications'
     },
     {
       'title': 'SwiftGS1Barcode',
@@ -61,11 +66,11 @@ public getOpenSourceProjects(): Array<any>{
       'url': 'https://github.com/xremix/Camera-Remote-JS',
       'description': 'Remote control your Sony Camera. Using one API and build an Application in Browser, Node.js, or a JavaScript Hybrid App'
     },
-    {
-      'title': 'Yeoman Gulp, SASS, Coffescript Generator',
-      'url': 'https://github.com/xremix/generator-gulp-sass-coffeescript',
-      'description': 'A Webapp Scaffold to generate a templated based on Gulp, SASS and Coffeescript'
-    },
+    // {
+    //   'title': 'Yeoman Gulp, SASS, Coffescript Generator',
+    //   'url': 'https://github.com/xremix/generator-gulp-sass-coffeescript',
+    //   'description': 'A Webapp Scaffold to generate a templated based on Gulp, SASS and Coffeescript'
+    // },
     {
       'title': 'Diff Match Patch CF Wheels port',
       'url': 'https://github.com/xremix/diff-match-path-cfwheels',
