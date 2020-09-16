@@ -9,14 +9,15 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 export class CallToActionComponent implements OnInit {
   @Input() public hide: boolean = true;
   @Input() public showScrollPosition: number;
-  @Input() public showTimed: number;
+  @Input() public showTime: number;
+  @Input() public hideTime: number;
   @Input() public text: string;
 
   constructor(public analyaticsService: AnalyticsService) { }
 
   ngOnInit(): void {
     this.reset();
-    if(!this.showScrollPosition && this.showTimed){
+    if(!this.showScrollPosition && this.showTime){
       this.hide = false;
     }
   }
@@ -24,10 +25,16 @@ export class CallToActionComponent implements OnInit {
   // TODO improve the behavior, to work better on modals
   public reset(){
       this.hide = true;
-    if(this.showTimed){
+    if(this.showTime){
       setTimeout(() => {
         this.hide = false;
-      }, this.showTimed);
+        if(this.hideTime){
+          setTimeout(() => {
+            this.hide = true;
+          }, this.hideTime);
+        }
+
+      }, this.showTime);
     }
   }
 
