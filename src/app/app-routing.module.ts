@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'imprint', component: ImprintComponent },
   { path: 'data-privacy', component: DataPrivacyComponent },
   { path: '',   component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,
-  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+  {path: '404', component: PageNotFoundComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({

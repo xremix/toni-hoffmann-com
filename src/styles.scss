@@ -11,7 +11,7 @@ $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
 .hide{
-	display:none;
+	display: none;
 }
 .text-center{
 	text-align: center;
@@ -21,31 +21,22 @@ $screen-lg-min: 1200px;
 	text-decoration: underline;
 }
 
-.dropdown-menu{
-  margin: -.125rem 0 0;
-  border-radius: 0px;
-  left: 8px;
-  border: 0px;
-  box-shadow: 0px 20px 15px 4px rgba(0, 0, 0, 0.2)
-}
-
 // /////// GENERAL ///////
 body{
 	font-weight: 100;
 	letter-spacing: 1px;
 	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	// -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-	background-color:white;
-	color:#535353;
-	font-size:16px;
+	background-color: white;
+	color: #535353;
+	font-size: 16px;
 	margin: 0px;
 	// letter-spacing: 1px; // TODO verify if a letter spacing looks better
 }
 h1, h2, h3{
 	font-weight: 100;
 	letter-spacing: 4px;
-	margin-top:1em;
-	margin-bottom:0.6em;
+	margin-top: 1em;
+	margin-bottom: 0.6em;
 }
 h1{
 	font-size: 2.5rem;
@@ -67,7 +58,7 @@ h3{
 }
 a{
 	color:#b3b3b3;
-	font-weight:200;
+	font-weight: 200;
 }
 a:hover, a:active{
 	color:#848484;
@@ -75,9 +66,9 @@ a:hover, a:active{
 
 .content{
 	margin-top: 60vh;
-	position:relative;
-	z-index: 2;
-	background-color:white;
+	position: relative;
+	z-index:  2;
+	background-color: white;
 	box-shadow: 0px -8px 7px rgba(0, 0, 0, 0.1);
 }
 
@@ -105,8 +96,8 @@ a:hover, a:active{
 }
 
 .fixed-bottom{
-  position:fixed;
-  left:0;
+  position: fixed;
+  left: 0;
   right: 0;
   bottom: 0;
 }
@@ -127,9 +118,9 @@ a:hover, a:active{
 }
 
 .huge{
-  font-size:2em;
+  font-size: 2em;
 }
 
 .smaller{
-  font-size:0.9em;
+  font-size: 0.9em;
 }

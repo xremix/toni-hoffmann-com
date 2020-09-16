@@ -8,15 +8,15 @@ $headerBackgroundHeight: 70vh;
 $headerTextTop: 10vh;
 
 .header-portrait-image{
-	margin-bottom:20px;
-	display:inline-block;
+	margin-bottom: 20px;
+	display: inline-block;
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
 	overflow: hidden;
 	position: relative;
 	img{
-		height:100%;
+		height: 100%;
 		position: absolute;
 		left: 0px;
 	}
@@ -37,14 +37,14 @@ $headerTextTop: 10vh;
 }
 .header-image{
 	height: $headerBackgroundHeight;
-	min-height:300px;
+	min-height: 300px;
 	background-position: center center;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
 	margin-top: 0px !important;
 	z-index: 1;
-	position:relative;
-	width:100%;
+	position: relative;
+	width: 100%;
 	background-image: url('/assets/work2.jpg');
 	filter: brightness(1.1); //to make text better readable
 }
@@ -52,31 +52,31 @@ $headerTextTop: 10vh;
 .header{
 	position: fixed;
 	z-index: 1;
-	height:$headerHeight;
-	top:0px; // TODO now as we got the navigation we should move everything a bit up, right?
-	left:0px;
-	right:0px;
+	height: $headerHeight;
+	top: 0px; // TODO now as we got the navigation we should move everything a bit up, right?
+	left: 0px;
+	right: 0px;
 	.back-button{
-		position:absolute;
-		left:30px;
-		top:20px;
-		z-index:999;
-		width:120px;
+		position: absolute;
+		left: 30px;
+		top: 20px;
+		z-index: 999;
+		width: 120px;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 	}
 }
 #header-vertical-container{
-	display:table;
+	display: table;
 	position: absolute;
 	z-index: 3;
-	height:100%;
-	width:100%;
+	height: 100%;
+	width: 100%;
 }
 #header-vertical-content{
 	display: table-cell;
 	vertical-align: middle;
-	padding-left:auto;
+	padding-left: auto;
 
 	@media(min-width: $screen-md-min) {
 		padding-left: 5%;
@@ -84,35 +84,35 @@ $headerTextTop: 10vh;
 }
 .fixed-header-text{
 	text-align: center;
-	z-index:2;
+	z-index: 2;
 	max-width: 800px;
 	margin: auto;
 	@media(min-width: $screen-md-min) {
 		margin: 0;
 	}
 	a.ghost-button-semi-transparent{
-		// text-decoration:none; // TODO implement this if no animation
-		width:200px;
+		// text-decoration: none; // TODO implement this if no animation
+		width: 200px;
 		// text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 		font-size: 1.2em;
-		margin:5px;
+		margin: 5px;
 		@media(min-width: $screen-sm-min) {
-			margin:0px 20px;
+			margin: 0px 20px;
 		}
 	}
 
 	h1, h2{
-		margin:0px 8px;
+		margin: 0px 8px;
 		@media(min-width: $screen-sm-min) {
-			padding:inherit;
+			padding: inherit;
 		}
 	}
 	hr{
 		color:#fff;
 		// box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-		padding:0px 4px;
+		padding: 0px 4px;
 		@media(min-width: $screen-sm-min) {
-			padding:inherit;
+			padding: inherit;
 		}
 	}
 }

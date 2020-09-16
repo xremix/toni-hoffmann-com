@@ -49,6 +49,10 @@ export class AlbumComponent implements OnInit {
 
         this.pages = UtilitiesService.fillArray(pages.length);
 
+        if(this.page + 1 > this.pages.length){
+          window.location.href = '/404';
+        }
+
         // TODO make this clean
         this.album.photos = pages[this.page];
 
