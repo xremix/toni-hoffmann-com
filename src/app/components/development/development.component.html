@@ -1,4 +1,11 @@
-<app-header-banner [showDefaultHeader]="true"></app-header-banner>
+<ng-container *ngIf="!showPreviewFeatures">
+  <app-header-banner [showDefaultHeader]="true"></app-header-banner>
+</ng-container>
+<ng-container *ngIf="showPreviewFeatures">
+<app-header-banner [galleryTitle]="'Software Developer'" [galleryImage]="'https://farm6.staticflickr.com/5610/30981074620_4ce0f6476d_b.jpg'"></app-header-banner>
+</ng-container>
+
+
 <div class="content">
   <div class="container text-center pt-5 ">
     <h1>Software Development Portfolio</h1>
@@ -15,19 +22,23 @@
 
       <div class="row large">
         <div class="col-md-4">
-          <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_1280.jpg'" [hoverAnimation]="false"></app-image-card>
+          <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/native-mobile-apps-banner.jpg'" [hoverAnimation]="false"></app-image-card>
         </div>
         <div class="col-md-4">
-          <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_1280.jpg'" [hoverAnimation]="false"></app-image-card>
+          <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'assets/business-web-apps-banner.webp'" [hoverAnimation]="false"></app-image-card>
         </div>
         <div class="col-md-4">
-          <app-image-card [title]="'UX-Design'" [imageUrl]="'https://cdn.pixabay.com/photo/2017/05/14/16/05/ui-2312399_1280.jpg'" [hoverAnimation]="false"></app-image-card>
+          <app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.jpg'" [hoverAnimation]="false"></app-image-card>
         </div>
       </div>
     </ng-container>
 
 
     <!-- Designs -->
+
+    <ng-container *ngIf="showPreviewFeatures">
+      <h2>UX-Designs</h2>
+    </ng-container>
 
     <!-- Open Source -->
     <h2>Open Source Projects</h2>
