@@ -13,12 +13,11 @@
 	background-color: rgba(0,0,0, 1);
 	visibility: visible;
 	opacity: 1;
-	transition: visibility 0s, opacity 0.4s linear; //Don't forget to set the transition in JavaScript as well
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; 
 
-	&.hide{
+	&.hidethis{
 		opacity: 0;
 		visibility: hidden;
-		transition: visibility 0s, opacity 0.4s linear; //Don't forget to set the transition in JavaScript as well
 	}
 	.customimagemodal-container{
 		position:absolute;

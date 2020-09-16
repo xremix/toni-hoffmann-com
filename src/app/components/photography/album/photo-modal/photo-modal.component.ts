@@ -20,6 +20,7 @@ export class PhotoModalComponent {
 
   public close(){
     this.hide = true;
+    this.callToAction.hideMe();
   }
 
   public show(photo: any){

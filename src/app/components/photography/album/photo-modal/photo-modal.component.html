@@ -1,14 +1,14 @@
-<div class="customimagemodal" [ngClass]="{'hide': hide}">
-	<div *ngIf="photo" class="customimagemodal-blurbackground" style="background-image: url(&quot;{{photo.url}}&quot;);"></div>
+<div class="customimagemodal" [ngClass]="{'hidethis': hide}">
+	<div class="customimagemodal-blurbackground" style="background-image: url(&quot;{{photo && photo.url}}&quot;);"></div>
 	<div class="customimagemodal-container">
 		<app-spinner *ngIf="loading"></app-spinner>
 		<div class="customimagemodal-imagecontainer">
-			<img *ngIf="photo" class="d-inline-block point-cursor" alt="{{photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo.url}}" (click)="close()">
+			<img class="d-inline-block point-cursor" alt="{{photo && photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo && photo.url}}" (click)="close()">
 		</div>
-		<div *ngIf="photo" class="customimagemodal-title">{{photo.title}}</div>
+		<div class="customimagemodal-title">{{photo && photo.title}}</div>
 	</div>
 	<div class="absolute-top-right m-5 text-right text-white point-cursor huge" (click)="close()">
 		<i class="fas fa-times"></i>
 	</div>
-	<app-call-to-action [showTimed]="3000" [text]="'Interest in this picture?'" #callToAction></app-call-to-action>
+	<app-call-to-action [showTimed]="4000" [text]="'Interest in this picture?'" #callToAction></app-call-to-action>
 </div>

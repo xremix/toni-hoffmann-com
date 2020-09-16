@@ -21,7 +21,7 @@ export class AlbumComponent implements OnInit {
   public modalPhoto: any = null;
   public callToAction = window.screen.height * 2;
 
-  private pageSize: number = 20;
+  private pageSize: number = 21;
   private page: number = 0;
   private nextPage: number = 1;
   private previousPage: number = 0;
@@ -29,10 +29,11 @@ export class AlbumComponent implements OnInit {
   public hasNext: boolean = false;
   public hasPrevious: boolean = false;
 
+  public pages: Array<number> = [];
+
   @ViewChild('photoModal') photoModal: PhotoModalComponent;
 
   constructor(private seoService: SeoService, private photoService: PhotoService, private route: ActivatedRoute) {
-
   }
 
   ngOnInit(): void {
@@ -49,13 +50,13 @@ export class AlbumComponent implements OnInit {
         this.album.subTitle
       );
 
-      this.photoService.getAlbum(albumParameter).subscribe(data =>{
-        // TODO the service should return an album!!
-
+      this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
         var pages = UtilitiesService.chunkArray(data, this.pageSize);
 
         this.hasNext = (this.page + 1) < pages.length;
         this.hasPrevious = this.page > 0;
+
+        this.pages = Array(pages.length).fill(1, 0, pages.length).map((x,i)=>i);
 
         // TODO make this clean
         this.album.photos = pages[this.page];
@@ -69,7 +70,6 @@ export class AlbumComponent implements OnInit {
         //   // TODO search the correct photo from the this.images array
         //   this.showPhotoModal(photoFromParameter);
         // }
-
       });
     });
   }

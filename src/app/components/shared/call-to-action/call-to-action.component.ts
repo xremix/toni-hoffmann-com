@@ -7,7 +7,7 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
   styleUrls: ['./call-to-action.component.scss']
 })
 export class CallToActionComponent implements OnInit {
-  @Input() public hide: boolean = false;
+  @Input() public hide: boolean = true;
   @Input() public showScrollPosition: number;
   @Input() public showTimed: number;
   @Input() public text: string;
@@ -16,17 +16,23 @@ export class CallToActionComponent implements OnInit {
 
   ngOnInit(): void {
     this.reset();
+    if(!this.showScrollPosition && this.showTimed){
+      this.hide = false;
+    }
   }
 
+  // TODO improve the behavior, to work better on modals
   public reset(){
-    if(this.showScrollPosition || this.showTimed){
       this.hide = true;
-    }
     if(this.showTimed){
       setTimeout(() => {
         this.hide = false;
       }, this.showTimed);
     }
+  }
+
+  public hideMe(){
+    this.hide = true;
   }
 
   @HostListener('window:scroll', ['$event'])
