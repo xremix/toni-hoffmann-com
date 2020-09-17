@@ -12,6 +12,7 @@ export class HeaderBannerComponent implements OnInit {
   @Input() gallerySubtitle: string;
   @Input() galleryImage: string;
   @Input() showDefaultHeader: boolean = false;
+  @Input() coverRight: boolean = false;
 
   constructor() { }
 

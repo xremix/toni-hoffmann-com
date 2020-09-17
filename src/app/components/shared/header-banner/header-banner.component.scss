@@ -39,6 +39,9 @@ $headerTextTop: 10vh;
 	height: $headerBackgroundHeight;
 	min-height: 300px;
 	background-position: center center;
+	&.header-image-right{
+		background-position: 100% 100% !important;
+	}
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-top: 0px !important;
