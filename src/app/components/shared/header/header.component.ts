@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-header-banner',
-  templateUrl: './header-banner.component.html',
-  styleUrls: ['./header-banner.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class HeaderBannerComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   public contentOpacity: number = 1;
 
   @Input() galleryTitle: string;

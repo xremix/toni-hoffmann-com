@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderBannerComponent } from './components/shared/header-banner/header-banner.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -31,7 +31,7 @@ import { CallToActionComponent } from './components/shared/call-to-action/call-t
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderBannerComponent,
+    HeaderComponent,
     FooterComponent,
     HomeComponent,
     PageNotFoundComponent,
