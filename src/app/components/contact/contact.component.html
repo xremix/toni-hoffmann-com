@@ -4,17 +4,23 @@
   <div class="container" *ngIf="!action || (action != 'photo-interest') ">
     <h1>Contact</h1>
     <p>I'm on social media - feel free to reach out.</p>
-    <div class="d-flex justify-content-around mt-5">
-      <a href="mailto:kontakt@toni-hoffmann.com" class="btn btn-outline-primary"><i class="fas fa-envelope"></i> E-Mail</a>
-      <a href="https://www.xing.com/profile/Toni_Hoffmann7/" target="_blank" class="btn btn-outline-primary"><i class="fab fa-xing"></i> Xing</a>
-      <a href="https://www.linkedin.com/in/toni-hoffmann-munich/" target="_blank" class="btn btn-outline-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <div class="d-flex justify-content-around mt-5 mx-auto" style="max-width: 600px;">
+      <a href="mailto:kontakt@toni-hoffmann.com" class="btn btn-outline-primary">
+          <i class="fas fa-envelope"></i> E-Mail
+      </a>
+      <a href="https://www.xing.com/profile/Toni_Hoffmann7/" target="_blank" class="btn btn-outline-primary">
+          <i class="fab fa-xing"></i> Xing
+      </a>
+      <a href="https://www.linkedin.com/in/toni-hoffmann-munich/" target="_blank" class="btn btn-outline-primary">
+          <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
     </div>
   </div>
 
   <div class="container" *ngIf="action == 'photo-interest'">
     <h1>Interest in a Picture?</h1>
     <p>The portfolio is just a reference and there are tons of more pictures of these places and moments from different angles and with different light conditions. Many of the photos <b>can be purchased</b>, so feel free to reach out to me.</p>
-    <a href="mailto:kontakt@toni-hoffmann.com" class="btn btn-outline-primary btn-lg"><i class="fas fa-envelope"></i> Contact Me</a>
+    <a href="mailto:kontakt@toni-hoffmann.com" class="btn btn-outline-primary btn-lg mt-4"><i class="fas fa-envelope"></i> Contact Me</a>
   </div>
 
 </div>

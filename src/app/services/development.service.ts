@@ -35,16 +35,16 @@ public getOpenSourceProjects(): Array<any>{
     {
       'title': 'toni-hoffmann.com',
       'url': 'https://github.com/xremix/toni-hoffmann-com',
-      'description': 'Open Source has always a passion, so why not open sourcing my private portfolio website?!'
+      'description': 'Open Source has always a passion - so why not open sourcing my private portfolio website'
     },{
       'title': 'Flashlight for OS X',
       'url': 'https://github.com/nate-parrott/Flashlight/graphs/contributors',
-      'description': 'An Open-Source project that allows to bore up the search in macOS. It was used by thousands of users. I was (besides the founder) the top contributor with over 120 commits.'
+      'description': 'An Open-Source project that allows to bore up the search in macOS. It was used by thousands of users. Next to the foudner I was the top contributor with over 120 commits, until the project was stopped.'
     },
     {
       'title': 'Flashlight Plugins',
       'url': 'https://github.com/xremix/FlashlightPlugins',
-      'description': 'A extra repository for Plugins, to be used with the Flashlight App for OS X.'
+      'description': 'Plugins for the Flashlight App for macOS, to add rich web features to the macOS search'
     },
     {
       'title': 'xGallerify',
@@ -54,12 +54,12 @@ public getOpenSourceProjects(): Array<any>{
     {
       'title': 'ng-xGallerify',
       'url': 'https://github.com/xremix/ng-xGallerify',
-      'description': 'The second version of xGallerify, written for Angular Applications'
+      'description': 'The second version of xGallerify, developed for Angular Applications'
     },
     {
       'title': 'SwiftGS1Barcode',
       'url': 'https://github.com/xremix/SwiftGS1Barcode',
-      'description': 'A GS1 Barcode Library and Parser in Swift'
+      'description': 'A GS1 Barcode Library and Parser for Swift Apps'
     },
     {
       'title': 'Camera Remote - JS',
@@ -79,7 +79,7 @@ public getOpenSourceProjects(): Array<any>{
     {
       'title': 'Flexgrid',
       'url': 'https://github.com/xremix/Flexgrid',
-      'description': 'A lightweight CSS3 flex box based grid'
+      'description': 'A lightweight CSS3 grid, based on flex box'
     },
     // {
     //   'title': 'Ti.FontAwesome',
