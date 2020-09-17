@@ -1,11 +1,4 @@
-// TODO move to one var file
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
-
-$headerHeight: 60vh;
-$headerBackgroundHeight: 70vh;
-$headerTextTop: 10vh;
+@import "../../../../variables";
 
 .header-portrait-image{
 	margin-bottom: 20px;
