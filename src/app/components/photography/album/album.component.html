@@ -15,7 +15,7 @@
 
     <div class="text-center p-4" *ngIf="pages && pages.length && pages.length > 1">
       <a
-      href="/photography/{{album.id}}/{{i == 0 ? '' : i}}"
+      routerLink="/photography/{{album.id}}/{{i == 0 ? '' : i}}"
       class="btn btn-outline-light ml-2"
       [ngClass]="{'btn-light': i == page, 'btn-outline-light': i != page}"
       *ngFor="let i of pages">

@@ -42,6 +42,7 @@ export class AlbumComponent implements OnInit {
   }
 
   createGallery(params: any){
+    // TODO Make pages based on 1 instead of 0
       var albumParameter = params['album'];
       if(params['page']){
         this.page = +params['page'];
@@ -71,7 +72,7 @@ export class AlbumComponent implements OnInit {
 
         this.images = this.album.photos;
         console.log("create gallery");
-        
+
       });
 
   }
