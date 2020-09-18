@@ -12,7 +12,6 @@ import { PhotographyComponent } from './components/photography/photography.compo
 import { MusicComponent } from './components/music/music.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
-import { GhostButtonComponent } from './components/shared/ghost-button/ghost-button.component';
 import { AlbumComponent } from './components/photography/album/album.component';
 // TODO move to npm
 import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
@@ -40,7 +39,6 @@ import { CallToActionComponent } from './components/shared/call-to-action/call-t
     MusicComponent,
     ImprintComponent,
     DataPrivacyComponent,
-    GhostButtonComponent,
     AlbumComponent,
     XGallerifyComponent,
     BannerLinkComponent,
