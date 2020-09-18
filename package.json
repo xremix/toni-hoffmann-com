@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~10.0.14",
     "@angular/router": "~10.0.14",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
-    "@xremix/ng-x-gallerify": "0.0.2",
+    "@xremix/ng-x-gallerify": "*",
     "bootstrap": "^4.5.0",
     "component": "^1.1.0",
     "rxjs": "~6.5.5",

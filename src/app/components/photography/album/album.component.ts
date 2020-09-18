@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { PhotoService } from 'src/app/services/photo.service';
 import { SeoService } from 'src/app/services/seo.service';
 import { PhotoModalComponent } from './photo-modal/photo-modal.component';
-import { XGallerifyComponent } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
 import { UtilitiesService } from 'src/app/services/utilities.service'
 
 @Component({

@@ -13,8 +13,9 @@ import { MusicComponent } from './components/music/music.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 import { AlbumComponent } from './components/photography/album/album.component';
-// TODO move to npm
-import { XGallerifyComponent } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/lib/x-gallerify.component';
+// For local development
+// import { XGallerifyModule } from '../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/public-api';
+import { XGallerifyModule } from '@xremix/ng-x-gallerify';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
@@ -40,7 +41,6 @@ import { CallToActionComponent } from './components/shared/call-to-action/call-t
     ImprintComponent,
     DataPrivacyComponent,
     AlbumComponent,
-    XGallerifyComponent,
     BannerLinkComponent,
     NavigationComponent,
     SafePipe,
@@ -55,6 +55,7 @@ import { CallToActionComponent } from './components/shared/call-to-action/call-t
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    XGallerifyModule
   ],
   providers: [PhotoService],
   bootstrap: [AppComponent]
