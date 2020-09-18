@@ -5,8 +5,7 @@ import { NavigationComponent } from 'src/app/components/shared/navigation/naviga
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   @ViewChild('navigation') navigation: NavigationComponent;

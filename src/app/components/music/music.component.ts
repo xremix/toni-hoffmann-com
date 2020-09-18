@@ -3,8 +3,7 @@ import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-music',
-  templateUrl: './music.component.html',
-  styleUrls: ['./music.component.scss']
+  templateUrl: './music.component.html'
 })
 export class MusicComponent implements OnInit {
   public songs: Array<string> = [];

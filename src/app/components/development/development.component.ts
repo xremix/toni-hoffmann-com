@@ -6,8 +6,7 @@ import { DevelopmentService } from 'src/app/services/development.service';
 
 @Component({
   selector: 'app-development',
-  templateUrl: './development.component.html',
-  styleUrls: ['./development.component.scss']
+  templateUrl: './development.component.html'
 })
 export class DevelopmentComponent implements OnInit {
 

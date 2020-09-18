@@ -4,8 +4,7 @@ import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-photography',
-  templateUrl: './photography.component.html',
-  styleUrls: ['./photography.component.scss']
+  templateUrl: './photography.component.html'
 })
 export class PhotographyComponent implements OnInit {
   public albums: Array<any> = [];
