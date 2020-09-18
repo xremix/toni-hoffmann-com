@@ -15,6 +15,9 @@ export class CallToActionComponent implements OnInit {
   @Input() public style: string = 'primary';
   @Input() public position: string = 'fixed-bottom';
 
+  private showTimerAction: any;
+  private hideTimerAction: any;
+
   constructor(public analyaticsService: AnalyticsService) { }
 
   ngOnInit(): void {
@@ -31,12 +34,12 @@ export class CallToActionComponent implements OnInit {
       this.hideAction();
 
       // Show after specific time
-      setTimeout(() => {
+      this.showTimerAction = setTimeout(() => {
         this.hide = false;
 
         // Hide after specific time
         if(this.hideTime){
-          setTimeout(() => {
+          this.hideTimerAction = setTimeout(() => {
             this.hide = true;
           }, this.hideTime);
         }
@@ -49,6 +52,10 @@ export class CallToActionComponent implements OnInit {
 
   public hideAction(){
     this.hide = true;
+
+    // Clear running timers
+    this.showTimerAction && clearTimeout(this.showTimerAction);
+    this.hideTimerAction && clearTimeout(this.hideTimerAction);
   }
 
   @HostListener('window:scroll', ['$event'])
