@@ -23,7 +23,6 @@ body{
 	color: #535353;
 	font-size: 16px;
 	margin: 0px;
-	// letter-spacing: 1px; // TODO verify if a letter spacing looks better
 }
 h1, h2, h3{
 	font-weight: 100;
@@ -55,6 +54,10 @@ a{
 }
 a:hover, a:active{
 	color:#848484;
+}
+
+.navigation-spacer{
+	height: $navigationSpace;
 }
 
 .content{
@@ -99,6 +102,10 @@ a:hover, a:active{
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5) 60%);
 }
 
+.bg-black-05{
+	background-color: rgba(0,0,0,0.5);
+}
+
 .opacity-1{
   opacity: 1;
 }
@@ -126,17 +133,24 @@ a:hover, a:active{
 }
 
 //  Scale on hover
-.scale-hover-container{
-  &.scale-hover-overflow-hidden{
-    overflow: hidden;
-  }
-  .scale-hover-child, &.scale-hover-child{
+.hover-container{
+	z-index: 0;
+  .hover-scale-child, &.hover-scale-child{
     transition: transform 1s ease-out;
   }
+	.hover-show-child{
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+	}
   &:hover{
-    .scale-hover-child, &.scale-hover-child{
+		z-index: 1;
+    .hover-scale-child, &.hover-scale-child{
       transform: scale(1.05);
     }
+
+		.hover-show-child{
+			opacity: 1;
+		}
   }
 
 }

@@ -1,5 +1,6 @@
 <ng-template [ngIf]="showDefaultHeader">
 <div class="header">
+  <!-- <div class="navigation-spacer"></div> -->
   <div id="header-vertical-container">
     <div id="header-vertical-content">
       <div class="fixed-header-text no-hidden" [style.opacity]="contentOpacity">
@@ -32,6 +33,7 @@
 
 <ng-template [ngIf]="!showDefaultHeader">
 <div class="header">
+  <!-- <div class="navigation-spacer"></div> -->
   <div style="display:table;position: absolute;z-index: 3; height:100%; width:100%;">
     <div style="display: table-cell; vertical-align: middle;">
       <div class="fixed-header-text no-hidden" style="color:white; max-width:100%; background: linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 0.5) 40%,rgba(0,0,0, 0.5) 60%,rgba(0,0,0, 0.0) 100%); text-transform: uppercase;" [style.opacity]="contentOpacity">

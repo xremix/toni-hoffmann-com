@@ -1,3 +1,4 @@
-<div class="mt-5">
+<div>
+  <div class="navigation-spacer"></div>
   <app-banner-link *ngFor="let album of albums" [title]="album.title" [subTitle]="album.subTitle" [imageUrl]="album.imageUrl" [href]="getAlbumUrl(album.id)"></app-banner-link>
 </div>

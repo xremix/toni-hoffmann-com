@@ -86,16 +86,6 @@
 	@media(min-width: $screen-md-min) {
 		margin: 0;
 	}
-	a.ghost-button-semi-transparent{
-		// text-decoration: none; // TODO implement this if no animation
-		width: 200px;
-		// text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-		font-size: 1.2em;
-		margin: 5px;
-		@media(min-width: $screen-sm-min) {
-			margin: 0px 20px;
-		}
-	}
 
 	h1, h2{
 		margin: 0px 8px;
@@ -129,11 +119,5 @@
 	}
 	h1{
 		font-size: 30px;
-	}
-	.fixed-header-text{
-		a.ghost-button-semi-transparent{
-			font-size: 1em;
-			margin: 4px;
-		}
 	}
 }
