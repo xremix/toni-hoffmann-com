@@ -7,6 +7,7 @@ import { CallToActionComponent } from 'src/app/components/shared/call-to-action/
   styleUrls: ['./photo-modal.component.scss']
 })
 export class PhotoModalComponent {
+
   @Input() photo: any;
 
   public loading: boolean = false;
@@ -20,7 +21,7 @@ export class PhotoModalComponent {
 
   public close(){
     this.hide = true;
-    this.callToAction.hideMe();
+    this.callToAction.hideAction();
     this.photo = null;
   }
 
@@ -28,7 +29,7 @@ export class PhotoModalComponent {
     this.loading = true
     this.photo = photo;
     this.hide = false;
-    this.callToAction.reset();
+    this.callToAction.startTriggers();
   }
 
 }

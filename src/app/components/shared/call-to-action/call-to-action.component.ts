@@ -12,22 +12,29 @@ export class CallToActionComponent implements OnInit {
   @Input() public showTime: number;
   @Input() public hideTime: number;
   @Input() public text: string;
+  @Input() public style: string = 'primary';
+  @Input() public position: string = 'fixed-bottom';
 
   constructor(public analyaticsService: AnalyticsService) { }
 
   ngOnInit(): void {
     this.reset();
-    if(!this.showScrollPosition && this.showTime){
-      this.hide = false;
-    }
   }
 
-  // TODO improve the behavior, to work better on modals
-  public reset(){
-      this.hide = true;
+  private reset(){
+    this.hide = !!(this.showScrollPosition || this.showTime);
+  }
+
+  public startTriggers(){
     if(this.showTime){
+      // Hide
+      this.hideAction();
+
+      // Show after specific time
       setTimeout(() => {
         this.hide = false;
+
+        // Hide after specific time
         if(this.hideTime){
           setTimeout(() => {
             this.hide = true;
@@ -35,16 +42,23 @@ export class CallToActionComponent implements OnInit {
         }
 
       }, this.showTime);
+    }else{
+      this.hide = false;
     }
   }
 
-  public hideMe(){
+  public hideAction(){
     this.hide = true;
   }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
-    this.hide = window.scrollY < this.showScrollPosition;
+    if(this.showScrollPosition){
+      var _hide = window.scrollY < this.showScrollPosition;
+      if(_hide != this.hide){
+        this.hide = _hide;
+      }
+    }
   }
 
   public clickCallToAction(){

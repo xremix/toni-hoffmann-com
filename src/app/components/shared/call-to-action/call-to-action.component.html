@@ -1,3 +1,3 @@
-<div class="fixed-bottom text-center call-to-action-container" [ngClass]="{'hidethis': hide}">
-  <a href="/contact/photo-interest" target="_blank" (click)="clickCallToAction()" class="btn btn-primary">{{text}}</a>
+<div class="{{position}} text-center call-to-action-container" [ngClass]="{'hideThis': hide}">
+  <a href="/contact/photo-interest" target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}">{{text}}</a>
 </div>

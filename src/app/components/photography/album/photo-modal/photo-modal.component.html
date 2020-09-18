@@ -6,9 +6,14 @@
 			<img class="d-inline-block point-cursor" alt="{{photo && photo.title}}" data-bind="attr:{src: imageModaleUrl}" src="{{photo && photo.bigurl}}" (click)="close()" (load)="loading=false">
 		</div>
 		<div class="customimagemodal-title">{{photo && photo.title}}</div>
+		<div class="mt-3">
+			<app-call-to-action [text]="'Interest in this picture?'" [style]="'outline-light'" [position]="'d-block'" [showTime]="'2000'" #callToAction></app-call-to-action>
+
+		</div>
+
 	</div>
-	<div class="absolute-top-right m-5 text-right text-white point-cursor huge" (click)="close()">
-		<i class="fas fa-times"></i>
+	<div class="absolute-top-right m-4 text-right text-white point-cursor huge" (click)="close()">
+		<a class="btn btn-outline-light">Close</a>
+		<!-- <i class="fas fa-times"></i> -->
 	</div>
-	<app-call-to-action [showTime]="6000" [text]="'Interest in this picture?'" #callToAction></app-call-to-action>
 </div>

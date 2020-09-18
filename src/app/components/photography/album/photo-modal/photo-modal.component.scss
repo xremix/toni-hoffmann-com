@@ -23,7 +23,8 @@
 		position: absolute;
 		left: 5%;
 		right: 5%;
-		bottom: calc(5% + 40px);
+		// bottom: calc(5% + 40px);
+		bottom: calc(5% + 40px + 40px); // thisis because of the call to action
 		top: 5%;
 		.customimagemodal-imagecontainer{
 

@@ -3,10 +3,9 @@
   <div class="content bg-dark" *ngIf="images && images.length">
     <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" #myGallery></ui-xGallerify>
     <ng-template #imageTemplate let-image="image">
-      <!-- TODO check why you can't open the same image twice -->
-      <div class="xgallerify-container scale-hover-container scale-hover-overflow-hidden" (click)="showPhotoModal(image)">
+      <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
 
-        <img class="xgallerify-img scale-hover-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)">
+        <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)">
         <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
         {{image.title}}
         </div>
@@ -27,4 +26,6 @@
   </div>
   <app-photo-modal #photoModal></app-photo-modal>
 </ng-container>
-<app-call-to-action [showScrollPosition]="callToAction" [text]="'Interest in a picture?'"></app-call-to-action>
+
+<app-call-to-action [showScrollPosition]="callToAction" [text]="'Interest in a collaboration?'" *ngIf="album.id === 'products'"></app-call-to-action>
+<app-call-to-action [showScrollPosition]="callToAction" [text]="'Interest in a picture?'" *ngIf="album.id !== 'products'"></app-call-to-action>
