@@ -1,10 +1,10 @@
 .call-to-action-container{
   z-index: 1998;
   transition: all .5s ease-in-out;
+  opacity: 1;
+  margin-bottom: 90px ;
 
-    opacity: 1;
-    margin-bottom: 70px ;
-  &.hideThis{
+    &.hideThis{
     margin-bottom: -100px ;
     opacity: 0;
   }
