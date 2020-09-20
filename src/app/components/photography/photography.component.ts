@@ -21,6 +21,6 @@ export class PhotographyComponent implements OnInit {
   }
 
   getAlbumUrl(albumId: string){
-    return `photography/${albumId}`;
+    return `/photography/${albumId}`;
   }
 }

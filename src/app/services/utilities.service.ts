@@ -21,6 +21,6 @@ export class UtilitiesService {
   }
 
   public static fillArray(length: number): Array<number>{
-    return Array(length).fill(1, 0, length).map((x,i)=>i)
+    return Array(length).fill(1, 0, length).map((x,i)=>i+1);
   }
 }
