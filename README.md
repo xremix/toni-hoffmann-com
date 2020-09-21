@@ -11,6 +11,7 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 ## To-Do´s
 
 - [ ] Increase banner image quality, based on the browser size
+- [ ] Move hide event for modal from the image to the background
 
 ## Technologies used
 
