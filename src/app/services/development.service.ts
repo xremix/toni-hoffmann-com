@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { OpenSourceProject } from 'src/app/models/open-source-project';
+import { LeisureProject } from 'src/app/models/leisure-project';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DevelopmentService {
 
-  public getLeisureProjects(): Array<any>{
+  public getLeisureProjects(): Array<LeisureProject>{
     return [{
       'title': 'invivo pobs',
       'url': 'http://pobs.agentur-invivo.de',
@@ -30,7 +32,7 @@ export class DevelopmentService {
   ];
 }
 
-public getOpenSourceProjects(): Array<any>{
+public getOpenSourceProjects(): Array<OpenSourceProject>{
   return [
     {
       'title': 'toni-hoffmann.com',

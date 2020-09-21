@@ -3,7 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PhotoService } from 'src/app/services/photo.service';
 import { SeoService } from 'src/app/services/seo.service';
 import { PhotoModalComponent } from './photo-modal/photo-modal.component';
-import { UtilitiesService } from 'src/app/services/utilities.service'
+import { UtilitiesService } from 'src/app/services/utilities.service';
+// import { GalleryImage } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/public-api';
+// import { GalleryImage } from '@xremix/ng-x-gallerify';
+import { Album } from 'src/app/models/album';
 
 @Component({
   selector: 'app-album',
@@ -15,14 +18,12 @@ export class AlbumComponent implements OnInit {
   public title: string;
   public subTitle: string;
   public images: Array<any>;
-  public album: any;
-  private sub: any;
+  public album: Album;
   public modalPhoto: any = null;
   public callToAction = window.screen.height * 2;
 
   private pageSize: number = 21;
   private page: number = 1;
-
 
   public pages: Array<number> = [];
 
@@ -30,18 +31,17 @@ export class AlbumComponent implements OnInit {
 
   constructor(public router: Router, private seoService: SeoService, private photoService: PhotoService, private route: ActivatedRoute) {
     route.params.subscribe(params => {
-    this.createGallery(params);
-  });
+      this.createGallery(params);
+    });
   }
 
   ngOnInit(): void {
-    this.sub = this.route.params.subscribe(params => {
+    this.route.params.subscribe(params => {
       this.createGallery(params);
     });
   }
 
   createGallery(params: any){
-    // TODO Make pages based on 1 instead of 0
       var albumParameter = params['album'];
       this.album = this.photoService.getAlbumMetaData(albumParameter);
       this.seoService.updatePageMetaData(
@@ -53,9 +53,8 @@ export class AlbumComponent implements OnInit {
         this.page = +params['page'];
       }else{
         var url = `/photography/${this.album.id}/1`;
-        
-        this.router.navigate([url], { relativeTo: this.route });
 
+        this.router.navigate([url], { relativeTo: this.route });
       }
 
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
