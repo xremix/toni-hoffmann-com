@@ -84,12 +84,19 @@ a:hover, a:active{
   right: 0px;
   bottom: 0px;
 }
+
 .absolute-top-right{
   position: absolute;
-  left: 0px;
   right: 0px;
   top: 0px;
 }
+
+// .absolute-top{
+//   position: absolute;
+//   left: 0px;
+//   right: 0px;
+//   top: 0px;
+// }
 
 .fixed-bottom{
   position: fixed;
