@@ -1,11 +1,16 @@
 # Toni-Hoffmann.com
 
-Open Source has always a passion, so why not open sourcing my private portfolio website?!
+Open Source has always a passion, so why not open sourcing my private portfolio website.
 
-You can see the results at [toni-hoffmann.com](https://www.toni-hoffmann.com).
+The website is hosted at [toni-hoffmann.com](https://www.toni-hoffmann.com).
+
+The base idea is to have a portfolio, that represents me in different kind of ways. On one site, it is the contents, like the photography, projects and music that I created. But then it's also the minimalistic bright design, the animation contents or the tons of images I fit in on the pages.
 
 ![alt text](src/assets/website-mockup.png)
 
+## To-Do´s
+
+- [ ] Increase banner image quality, based on the browser size
 
 ## Technologies used
 
@@ -15,6 +20,10 @@ You can see the results at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
 Everything else is developed from scratch.
 
+**Branching** should be done like the git flow, with a *master*, *develop* and *feature* branches, while *master* represents the production state of the database.
+
+Depending on the project, my favorite set up is to work with a seperate [terminal](https://www.iterm2.com/) and a nice clean [editor](https://atom.io/), which I both can upgrade with plug ins and adjust to my needs. I also tried to code much of this project by using [GitHub Codespaces](https://github.com/features/codespaces), which was a great success.
+
 ## Setup
 
 - Install [Node.js](https://nodejs.org/en/)
@@ -22,9 +31,11 @@ Everything else is developed from scratch.
 - Clone the Repository via `git clone git@github.com:xremix/toni-hoffmann-com.git`
 - Run `npm i` in your local repository
 
-## Usage
+## Run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Run `ng serve` to get the dev server started
+- Navigate to `http://localhost:4200/`
+- The app will automatically reload if you change any of the source files
 
 ## Deploy
 
@@ -32,3 +43,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - Upload the artifacts in the `dist/toni-hoffmann-com` directory to the webspace
 - Make sure you have rewrite rules set up on the webserver
 - Make sure deploy the api in the folder `/api` on the same level than the angular application. The API is part of a private repository
+
