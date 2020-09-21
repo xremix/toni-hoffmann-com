@@ -1,6 +1,6 @@
 # Toni-Hoffmann.com
 
-Open Source has always a passion, so why not open sourcing my private portfolio website.
+Open Source has always a passion, so why not open sourcing my personal portfolio website.
 
 The website is hosted at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
