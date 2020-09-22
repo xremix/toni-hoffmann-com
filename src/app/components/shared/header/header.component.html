@@ -14,9 +14,9 @@
         <hr class="seperator">
 
         <div class="larger mt-3 d-none d-lg-block">
-          <span style="padding-left: 20px; padding-right: 20px; border-right: 1px solid gray;">Software Developer</span>
-          <span style="padding-left: 20px; padding-right: 20px; border-right: 1px solid gray;">Photographer</span>
-          <span style="padding-left: 20px; padding-right: 20px; ">Musician</span>
+          <span class="px-3 border-right border-gray">Software Developer</span>
+          <span class="px-3 border-right border-gray">Photographer</span>
+          <span class="px-3">Musician</span>
         </div>
         <div class="larger mt-3 d-block d-lg-none">
           <span>Software Developer</span><br/>
@@ -33,10 +33,9 @@
 
 <ng-template [ngIf]="!showDefaultHeader">
 <div class="header">
-  <!-- <div class="navigation-spacer"></div> -->
-  <div style="display:table;position: absolute;z-index: 3; height:100%; width:100%;">
-    <div style="display: table-cell; vertical-align: middle;">
-      <div class="fixed-header-text no-hidden" style="color:white; max-width:100%; background: linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 0.5) 40%,rgba(0,0,0, 0.5) 60%,rgba(0,0,0, 0.0) 100%); text-transform: uppercase;" [style.opacity]="contentOpacity">
+  <div class="header-container-filler">
+    <div class ="header-vertical-center">
+      <div class="fixed-header-text no-hidden text-gradient" [style.opacity]="contentOpacity">
         <div class="p-2">
           <h1 class="p-0">Toni Hoffmann</h1>
           <h2 class="p-0" *ngIf="galleryTitle">{{galleryTitle}}</h2>
