@@ -19,7 +19,7 @@ export class PhotoService {
     photos: []
   },{
     title: 'Winter Outdoors',
-    subTitle: 'Snowy miracles in the cold season',
+    subTitle: 'Cozy Moments in the cold Season',
     id: 'winterlandscapes',
     imageUrl: 'https://farm5.staticflickr.com/4649/39767964544_9ba2c3c3b8_b.jpg',
     photos: []
@@ -37,7 +37,7 @@ export class PhotoService {
     photos: []
   },{
     title: 'Products',
-    subTitle: 'Products that trigger Emotions',
+    subTitle: 'Lifestyle Products that trigger Emotions',
     id: 'products',
     imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg',
     photos: []

@@ -121,3 +121,21 @@
 		font-size: 30px;
 	}
 }
+
+
+.header-container-filler{
+	display:table;
+	position: absolute;
+	z-index: 3;
+	height:100%;
+	width:100%;
+}
+.header-vertical-center{
+	display: table-cell; vertical-align: middle;
+}
+.text-gradient{
+	color:white;
+	max-width:100%;
+	background: linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 0.5) 40%,rgba(0,0,0, 0.5) 60%,rgba(0,0,0, 0.0) 100%);
+	text-transform: uppercase;
+}

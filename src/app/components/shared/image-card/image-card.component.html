@@ -1,4 +1,4 @@
-<div class="text-center" [ngClass]="{'hover-container': hoverAnimation, 'hover-scale-child': hoverAnimation}" style="position:relative;">
+<div class="text-center relative" [ngClass]="{'hover-container': hoverAnimation, 'hover-scale-child': hoverAnimation}">
   <a [attr.href]="href" target="{{target}}">
 
     <img src="{{imageUrl}}" class="w-100" alt="{{description}}" />
@@ -8,7 +8,7 @@
     <div class="text-white absolute-{{titlePosition}}" [ngClass]="{'bg-gradient-background': textBackground}" *ngIf="title || description">
       <div class="hover-show-child mb-3 px-2" [innerHtml]="description"></div>
       <!-- TODO check if this should always show on mobile -->
-      <div class="larger mb-2" [ngClass]="{'hover-show-child': hideBoxTitle}">{{title}}</div>
+      <div class="larger mb-3" [ngClass]="{'hover-show-child': hideBoxTitle}">{{title}}</div>
     </div>
 
   </a>
