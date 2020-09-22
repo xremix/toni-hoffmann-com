@@ -3,6 +3,9 @@ import { SeoService } from 'src/app/services/seo.service';
 import { UtilitiesService } from 'src/app/services/utilities.service'
 import { isDevMode } from '@angular/core';
 import { DevelopmentService } from 'src/app/services/development.service';
+import { OpenSourceProject } from 'src/app/models/open-source-project';
+import { LeisureProject } from 'src/app/models/leisure-project';
+
 
 @Component({
   selector: 'app-development',
@@ -11,8 +14,8 @@ import { DevelopmentService } from 'src/app/services/development.service';
 export class DevelopmentComponent implements OnInit {
 
   public showPreviewFeatures: boolean = isDevMode();
-  public openSourceProjects: Array<any> = [];
-  public leisureProjects: Array<any> = [];
+  public openSourceProjects: Array<OpenSourceProject> = [];
+  public leisureProjects: Array<LeisureProject> = [];
 
   constructor(private seoService: SeoService, private developmentService: DevelopmentService) {
     this.seoService.updatePageMetaData(

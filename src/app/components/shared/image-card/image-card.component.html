@@ -5,7 +5,7 @@
 
     <div class="bg-black-05 absolute-fill hover-show-child" *ngIf="hoverAnimation"></div>
 
-    <div class="text-white absolute-bottom" [ngClass]="{'bg-gradient-background': textBackground}" *ngIf="title || description">
+    <div class="text-white absolute-{{titlePosition}}" [ngClass]="{'bg-gradient-background': textBackground}" *ngIf="title || description">
       <div class="hover-show-child mb-3 px-2" [innerHtml]="description"></div>
       <!-- TODO check if this should always show on mobile -->
       <div class="larger mb-2" [ngClass]="{'hover-show-child': hideBoxTitle}">{{title}}</div>
