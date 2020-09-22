@@ -27,6 +27,7 @@ import { ImageCardComponent } from './components/shared/image-card/image-card.co
 import { ContactComponent } from './components/contact/contact.component';
 import { SpinnerComponent } from './components/shared/spinner/spinner.component';
 import { CallToActionComponent } from './components/shared/call-to-action/call-to-action.component';
+import { CookieBannerComponent } from './components/shared/cookie-banner/cookie-banner.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CallToActionComponent } from './components/shared/call-to-action/call-t
     ImageCardComponent,
     ContactComponent,
     SpinnerComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    CookieBannerComponent
   ],
   imports: [
     BrowserModule,
