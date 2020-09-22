@@ -14,6 +14,7 @@ export class ImageCardComponent implements OnInit {
   @Input() hideBoxTitle: boolean = false;
   @Input() hoverAnimation: boolean = true;
   @Input() textBackground: boolean = true;
+  @Input() titlePosition: string = "bottom";
 
   constructor() { }
 
