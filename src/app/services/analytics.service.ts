@@ -28,7 +28,6 @@ export class AnalyticsService {
 
     public init(event: any){
       if(this.cookieService.get('didOptOut') !== 'true'){
-
         gtag('config', environment.googleAnalyticsId,
         {
           'page_path': event.urlAfterRedirects
