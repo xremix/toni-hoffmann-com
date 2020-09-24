@@ -1,0 +1,16 @@
+<div class="fixed-bottom bg-white p-3 text-left" *ngIf="show">
+  <div class="container">
+
+    <div class="p-2">
+      This site uses cookies to improve the experience of the website. Please check the <a routerLink="/data-privacy">Data-Privacy</a> section for more information.
+      <a class="btn btn-outline-primary float-right" (click)="optIn()">
+        accept
+      </a>
+    </div>
+
+    <a class="absolute-top-right mr-3 mt-3 large" (click)="optOut()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+
+</div>

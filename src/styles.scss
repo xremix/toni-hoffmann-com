@@ -70,12 +70,25 @@ a:hover, a:active{
 
 // Positioning
 
+.relative{
+	position: relative;
+}
+
 .absolute-fill{
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   top: 0;
+}
+
+.absolute-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 .absolute-bottom{
@@ -113,6 +126,10 @@ a:hover, a:active{
 	background-color: rgba(0,0,0,0.5);
 }
 
+.border-gray{
+	border-color: gray;
+}
+
 .opacity-1{
   opacity: 1;
 }
@@ -137,6 +154,10 @@ a:hover, a:active{
 
 .smaller{
   font-size: 0.9em;
+}
+
+.container-small{
+	max-width: 600px;
 }
 
 //  Scale on hover

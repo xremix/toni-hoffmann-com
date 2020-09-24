@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { isDevMode } from '@angular/core';
+import { Album } from 'src/app/models/album';
+import { Observable } from 'rxjs';
 
 
 
@@ -9,36 +11,41 @@ import { isDevMode } from '@angular/core';
 })
 export class PhotoService {
 
-  private albums: Array<any> = [{
+  private albums: Array<Album> = [{
     title: 'Landscapes',
     subTitle: 'Bavarian Alps, Austria, Italy and Portugal',
     id: 'landscapes',
-    imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg'
+    imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg',
+    photos: []
   },{
     title: 'Winter Outdoors',
-    subTitle: 'Snowy miracles in the cold season',
+    subTitle: 'Cozy Moments in the cold Season',
     id: 'winterlandscapes',
-    imageUrl: 'https://farm5.staticflickr.com/4649/39767964544_9ba2c3c3b8_b.jpg'
+    imageUrl: 'https://farm5.staticflickr.com/4649/39767964544_9ba2c3c3b8_b.jpg',
+    photos: []
   },{
     title: 'Cityscapes',
     subTitle: 'Big City Lights, Urbans and Mountan Villages',
     id: 'cityscapes',
-    imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg'
+    imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg',
+    photos: []
   },{
     title: 'Urban Subways',
     subTitle: 'Places that connect People',
     id: 'subways',
-    imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg'
+    imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg',
+    photos: []
   },{
     title: 'Products',
-    subTitle: 'Products that trigger Emotions',
+    subTitle: 'Lifestyle Products that trigger Emotions',
     id: 'products',
-    imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg'
+    imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg',
+    photos: []
   }];
 
   constructor(private http: HttpClient) { }
 
-  public getAlbumOverview(): Array<any> {
+  public getAlbumOverview(): Array<Album> {
     return this.albums;
   }
 
@@ -47,7 +54,7 @@ export class PhotoService {
   }
 
   // TODO use the model instead of any
-  public getPhotosFromAlbum(album: string): any {
+  public getPhotosFromAlbum(album: string): Observable<any> {
     var url = isDevMode() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
 
     return this.http.get(url);

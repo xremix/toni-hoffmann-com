@@ -4,13 +4,16 @@
   <div class="container" *ngIf="!action || (action != 'photo-interest') ">
     <h1>Contact</h1>
     <p>I'm on social media - feel free to reach out.</p>
-    <div class="d-flex justify-content-around mt-5 mx-auto" style="max-width: 600px;">
-      <a href="mailto:kontakt@toni-hoffmann.com" class="btn btn-outline-primary">
+    <div class="d-flex justify-content-around mt-5 mx-auto container-small">
+      <ng-template #popContent><a href="mailto:kontakt@toni-hoffmann.com">kontakt@toni-hoffmann.com</a></ng-template>
+      <a class="btn btn-outline-primary" [ngbPopover]="popContent" triggers="click" [autoClose]="false">
           <i class="fas fa-envelope"></i> E-Mail
       </a>
+
       <a href="https://www.xing.com/profile/Toni_Hoffmann7/" target="_blank" class="btn btn-outline-primary">
           <i class="fab fa-xing"></i> Xing
       </a>
+
       <a href="https://www.linkedin.com/in/toni-hoffmann-munich/" target="_blank" class="btn btn-outline-primary">
           <i class="fab fa-linkedin"></i> LinkedIn
       </a>

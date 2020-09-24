@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { environment } from 'src/environments/environment';
+
 
 declare let gtag: Function;
 
@@ -7,7 +10,7 @@ declare let gtag: Function;
 })
 export class AnalyticsService {
 
-  constructor() { }
+  constructor(private cookieService: CookieService) { }
 
   public eventEmitter(
     eventName: string,
@@ -24,10 +27,11 @@ export class AnalyticsService {
     }
 
     public init(event: any){
-      gtag('config', 'UA-40522413-1',
-      {
-        'page_path': event.urlAfterRedirects
+      if(this.cookieService.get('didOptOut') !== 'true'){
+        gtag('config', environment.googleAnalyticsId,
+        {
+          'page_path': event.urlAfterRedirects
+        });
       }
-    );
+    }
   }
-}

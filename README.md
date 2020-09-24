@@ -44,4 +44,3 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 - Upload the artifacts in the `dist/toni-hoffmann-com` directory to the webspace
 - Make sure you have rewrite rules set up on the webserver
 - Make sure deploy the api in the folder `/api` on the same level than the angular application. The API is part of a private repository
-
