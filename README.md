@@ -11,7 +11,7 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 ## To-Do´s
 
 - [ ] Increase banner image quality, based on the browser size
-- [ ] Move hide event for modal from the image to the background
+- [ ] Improve user experience for contact via mail
 
 ## Technologies used
 
@@ -19,7 +19,7 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 - **[Bootstrap](https://getbootstrap.com/)** is used for the layout, buttons and navigation
 - **[ng-xGallerify](https://github.com/xremix/ng-xGallerify)** is my gallery component that hosts the photography portfolio
 
-Everything else is developed from scratch.
+Everything else is developed from scratch. The languages that have been used are [TypeScript](https://www.typescriptlang.org/), [SCSS](https://sass-lang.com/) and HTML.
 
 **Branching** should be done like the git flow, with a *master*, *develop* and *feature* branches, while *master* represents the production state of the database.
 
