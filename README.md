@@ -1,6 +1,6 @@
 # Toni-Hoffmann.com
 
-Open Source has always a passion, so why not open sourcing my private portfolio website.
+Open Source has always a passion, so why not open sourcing my personal portfolio website.
 
 The website is hosted at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
@@ -11,6 +11,7 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 ## To-Do´s
 
 - [ ] Increase banner image quality, based on the browser size
+- [ ] Move hide event for modal from the image to the background
 
 ## Technologies used
 
