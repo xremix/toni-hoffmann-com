@@ -54,7 +54,7 @@ import { CookieService } from 'ngx-cookie-service';
     CookieBannerComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     HttpClientModule,

@@ -3,7 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
 
 
-declare let gtag: Function;
+// declare let gtag: Function;
 
 @Injectable({
   providedIn: 'root'
@@ -18,20 +18,20 @@ export class AnalyticsService {
     eventAction: string,
     eventLabel: string = null,
     eventValue: number = null ){
-      gtag('event', eventName, {
-        eventCategory: eventCategory,
-        eventLabel: eventLabel,
-        eventAction: eventAction,
-        eventValue: eventValue
-      });
+      // gtag('event', eventName, {
+      //   eventCategory: eventCategory,
+      //   eventLabel: eventLabel,
+      //   eventAction: eventAction,
+      //   eventValue: eventValue
+      // });
     }
 
     public init(event: any){
       if(this.cookieService.get('didOptOut') !== 'true'){
-        gtag('config', environment.googleAnalyticsId,
-        {
-          'page_path': event.urlAfterRedirects
-        });
+        // gtag('config', environment.googleAnalyticsId,
+        // {
+        //   'page_path': event.urlAfterRedirects
+        // });
       }
     }
   }
