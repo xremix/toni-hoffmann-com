@@ -24,6 +24,17 @@
         <app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.jpg'" [hoverAnimation]="false"></app-image-card>
       </div>
     </div>
+    <!-- <div class="row large">
+      <div class="col-md-4" (click)="open($event, content, 'native')">
+        <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/native-mobile-apps-banner.jpg'" [href]="'#'"></app-image-card>
+      </div>
+      <div class="col-md-4" (click)="open($event, content, 'business')">
+        <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'assets/business-web-apps-banner.jpg'" [href]="'#'"></app-image-card>
+      </div>
+      <div class="col-md-4" (click)="open($event, content, 'ux')">
+        <app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.jpg'" [href]="'#'"></app-image-card>
+      </div>
+    </div> -->
 
     <!-- Designs -->
 
@@ -87,3 +98,18 @@
 
   </div>
 </div>
+
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header border-0">
+    <h4 class="modal-title" id="modal-basic-title">{{modalTitle}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{modalText}}
+  </div>
+</ng-template>
