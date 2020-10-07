@@ -114,9 +114,9 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "static-app:build:production",
-            "serverTarget": "static-app:server:production",
-            "routes": ["/"] // <-- Here you should put the routes you want to prender
+            "browserTarget": "toni-hoffmann-com:build:production",
+            "serverTarget": "toni-hoffmann-com:server:production",
+            "routes": ["/", "/photography/landscapes/1"] // <-- Here you should put the routes you want to prender
           },
           "configurations": {
             "production": {}
