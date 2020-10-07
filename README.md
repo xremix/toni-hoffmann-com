@@ -1,6 +1,6 @@
 # Toni-Hoffmann.com
 
-Open Source has always a passion, so why not open sourcing my private portfolio website.
+Open Source has always a passion, so why not open sourcing my personal portfolio website.
 
 The website is hosted at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
@@ -11,6 +11,7 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 ## To-Do´s
 
 - [ ] Increase banner image quality, based on the browser size
+- [ ] Improve user experience for contact via mail
 
 ## Technologies used
 
@@ -18,7 +19,7 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 - **[Bootstrap](https://getbootstrap.com/)** is used for the layout, buttons and navigation
 - **[ng-xGallerify](https://github.com/xremix/ng-xGallerify)** is my gallery component that hosts the photography portfolio
 
-Everything else is developed from scratch.
+Everything else is developed from scratch. The languages that have been used are [TypeScript](https://www.typescriptlang.org/), [SCSS](https://sass-lang.com/) and HTML.
 
 **Branching** should be done like the git flow, with a *master*, *develop* and *feature* branches, while *master* represents the production state of the database.
 
@@ -39,7 +40,7 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 
 ## Deploy
 
-- Run `ng build --prod` to build the project
+- Run `npm run prerender` to [prerender](https://dev.to/michaeljota/how-to-prerender-your-angular-app-using-angular-universal-4g0b) the project
 - Upload the artifacts in the `dist/toni-hoffmann-com` directory to the webspace
 - Make sure you have rewrite rules set up on the webserver
 - Make sure deploy the api in the folder `/api` on the same level than the angular application. The API is part of a private repository

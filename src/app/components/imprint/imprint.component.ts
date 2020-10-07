@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImprintComponent implements OnInit {
 
-  constructor() { }
+  public currentYear: number = 2020;
+
+  constructor() {
+    this.currentYear = new Date().getFullYear();
+  }
 
   ngOnInit(): void {
   }

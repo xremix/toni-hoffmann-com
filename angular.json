@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/toni-hoffmann-com",
+            "outputPath": "dist/toni-hoffmann-com/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -103,11 +103,23 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "e2e/tsconfig.json",
+              "tsconfig.server.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "toni-hoffmann-com:build:production",
+            "serverTarget": "toni-hoffmann-com:server:production",
+            "routes": ["/", "/photography/landscapes/1"] // <-- Here you should put the routes you want to prender
+          },
+          "configurations": {
+            "production": {}
           }
         },
         "e2e": {
@@ -120,6 +132,52 @@
             "production": {
               "devServerTarget": "toni-hoffmann-com:serve:production"
             }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/toni-hoffmann-com/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "toni-hoffmann-com:build",
+            "serverTarget": "toni-hoffmann-com:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "toni-hoffmann-com:build:production",
+              "serverTarget": "toni-hoffmann-com:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "toni-hoffmann-com:build:production",
+            "serverTarget": "toni-hoffmann-com:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }

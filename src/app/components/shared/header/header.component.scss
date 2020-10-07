@@ -96,7 +96,7 @@
 	hr{
 		color:#fff;
 		// box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-		padding: 0px 4px;
+		padding: 0px 4px !important;
 		@media(min-width: $screen-sm-min) {
 			padding: inherit;
 		}
@@ -138,4 +138,13 @@
 	max-width:100%;
 	background: linear-gradient(to right, rgba(0,0,0, 0) 0%,rgba(0,0,0, 0.5) 40%,rgba(0,0,0, 0.5) 60%,rgba(0,0,0, 0.0) 100%);
 	text-transform: uppercase;
+}
+
+.bg-lg-wallpapergray{
+	background-color: rgba(255, 255, 255, 0.95);
+}
+@media(min-width: $screen-sm-min) {
+	.bg-lg-wallpapergray{
+		background-color: initial;
+	}
 }
