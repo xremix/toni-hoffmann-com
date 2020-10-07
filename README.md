@@ -40,8 +40,7 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 
 ## Deploy
 
-- Run `npm run prerender
-` to [prerender](https://dev.to/michaeljota/how-to-prerender-your-angular-app-using-angular-universal-4g0b) the project
+- Run `npm run prerender` to [prerender](https://dev.to/michaeljota/how-to-prerender-your-angular-app-using-angular-universal-4g0b) the project
 - Upload the artifacts in the `dist/toni-hoffmann-com` directory to the webspace
 - Make sure you have rewrite rules set up on the webserver
 - Make sure deploy the api in the folder `/api` on the same level than the angular application. The API is part of a private repository
