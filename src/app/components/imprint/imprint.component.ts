@@ -15,7 +15,7 @@ export class ImprintComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updatePageMetaData(
-      `Imprint - Toni Hoffmann`,
+      `Imprint`,
       'Imprint on the use of the portfolio website of Toni Hoffmann'
     );
   }

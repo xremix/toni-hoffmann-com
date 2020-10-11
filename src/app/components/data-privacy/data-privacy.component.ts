@@ -11,7 +11,7 @@ export class DataPrivacyComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updatePageMetaData(
-      `Data Privacy - Toni Hoffmann`,
+      `Data Privacy`,
       'Privacy policy on the use of the portfolio website of Toni Hoffmann'
     );
   }
