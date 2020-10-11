@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics.service';
+import { UtilitiesService } from 'src/app/services/utilities.service';
 
 @Component({
   selector: 'app-call-to-action',
@@ -18,7 +19,7 @@ export class CallToActionComponent implements OnInit {
   private showTimerAction: any;
   private hideTimerAction: any;
 
-  constructor(public analyaticsService: AnalyticsService) { }
+  constructor(public analyaticsService: AnalyticsService, private utilitiesService: UtilitiesService) { }
 
   ngOnInit(): void {
     this.reset();
@@ -60,12 +61,15 @@ export class CallToActionComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
-    if(this.showScrollPosition){
-      var _hide = window.scrollY < this.showScrollPosition;
-      if(_hide != this.hide){
-        this.hide = _hide;
+    if(this.utilitiesService.isBrowser()){
+      if(this.showScrollPosition){
+        var _hide = window.scrollY < this.showScrollPosition;
+        if(_hide != this.hide){
+          this.hide = _hide;
+        }
       }
     }
+
   }
 
   public clickCallToAction(){
