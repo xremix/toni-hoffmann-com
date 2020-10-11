@@ -20,7 +20,8 @@ export class AlbumComponent implements OnInit {
   public images: Array<any>;
   public album: Album;
   public modalPhoto: any = null;
-  public callToAction = window.screen.height * 2;
+  public callToAction = 999999;//get's set in constructor
+  isSeo
 
   private pageSize: number = 21;
   private page: number = 1;
@@ -29,7 +30,18 @@ export class AlbumComponent implements OnInit {
 
   @ViewChild('photoModal') photoModal: PhotoModalComponent;
 
-  constructor(public router: Router, private seoService: SeoService, private photoService: PhotoService, private route: ActivatedRoute) {
+  constructor(public router: Router,
+    private seoService: SeoService,
+    private photoService: PhotoService,
+    private route: ActivatedRoute,
+    private utilitiesService: UtilitiesService) {
+    this.isSeo = !this.utilitiesService.isBrowser();
+    this.isSeo = true;
+
+    if(!this.isSeo){
+      this.callToAction = window.screen.height * 2;
+    }
+
     route.params.subscribe(params => {
       this.createGallery(params);
     });

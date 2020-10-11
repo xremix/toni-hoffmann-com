@@ -1,11 +1,16 @@
-import { Injectable } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilitiesService {
 
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
+  public isBrowser(){
+    return isPlatformBrowser(this.platformId);
+  }
 
   public static chunkArray(myArray: Array<any>, chunk_size: number): Array<any>{
     var index = 0;

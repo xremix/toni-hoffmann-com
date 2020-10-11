@@ -2,6 +2,12 @@
   <app-header [galleryTitle]="album.title" [gallerySubtitle]="album.subTitle" [galleryImage]="album.imageUrl"></app-header>
   <div class="content bg-dark" *ngIf="images && images.length">
     <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" #myGallery></ui-xGallerify>
+    <div *ngIf="isSeo">
+      <figure *ngFor="let i of images">
+        <img src="{{i.bigurl}}" alt="{{i.title}} by Toni Hoffmann">
+          <figcaption>{{i.title}} by Toni Hoffmann</figcaption>
+      </figure>
+    </div>
     <ng-template #imageTemplate let-image="image">
       <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
 
