@@ -36,7 +36,6 @@ export class AlbumComponent implements OnInit {
     private route: ActivatedRoute,
     private utilitiesService: UtilitiesService) {
     this.isSeo = !this.utilitiesService.isBrowser();
-    this.isSeo = true;
 
     if(!this.isSeo){
       this.callToAction = window.screen.height * 2;
