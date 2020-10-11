@@ -6,7 +6,7 @@
 
     <ng-template #imageTemplate let-image="image">
       <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
-        <figure>
+        <figure class="m-0 p-0">
           <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" />
           <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
             <figcaption>{{image.title}}</figcaption>
