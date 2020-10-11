@@ -11,6 +11,8 @@ import { ImprintComponent } from './components/imprint/imprint.component';
 import { AlbumComponent } from './components/photography/album/album.component';
 
 const routes: Routes = [
+  { path: 'cityscapes', redirectTo: '/photography/cityscapes/1'}, // legacy
+  { path: 'landscapes', redirectTo: '/photography/landscapes/1'}, // legacy
   { path: 'contact', component: ContactComponent },
   { path: 'contact/:action', component: ContactComponent },
   { path: 'development', component: DevelopmentComponent },
@@ -22,8 +24,8 @@ const routes: Routes = [
   { path: 'imprint', component: ImprintComponent },
   { path: 'data-privacy', component: DataPrivacyComponent },
   { path: '',   component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,
-  {path: '404', component: PageNotFoundComponent},
-  {path: '**', redirectTo: '/404'}
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({

@@ -21,7 +21,6 @@ export class AlbumComponent implements OnInit {
   public album: Album;
   public modalPhoto: any = null;
   public callToAction = 999999;//get's set in constructor
-  isSeo
 
   private pageSize: number = 21;
   private page: number = 1;
@@ -35,9 +34,8 @@ export class AlbumComponent implements OnInit {
     private photoService: PhotoService,
     private route: ActivatedRoute,
     private utilitiesService: UtilitiesService) {
-    this.isSeo = !this.utilitiesService.isBrowser();
 
-    if(!this.isSeo){
+    if(this.utilitiesService.isBrowser()){
       this.callToAction = window.screen.height * 2;
     }
 
@@ -87,10 +85,7 @@ export class AlbumComponent implements OnInit {
         this.album.photos = pages[this.page - 1];
 
         this.images = this.album.photos;
-        console.log("create gallery");
-
       });
-
   }
 
   showPhotoModal(photo: any){

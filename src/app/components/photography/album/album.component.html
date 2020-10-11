@@ -1,22 +1,18 @@
 <ng-container *ngIf="album">
   <app-header [galleryTitle]="album.title" [gallerySubtitle]="album.subTitle" [galleryImage]="album.imageUrl"></app-header>
   <div class="content bg-dark" *ngIf="images && images.length">
+
     <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" #myGallery></ui-xGallerify>
-    <div *ngIf="isSeo">
-      <figure *ngFor="let i of images">
-        <img src="{{i.bigurl}}" alt="{{i.title}} by Toni Hoffmann">
-          <figcaption>{{i.title}} by Toni Hoffmann</figcaption>
-      </figure>
-    </div>
+
     <ng-template #imageTemplate let-image="image">
       <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
-
-        <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" />
-        <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
-        {{image.title}}
-        </div>
+        <figure>
+          <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" />
+          <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
+            <figcaption>{{image.title}}</figcaption>
+          </div>
+        </figure>
       </div>
-
     </ng-template>
 
     <div class="text-center p-4" *ngIf="pages && pages.length && pages.length > 1">
