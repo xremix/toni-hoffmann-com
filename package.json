@@ -11,7 +11,7 @@
     "dev:ssr": "ng run toni-hoffmann-com:serve-ssr",
     "serve:ssr": "node dist/toni-hoffmann-com/server/main.js",
     "build:ssr": "ng build --prod && ng run toni-hoffmann-com:server:production",
-    "prerender": "ng run toni-hoffmann-com:prerender"
+    "prerender": "node generate-sitemap.js && ng run toni-hoffmann-com:prerender --routesFile routes.txt"
   },
   "private": true,
   "dependencies": {

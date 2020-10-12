@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   @Input() galleryImage: string;
   @Input() showDefaultHeader: boolean = false;
   @Input() coverRight: boolean = false;
+  @Input() asHeader: boolean = false;
 
   constructor() { }
 
