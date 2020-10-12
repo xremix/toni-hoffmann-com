@@ -9,7 +9,7 @@ export class HomeComponent {
 
   constructor(private seoService: SeoService) {
     this.seoService.updatePageMetaData(
-      'Software Developer, Photographer, Musician',
+      'Software Developer, Photographer, Musician Portfolio',
       `The official website of Toni Hoffmann from Munich. Toni Hoffmann is a Software Developer, Photographer, Musician. See Open Source Projects, Photos and free Music`
     );
   }
