@@ -36,7 +36,7 @@ export class AlbumComponent implements OnInit {
     private utilitiesService: UtilitiesService) {
 
     if(this.utilitiesService.isBrowser()){
-      this.callToAction = window.screen.height * 2;
+      this.callToAction = window.screen.height * 1.7;
     }
 
     route.params.subscribe(params => {
