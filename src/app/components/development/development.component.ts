@@ -16,7 +16,6 @@ export class DevelopmentComponent implements OnInit {
 
   public showPreviewFeatures: boolean = isDevMode();
   public openSourceProjects: Array<OpenSourceProject> = [];
-  public leisureProjects: Array<LeisureProject> = [];
   public modalTitle: string;
   public modalText: string;
 
@@ -28,7 +27,6 @@ export class DevelopmentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.leisureProjects = this.developmentService.getLeisureProjects()
     this.openSourceProjects = this.developmentService.getOpenSourceProjects();
   }
 

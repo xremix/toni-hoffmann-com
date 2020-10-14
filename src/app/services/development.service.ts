@@ -7,31 +7,6 @@ import { LeisureProject } from 'src/app/models/leisure-project';
 })
 export class DevelopmentService {
 
-  public getLeisureProjects(): Array<LeisureProject>{
-    return [{
-      'title': 'invivo pobs',
-      'url': 'http://pobs.agentur-invivo.de',
-      'img':  'assets/web-projects/static-invivo-pobs.png',
-      'imgAlt':  'Event Management System of the Company Invivo, Developed by Toni Hoffmann',
-      'description': 'Development of the <b>p</b>romotion <b>o</b>nline <b>b</b>ooking <b>s</b>ystem for the promotion agency invivo. A custom CMS and EMS, build from scratch.'
-    },
-    {
-      'title': 'KFZ-Sachverständiger F. S. Hoffmann',
-      'url': 'https://www.fshoffmann.de',
-      'img':  'assets/web-projects/static-fshoffmann.png',
-      'imgAlt':  'Company Website of the KFZ-Sachverständiger F. S. Hoffmann, Developed by Toni Hoffmann',
-      'description': 'Website for the motor vehicle expert Felix Hoffmann'
-    },
-    {
-      'title': 'Kreuzfahrer Gruppe',
-      'url': 'http://www.kreuzfahrer-gruppe.de',
-      'img':  'assets/web-projects/static-kreuzfahrer.png',
-      'imgAlt':  'Website of the medieval group Kreuzfahrer Gruppe, Developed by Toni Hoffmann',
-      'description': 'Website of the medieval group Kreuzfahrer from Dachau, that acts on the famous Kaltenberger Rittertunier'
-    }
-  ];
-}
-
 public getOpenSourceProjects(): Array<OpenSourceProject>{
   return [
     {
