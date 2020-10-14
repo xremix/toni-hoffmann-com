@@ -3,6 +3,9 @@
 </div>
 
 
+<div class="absolute-fill bg-black-05 fade-in" style="z-index: 2; position: fixed;" [ngClass]="{'showfade': contentVisible, 'hidefade': !contentVisible}" (click)="hideContent()">
+
+</div>
 
 <div class="fixed-bottom bg-white text-center pb-5 fade-bottom-in" [ngClass]="{'show': contentVisible}" style="z-index:99999999999">
   <a class="absolute-top-right mr-3 mt-3 large" (click)="hideContent()">

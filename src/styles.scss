@@ -133,6 +133,19 @@ b{
   }
 }
 
+.fade-in{
+  transition: all .7s ease-in-out;
+
+	&.hidefade{
+  visibility: hidden;
+		opacity: 0;
+  }
+	&.showfade{
+    visibility: visible;
+		opacity: 1;
+  }
+}
+
 
 .bg-gradient-background{
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5) 60%);
