@@ -1,3 +1,20 @@
 <div class="{{position}} text-center call-to-action-container" [ngClass]="{'hideThis': hide}">
-  <a routerLink="/contact/photo-interest" target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}">{{text}}</a>
+  <a target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}">{{text}}</a>
+</div>
+
+
+
+<div class="fixed-bottom bg-white text-center pb-5 fade-bottom-in" [ngClass]="{'show': contentVisible}" style="z-index:99999999999">
+  <a class="absolute-top-right mr-3 mt-3 large" (click)="hideContent()">
+    <i class="fas fa-times"></i>
+  </a>
+  <div class="container">
+    <h1>Interest in a Picture?</h1>
+    <p>I'm glad you enjoy my photography. Many of the photos <b>can be purchased</b>, so feel free to reach out to me. The portfolio is just a reference and usually I have many more perspectives, angles and different light conditions of these shots.</p>
+
+    <p>You can also contact me for <b>collaborations</b> or <b>private shootings</b>.</p>
+    <ng-template #popContent><a>kontakt@toni-hoffmann.com</a></ng-template>
+    <a class="btn btn-outline-primary btn-lg mt-5" [ngbPopover]="popContent" href="mailto:kontakt@toni-hoffmann.com" [autoClose]="false" triggers="manual" #p="ngbPopover" (mouseover)="p.open()"><i class="fas fa-envelope"></i> Contact Me</a>
+
+  </div>
 </div>

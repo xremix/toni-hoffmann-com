@@ -8,14 +8,9 @@ import { SeoService } from 'src/app/services/seo.service';
 })
 export class ContactComponent implements OnInit {
 
-  public action: string;
-
-  constructor(private route: ActivatedRoute, private seoService: SeoService) { }
+  constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.action = params['action'];
-    });
     this.seoService.updatePageMetaData(
       `Contact Toni Hoffmann`,
       'Contact Toni Hoffmann from Munich via E-Mail or Social media like LinkedIn or Xing'

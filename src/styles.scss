@@ -123,6 +123,17 @@ b{
   bottom: 0;
 }
 
+.fade-bottom-in{
+  bottom: -600px;
+  transition: all .7s ease-in-out;
+  visibility: hidden;
+  &.show{
+    bottom: 0px;
+    visibility: visible;
+  }
+}
+
+
 .bg-gradient-background{
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5) 60%);
 }

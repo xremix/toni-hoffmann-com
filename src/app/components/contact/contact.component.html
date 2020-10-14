@@ -1,12 +1,12 @@
 <app-header [showDefaultHeader]="true"></app-header>
 <div class="content py-5 text-center">
 
-  <div class="container" *ngIf="!action || (action != 'photo-interest') ">
+  <div class="container">
     <h1>Contact</h1>
     <p>I'm on social media - feel free to reach out.</p>
     <div class="d-flex justify-content-around mt-5 mx-auto container-small">
-      <ng-template #popContent><a href="mailto:kontakt@toni-hoffmann.com">kontakt@toni-hoffmann.com</a></ng-template>
-      <a class="btn btn-outline-primary" [ngbPopover]="popContent" triggers="click" [autoClose]="false">
+      <ng-template #popContent><a>kontakt@toni-hoffmann.com</a></ng-template>
+      <a class="btn btn-outline-primary" [ngbPopover]="popContent" href="mailto:kontakt@toni-hoffmann.com" [autoClose]="false" triggers="manual" #p="ngbPopover" (mouseover)="p.open()">
           <i class="fas fa-envelope"></i> E-Mail
       </a>
 
@@ -20,12 +20,5 @@
     </div>
   </div>
 
-  <div class="container" *ngIf="action == 'photo-interest'">
-    <h1>Interest in a Picture?</h1>
-    <p>I'm glad you enjoy my photography. Many of the photos <b>can be purchased</b>, so feel free to reach out to me. The portfolio is just a reference and usually I have many more perspectives, angles and different light conditions of these shots.</p>
-
-    <p>You can also contact me for <b>collaborations</b> or <b>private shootings</b>.</p>
-    <a href="mailto:kontakt@toni-hoffmann.com" class="btn btn-outline-primary btn-lg mt-4"><i class="fas fa-envelope"></i> Contact Me</a>
-  </div>
 
 </div>

@@ -19,6 +19,8 @@ export class CallToActionComponent implements OnInit {
   private showTimerAction: any;
   private hideTimerAction: any;
 
+  public contentVisible: boolean = false;
+
   constructor(public analyaticsService: AnalyticsService, private utilitiesService: UtilitiesService) { }
 
   ngOnInit(): void {
@@ -73,7 +75,15 @@ export class CallToActionComponent implements OnInit {
   }
 
   public clickCallToAction(){
+    this.showContent();
     this.analyaticsService.eventEmitter("button-click", "Album", "call-to-action", "click", 10);
+  }
+
+  public showContent(){
+    this.contentVisible = true;
+  }
+  public hideContent(){
+    this.contentVisible = false;
   }
 
 }
