@@ -15,9 +15,12 @@ export class CallToActionComponent implements OnInit {
   @Input() public text: string;
   @Input() public style: string = 'primary';
   @Input() public position: string = 'fixed-bottom';
+  @Input() public href: string;
 
   private showTimerAction: any;
   private hideTimerAction: any;
+
+  public contentVisible: boolean = false;
 
   constructor(public analyaticsService: AnalyticsService, private utilitiesService: UtilitiesService) { }
 
@@ -73,7 +76,15 @@ export class CallToActionComponent implements OnInit {
   }
 
   public clickCallToAction(){
+    this.showContent();
     this.analyaticsService.eventEmitter("button-click", "Album", "call-to-action", "click", 10);
+  }
+
+  public showContent(){
+    this.contentVisible = true;
+  }
+  public hideContent(){
+    this.contentVisible = false;
   }
 
 }

@@ -36,7 +36,7 @@ export class AlbumComponent implements OnInit {
     private utilitiesService: UtilitiesService) {
 
     if(this.utilitiesService.isBrowser()){
-      this.callToAction = window.screen.height * 2;
+      this.callToAction = window.screen.height * 1.7;
     }
 
     route.params.subscribe(params => {
@@ -55,7 +55,7 @@ export class AlbumComponent implements OnInit {
       this.album = this.photoService.getAlbumMetaData(albumParameter);
       this.seoService.updatePageMetaData(
         `${this.album.title} Photography by Toni Hoffmann`,
-        this.album.subTitle
+        this.album.subTitle // TODO make this more meaningful / longer?
       );
 
       if(params['page']){

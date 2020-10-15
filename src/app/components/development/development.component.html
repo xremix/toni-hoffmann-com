@@ -1,8 +1,7 @@
 <app-header [galleryTitle]="'Software Developer'" [galleryImage]="'https://farm6.staticflickr.com/5610/30981074620_4ce0f6476d_b.jpg'"></app-header>
-
 <div class="content">
   <div class="container text-center pt-5 ">
-    <h1>Software Development Portfolio</h1>
+    <h1 class="mt-0">Software Development Portfolio</h1>
     <p>
       <i class="fas fa-quote-right text-black-50 pr-1"></i> <b class="larger">Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</b>
       <br/>
@@ -38,19 +37,20 @@
 
     <!-- Designs -->
 
-    <h2>UX-Designs</h2>
-    <p>
+    <h2>UX-Designs</h2>    
+    <p class="larger">
       An intuitive, simple, user-centric design is as important as a solid and scalable code base. That's why I belive professional engineers should have design skills as well.
     </p>
     <div class="row">
       <h3 class="w-100">Gamification Sales App</h3>
-      <div class="w-100 pb-2">A concept for a sales centric designed mobile app, which motivates users intrinsic and extrinsic, while using gamification elements.</div>
+      <div class="w-100 py-4 larger">A concept for a sales centric designed mobile app, which motivates users intrinsic and extrinsic, while using gamification elements.</div>
       <app-image-card [imageUrl]="'assets/Gamification-Banner.png'" [title]="'Gamification Sales App'" [description]="'Published on Behance.net'" [href]="'https://www.behance.net/gallery/105079179/Sales-Gamification-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
     </div>
 
     <div class="row">
       <h3 class="w-100">Cope Stress App</h3>
-      <div class="w-100 pb-2">A clean mobile App that helps you coping with stress, by giving you a daily challenge that helps you to calm. The idea is inspired by the viral tweet <a href="https://twitter.com/lovelyyy_lina/status/771858389181661188">101 ways to cope with stress</a></div>
+      <div class="w-100 py-4 larger">A clean mobile App that helps you coping with stress, by giving you a daily challenge that helps you to calm.<br/>
+        The idea is inspired by the viral tweet <a href="https://twitter.com/lovelyyy_lina/status/771858389181661188">101 ways to cope with stress</a></div>
       <div class="overflow-hidden">
 
         <app-image-card [imageUrl]="'assets/Cope-Stress-Mock.jpg'" [title]="'Cope Stress App'" [description]="'Open Source Project published on GitHub'" [href]="'https://github.com/xremix/Cope-Stress-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
@@ -64,7 +64,7 @@
 
     <a href="https://github.com/xremix" target="_blank" class="btn btn-primary my-3">Github Profile</a>
 
-    <p>
+    <p class="larger">
       The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
     </p>
 
@@ -83,23 +83,8 @@
       </div>
     </div>
 
-    <!-- leisure projects -->
-    <h2>Leisure Projects</h2>
-
-    <div class="text-center">
-      <p>The following references show some spare time projects I worked on.</p>
-    </div>
-
-    <div class="row">
-    		<div class="col-md-4 smaller mb-5" *ngFor="let project of leisureProjects">
-          <app-image-card [title]="project.title" [description]="project.description" [href]="project.url" [imageUrl]="project.img" [target]="'_blank'" [hideBoxTitle]="true" [textBackground]="false"></app-image-card>
-    		</div>
-    </div>
-
   </div>
 </div>
-
-
 
 
 <ng-template #content let-modal>
@@ -113,3 +98,5 @@
     {{modalText}}
   </div>
 </ng-template>
+
+<app-call-to-action [showScrollPosition]="callToAction" [text]="'Did you know I made this website open source?'" [href]="'https://github.com/xremix/toni-hoffmann-com'"></app-call-to-action>

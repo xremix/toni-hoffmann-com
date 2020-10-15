@@ -24,13 +24,19 @@ export class CookieBannerComponent implements OnInit {
   }
 
   optIn(){
-    this.cookieService.set('didOpt', 'true');
+    var expirationDate = new Date();
+    expirationDate.setDate( expirationDate.getDate() + 90 );
+
+    this.cookieService.set('didOpt', 'true', expirationDate);
     this.show = !this.didOpt();
   }
 
   optOut(){
-    this.cookieService.set('didOpt', 'true');
-    this.cookieService.set('didOptOut', 'true');
+    var expirationDate = new Date();
+    expirationDate.setDate( expirationDate.getDate() + 7 );
+
+    this.cookieService.set('didOpt', 'true', expirationDate);
+    this.cookieService.set('didOptOut', 'true', expirationDate);
     this.show = !this.didOpt();
   }
 
