@@ -1,5 +1,6 @@
 <div class="{{position}} text-center call-to-action-container" [ngClass]="{'hideThis': hide}">
-  <a target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}">{{text}}</a>
+  <a target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}" *ngIf="!href">{{text}}</a>
+  <a target="_blank" [href]="href" target="_blank" class="btn btn-{{style}}" *ngIf="href">{{text}}</a>
 </div>
 
 
@@ -13,7 +14,7 @@
   </a>
   <div class="container">
     <h1>Interest in a Picture?</h1>
-    <p>I'm glad you enjoy my photography. Many of the photos <b>can be purchased</b>, so feel free to reach out to me. The portfolio is just a reference and usually I have many more perspectives, angles and different light conditions of these shots.</p>
+    <p>I'm glad you enjoy my photography. Many of the photos <b>can be purchased</b>, so feel free to reach out to me. The portfolio is just a reference and I have many more perspectives, angles and light conditions of these places.</p>
 
     <p>You can also contact me for <b>collaborations</b> or <b>private shootings</b>.</p>
     <ng-template #popContent><a>kontakt@toni-hoffmann.com</a></ng-template>

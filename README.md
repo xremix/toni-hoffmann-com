@@ -11,7 +11,6 @@ The base idea is to have a portfolio, that represents me in different kind of wa
 ## To-Do´s
 
 - [ ] Increase banner image quality, based on the browser size
-- [ ] Improve user experience for contact via mail
 
 ## Technologies used
 

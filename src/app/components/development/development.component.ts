@@ -18,12 +18,17 @@ export class DevelopmentComponent implements OnInit {
   public openSourceProjects: Array<OpenSourceProject> = [];
   public modalTitle: string;
   public modalText: string;
+  public callToAction = 999999;//get's set in constructor
 
-  constructor(private seoService: SeoService, private developmentService: DevelopmentService, private modalService: NgbModal) {
+  constructor(private seoService: SeoService, private developmentService: DevelopmentService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
     this.seoService.updatePageMetaData(
       `Fullstack Software Developer from Munich`,
       'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
     );
+
+    if(this.utilitiesService.isBrowser()){
+      this.callToAction = window.screen.height * 1.7;
+    }
   }
 
   ngOnInit(): void {

@@ -15,6 +15,7 @@ export class CallToActionComponent implements OnInit {
   @Input() public text: string;
   @Input() public style: string = 'primary';
   @Input() public position: string = 'fixed-bottom';
+  @Input() public href: string;
 
   private showTimerAction: any;
   private hideTimerAction: any;
