@@ -12,6 +12,10 @@ export class UtilitiesService {
     return isPlatformBrowser(this.platformId);
   }
 
+  public isSeoBot(){
+    return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+  }
+
   public static chunkArray(myArray: Array<any>, chunk_size: number): Array<any>{
     var index = 0;
     var arrayLength = myArray.length;
