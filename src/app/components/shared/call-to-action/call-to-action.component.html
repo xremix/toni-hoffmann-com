@@ -10,7 +10,7 @@
 
 <div class="fixed-bottom bg-white text-center pb-5 fade-bottom-in" [ngClass]="{'show': contentVisible}" style="z-index:99999999999">
   <a class="absolute-top-right mr-3 mt-3 large" (click)="hideContent()">
-    <i class="fas fa-times"></i>
+    <fa-icon icon="times"></fa-icon>
   </a>
   <div class="container">
     <h1>Interest in a Picture?</h1>
@@ -18,7 +18,7 @@
 
     <p>You can also contact me for <b>collaborations</b> or <b>private shootings</b>.</p>
     <ng-template #popContent><a>kontakt@toni-hoffmann.com</a></ng-template>
-    <a class="btn btn-outline-primary btn-lg mt-5" [ngbPopover]="popContent" href="mailto:kontakt@toni-hoffmann.com" [autoClose]="false" triggers="manual" #p="ngbPopover" (mouseover)="p.open()"><i class="fas fa-envelope"></i> Contact Me</a>
+    <a class="btn btn-outline-primary btn-lg mt-5" [ngbPopover]="popContent" href="mailto:kontakt@toni-hoffmann.com" [autoClose]="false" triggers="manual" #p="ngbPopover" (mouseover)="p.open()"><fa-icon icon="envelope"></fa-icon> Contact Me</a>
 
   </div>
 </div>

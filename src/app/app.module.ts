@@ -29,6 +29,9 @@ import { SpinnerComponent } from './components/shared/spinner/spinner.component'
 import { CallToActionComponent } from './components/shared/call-to-action/call-to-action.component';
 import { CookieBannerComponent } from './components/shared/cookie-banner/cookie-banner.component';
 import { CookieService } from 'ngx-cookie-service';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faCoffee, faEnvelope, faTimes, faAddressCard, faQuoteRight  } from '@fortawesome/free-solid-svg-icons';
+import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   declarations: [
@@ -58,9 +61,15 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    XGallerifyModule
+    XGallerifyModule,
+    FontAwesomeModule
   ],
   providers: [PhotoService, CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    // Add an icon to the library for convenient access in other components
+    library.addIcons(faCoffee, faEnvelope, faXing, faLinkedin, faTimes, faAddressCard, faQuoteRight);
+  }
+}
