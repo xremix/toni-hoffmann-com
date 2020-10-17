@@ -5,7 +5,6 @@
 		<app-spinner *ngIf="loading"></app-spinner>
 
 		<div class="customimagemodal-imagecontainer" [ngClass]="{'opacity-0': loading}">
-			<!-- TODO think about smoothly animating on load -->
 			<img class="d-inline-block" alt="{{photo && photo.title}}" src="{{photo && photo.bigurl}}" (click)="$event.stopImmediatePropagation()" (load)="loading=false" />
 		</div>
 
