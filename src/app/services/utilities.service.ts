@@ -13,6 +13,9 @@ export class UtilitiesService {
   }
 
   public isSeoBot(){
+    if (typeof navigator === 'undefined') {
+      return true;
+    }
     return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
   }
 
