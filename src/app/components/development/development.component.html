@@ -1,9 +1,9 @@
-<app-header [galleryTitle]="'Software Developer'" [galleryImage]="'https://farm6.staticflickr.com/5610/30981074620_4ce0f6476d_b.jpg'"></app-header>
+<app-header [galleryTitle]="'Software Developer'" [galleryImage]="'/assets/software-developer-banner.jpg'"></app-header>
 <div class="content">
   <div class="container text-center pt-5 ">
     <h1 class="mt-0">Software Development Portfolio</h1>
     <p>
-      <i class="fas fa-quote-right text-black-50 pr-1"></i> <b class="larger">Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</b>
+      <span class="text-black-50 pr-1"><fa-icon icon="quote-right"></fa-icon></span> <b class="larger">Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</b>
       <br/>
       <span class="larger">~ Toni Hoffmann ~</span>
     </p>
@@ -49,11 +49,11 @@
 
     <div class="row">
       <h3 class="w-100">The Cope Stress App</h3>
-      <div class="w-100 py-4 larger">A clean mobile App that helps you coping with stress, by giving you a daily challenge that helps you to calm.<br/>
+      <div class="w-100 py-4 larger">A intuitive mobile App that helps you coping with stress, by giving you a daily lesson that helps you to calm.<br/>
         The idea is inspired by the viral tweet <a href="https://twitter.com/lovelyyy_lina/status/771858389181661188">101 ways to cope with stress</a></div>
       <div class="overflow-hidden">
 
-        <app-image-card [imageUrl]="'assets/Cope-Stress-Mock.jpg'" [title]="'Cope Stress App'" [description]="'Open Source Project published on GitHub'" [href]="'https://github.com/xremix/Cope-Stress-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
+        <app-image-card [imageUrl]="'assets/Cope-Stress-Banner.png'" [title]="'Cope Stress App'" [description]="'Open Source Project published on GitHub'" [href]="'https://github.com/xremix/Cope-Stress-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
 
       </div>
 
@@ -99,4 +99,4 @@
   </div>
 </ng-template>
 
-<app-call-to-action [showScrollPosition]="callToAction" [text]="'Did you know that this website is open source?'" [href]="'https://github.com/xremix/toni-hoffmann-com'"></app-call-to-action>
+<app-call-to-action [showScrollPosition]="callToAction" [text]="'Did you know I made this website open source?'" [href]="'https://github.com/xremix/toni-hoffmann-com'"></app-call-to-action>

@@ -27,7 +27,7 @@ export class DevelopmentComponent implements OnInit {
     );
 
     if(this.utilitiesService.isBrowser()){
-      this.callToAction = window.screen.height * 1.7;
+      this.callToAction = window.screen.height * 1.8;
     }
   }
 

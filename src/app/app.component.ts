@@ -14,7 +14,9 @@ export class AppComponent {
       this.router.events.subscribe(event => {
          if(event instanceof NavigationEnd){
            this.analyaticsService.init(event);
-           this.navigation.isNavbarCollapsed = true;
+           if(this.navigation){
+             this.navigation.isNavbarCollapsed = true;
+           }           
           }
        }
     )}

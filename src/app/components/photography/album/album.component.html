@@ -29,5 +29,4 @@
   <app-photo-modal #photoModal></app-photo-modal>
 </ng-container>
 
-<app-call-to-action [showScrollPosition]="callToAction" [text]="'Interest in a collaboration?'" *ngIf="album.id === 'products'"></app-call-to-action>
-<app-call-to-action [showScrollPosition]="callToAction" [text]="'Interest in a picture?'" *ngIf="album.id !== 'products'"></app-call-to-action>
+<app-call-to-action [showScrollPosition]="callToAction" [text]="album.id === 'products' ? 'Interest in a collaboration?' : 'Interest in a picture?'"></app-call-to-action>
