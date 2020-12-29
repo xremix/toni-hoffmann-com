@@ -24,33 +24,34 @@
       </div>
     </div>
     <!-- <div class="row large">
-      <div class="col-md-4" (click)="open($event, content, 'native')">
-        <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/native-mobile-apps-banner.jpg'" [href]="'#'"></app-image-card>
-      </div>
-      <div class="col-md-4" (click)="open($event, content, 'business')">
-        <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'assets/business-web-apps-banner.jpg'" [href]="'#'"></app-image-card>
-      </div>
-      <div class="col-md-4" (click)="open($event, content, 'ux')">
-        <app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.jpg'" [href]="'#'"></app-image-card>
-      </div>
-    </div> -->
+    <div class="col-md-4" (click)="open($event, content, 'native')">
+    <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/native-mobile-apps-banner.jpg'" [href]="'#'"></app-image-card>
+  </div>
+  <div class="col-md-4" (click)="open($event, content, 'business')">
+  <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'assets/business-web-apps-banner.jpg'" [href]="'#'"></app-image-card>
+</div>
+<div class="col-md-4" (click)="open($event, content, 'ux')">
+<app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.jpg'" [href]="'#'"></app-image-card>
+</div>
+</div> -->
 
-    <!-- Designs -->
+<!-- Designs -->
 
-    <h2>UX-Designs</h2>
-    <p class="larger">
-      An intuitive, simple, user-centric design is as important as a solid and scalable code. That's why I belive professional engineers should have design skills.
-    </p>
-    <div class="row">
-      <h3 class="w-100">Gamification Sales App</h3>
-      <div class="w-100 py-4 larger">A concept for a sales centric designed mobile app, which motivates users intrinsic and extrinsic, while using gamification elements.</div>
-      <app-image-card [imageUrl]="'assets/Gamification-Banner.png'" [title]="'Gamification Sales App'" [description]="'Published on Behance.net'" [href]="'https://www.behance.net/gallery/105079179/Sales-Gamification-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
-    </div>
+<h2>UX-Designs</h2>
+<p class="larger">
+  An intuitive, simple, user-centric design is as important as a solid and scalable code. That's why I belive professional engineers should have design skills.
+</p>
+<div class="row justify-content-center">
+  <div class="col-lg-6">
+    <h3 class="w-100">Gamification Sales App - Concept</h3>
+    <div class="w-100 py-4 larger">A concept for a sales centric designed mobile app, which motivates users intrinsic and extrinsic, while using gamification elements.</div>
+    <app-image-card [imageUrl]="'assets/Gamification-Banner.png'" [title]="'Gamification Sales App'" [description]="'Published on Behance.net'" [href]="'https://www.behance.net/gallery/105079179/Sales-Gamification-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
+  </div>
 
-    <div class="row">
+    <div class="col-lg-6">
       <h3 class="w-100">The Cope Stress App</h3>
       <div class="w-100 py-4 larger">A intuitive mobile App that helps you coping with stress, by giving you a daily lesson that helps you to calm.<br/>
-        The idea is inspired by the viral tweet <a href="https://twitter.com/lovelyyy_lina/status/771858389181661188">101 ways to cope with stress</a></div>
+      </div>
       <div class="overflow-hidden">
 
         <app-image-card [imageUrl]="'https://xremix.github.io/The-Cope-Stress-App/assets/images/The-Cope-Stress-App-Header.png'" [title]="'Cope Stress App'" [description]="'Visit the Website to find out more'" [href]="'https://xremix.github.io/The-Cope-Stress-App/'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
@@ -58,32 +59,43 @@
       </div>
 
     </div>
-
-    <!-- Open Source -->
-    <h2>Open Source Projects</h2>
-
-    <a href="https://github.com/xremix" target="_blank" class="btn btn-primary my-3">Github Profile</a>
-
-    <p class="larger">
-      The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
-    </p>
-
-    <div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
-      <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
-
-        <div class="card-body">
-          <h5 class="card-title">{{project.title}}</h5>
-          <p class="card-text">{{project.description}}</p>
+      <div class="col-lg-6">
+        <h3 class="w-100">Pretty GS1 Scanner</h3>
+        <div class="w-100 py-4 larger">An feature ritch Barcode Scanner that supports the GS1 Standard and has a focus on great usibility and intuitive design.<br/>
         </div>
+        <div class="overflow-hidden">
+          <app-image-card [imageUrl]="'https://xremix.github.io/The-Pretty-GS1-Barcode-Scanner/assets/images/The-Pretty-GS1-Reader-Header.png'" [title]="'Pretty GS1 Scanner'" [description]="'Visit the Website to find out more'" [href]="'https://xremix.github.io/The-Pretty-GS1-Barcode-Scanner/'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
 
-        <div class="card-footer">
-          <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">More</a>
         </div>
 
       </div>
+</div>
+
+<!-- Open Source -->
+<h2>Open Source Projects</h2>
+
+<a href="https://github.com/xremix" target="_blank" class="btn btn-primary my-3">Github Profile</a>
+
+<p class="larger">
+  The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
+</p>
+
+<div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
+  <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
+
+    <div class="card-body">
+      <h5 class="card-title">{{project.title}}</h5>
+      <p class="card-text">{{project.description}}</p>
+    </div>
+
+    <div class="card-footer">
+      <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">More</a>
     </div>
 
   </div>
+</div>
+
+</div>
 </div>
 
 
