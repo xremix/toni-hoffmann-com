@@ -62,6 +62,18 @@ var sites = [{
   url: '/photography/products/3',
   priority: '1.00',
 }, {
+  url: '/apps',
+  priority: '1.00',
+}, {
+  url: '/apps/pretty-gs1-scanner',
+  priority: '1.00',
+}, {
+  url: '/apps/smart-gs1-barcode-generator',
+  priority: '1.00',
+}, {
+  url: '/apps/geo-file-converter',
+  priority: '1.00',
+}, {
   url: '/development',
   priority: '1.00',
 }, {
