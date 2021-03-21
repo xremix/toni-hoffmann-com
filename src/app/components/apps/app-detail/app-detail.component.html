@@ -20,10 +20,6 @@
           </div>
         </div>
 
-<div class="row mt-5">
-  <div class="col" [innerHtml]="app.description"></div>
-</div>
-
         <div class="row mt-4 card-group">
           <div class="card mx-2 border-left rounded" *ngFor="let feature of app.features">
             <div class="card-body">
@@ -34,6 +30,9 @@
           </div>
         </div>
 
+        <div class="row mt-5">
+          <div class="col" [innerHtml]="app.description"></div>
+        </div>
 
       </div>
       <div class="col-3 text-center" style="margin-top: 5em;">
