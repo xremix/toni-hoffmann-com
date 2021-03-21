@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from "@angular/common";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,9 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DevelopmentComponent } from './components/development/development.component';
 import { PhotographyComponent } from './components/photography/photography.component';
+import { AppsComponent } from './components/apps/apps.component';
+import { AppDetailComponent } from './components/apps/app-detail/app-detail.component';
+import { AppImprintComponent } from './components/apps/app-imprint/app-imprint.component';
 import { MusicComponent } from './components/music/music.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
@@ -20,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
 import { PhotoService } from './services/photo.service';
+import { AppService } from './services/app.service';
 import { SafePipe } from './safe-pipe';
 import { PhotoModalComponent } from './components/photography/album/photo-modal/photo-modal.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -54,9 +60,13 @@ import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
     ContactComponent,
     SpinnerComponent,
     CallToActionComponent,
-    CookieBannerComponent
+    CookieBannerComponent,
+    AppsComponent,
+    AppDetailComponent,
+    AppImprintComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
@@ -64,7 +74,7 @@ import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
     XGallerifyModule,
     FontAwesomeModule
   ],
-  providers: [PhotoService, CookieService],
+  providers: [PhotoService, AppService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

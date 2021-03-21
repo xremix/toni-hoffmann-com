@@ -1,0 +1,31 @@
+<div>
+  <div class="navigation-spacer"></div>
+  <div class="container">
+
+    <h1>App Portfolio</h1>
+
+    <div class="row mt-4 card-group">
+      <div class="card mx-2 border-left rounded" *ngFor="let app of apps">
+
+        <div class="card-body">
+          <div class="text-center">
+            <img src="{{app.iconUrl}}" style="max-height: 60px; border-radius: 10px;" alt=""><br />
+            <h5 class="card-title mt-2">
+              {{app.title}}
+            </h5>
+          </div>
+
+          <div style="">
+            {{app.shortDescription}}
+          </div>
+          <p class="card-text">
+
+
+            <a href="/apps/{{app.id}}" class="btn btn-primary mt-2">More details</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
