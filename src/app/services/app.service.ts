@@ -10,7 +10,10 @@ import { UtilitiesService } from 'src/app/services/utilities.service'
 })
 export class AppService {
 
-  private apps: Array<App> = [{
+  private apps: Array<App> = [/*{
+    title: 'Cope Stress App (Beta)',
+    id: 'cope-stress'
+  },*/{
     title: 'Pretty GS1 Scanner',
     id: 'pretty-gs1-scanner',
     bannerUrl: '/assets/apps/The-Pretty-GS1-Reader-Header.png',

@@ -14,6 +14,7 @@ import { PhotographyComponent } from './components/photography/photography.compo
 import { AppsComponent } from './components/apps/apps.component';
 import { AppDetailComponent } from './components/apps/app-detail/app-detail.component';
 import { AppImprintComponent } from './components/apps/app-imprint/app-imprint.component';
+import { AppTermsComponent } from './components/apps/app-terms/app-terms.component';
 import { MusicComponent } from './components/music/music.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
@@ -63,7 +64,8 @@ import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
     CookieBannerComponent,
     AppsComponent,
     AppDetailComponent,
-    AppImprintComponent
+    AppImprintComponent,
+    AppTermsComponent
   ],
   imports: [
     CommonModule,
