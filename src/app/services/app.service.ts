@@ -10,10 +10,28 @@ import { UtilitiesService } from 'src/app/services/utilities.service'
 })
 export class AppService {
 
-  private apps: Array<App> = [/*{
+  private apps: Array<App> = [{
     title: 'Cope Stress App (Beta)',
-    id: 'cope-stress'
-  },*/{
+    id: 'cope-stress',
+    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.png',
+    iconUrl: '/assets/apps/The-Cope-Stress-App-Icon.png',
+    betaUrl: 'https://forms.gle/xs32Fo49tAx8swZF7',
+    primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.png',
+    primaryColor: '#329D9C',
+    features: [{
+      icon: 'fas fa-bath',
+      title: 'Cope Stress',
+      description: 'Over a hundred little lessons to get you more calm and forget about your daily stress.'
+    },{
+      icon: 'fas fa-rocket',
+      title: 'Daily Challenge',
+      description: 'Get out of your comfort zone gives you the best results.'
+    },{
+      icon: 'fas fa-bath',
+      title: 'Learn how to calm',
+      description: 'Continue to work on yourself every day, to get a mind change and see long term results.'
+    }]
+  },{
     title: 'Pretty GS1 Scanner',
     id: 'pretty-gs1-scanner',
     bannerUrl: '/assets/apps/The-Pretty-GS1-Reader-Header.png',

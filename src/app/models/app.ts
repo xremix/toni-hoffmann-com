@@ -5,6 +5,7 @@ export class App {
   public title: string;
   public bannerUrl?: string;
   public appStoreUrl?: string;
+  public betaUrl?: string;
   public iconUrl?: String;
   public primaryScreenshotUrl?: string;
   public screenshotUrls?: Array<string>;

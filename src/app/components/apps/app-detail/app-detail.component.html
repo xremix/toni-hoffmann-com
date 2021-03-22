@@ -36,8 +36,11 @@
 
       </div>
       <div class="col-3 text-center" style="margin-top: 5em;">
-        <a href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary btn-lg" style="background: {{app.primaryColor}}; border: 0px">
+        <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary btn-lg mb-3" style="background: {{app.primaryColor}}; border: 0px">
           <i class="fab fa-apple"></i> App Store
+        </a>
+        <a *ngIf="app.betaUrl" href="{{app.betaUrl}}" target="_blank" class="btn btn-primary btn-lg mb-3" style="background: {{app.primaryColor}}; border: 0px">
+          <i class="fas fa-flask"></i> Register for Beta
         </a>
         <img *ngIf="app.primaryScreenshotUrl" src="{{app.primaryScreenshotUrl}}" alt="Screenshot of {{app.title}}" class="w-100">
       </div>
