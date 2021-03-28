@@ -159,6 +159,16 @@ export class AppService {
     <br/>
     Supported formats: KML, KMZ, GPX and GeoJSON<br/>
     Convert Map Name, Routes, Location Markers and POIs`
+  },{
+    title: 'ETF Saving Plan Calculator',
+    id: 'etf-saving-plan-calculator',
+    iconUrl: 'https://is2-ssl.mzstatic.com/image/thumb/Purple114/v4/52/a2/56/52a25652-33ba-088e-2b18-97c14131ea03/AppIcon-1x_U007emarketing-0-7-0-85-220.png/492x0w.png',
+    appStoreUrl: 'https://apps.apple.com/de/app/geo-file-converter-gpx-kml/id1550304849',
+    screenshotUrls: [
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/7b/ea/9e/7bea9edd-b2c2-a201-8968-bc04baf0b429/7440c837-fa00-4b59-87ad-f4c2cd2a6f46_iPhone_6-5_-_1__U2013_1@3x.png/230x0w.png',
+    ],
+    shortDescription: '',
+    description: ``
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }
