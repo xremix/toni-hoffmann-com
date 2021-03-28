@@ -74,6 +74,9 @@ var sites = [{
   url: '/apps/geo-file-converter',
   priority: '1.00',
 }, {
+  url: '/apps/etf-saving-plan-calculator',
+  priority: '1.00',
+}, {
   url: '/development',
   priority: '1.00',
 }, {
