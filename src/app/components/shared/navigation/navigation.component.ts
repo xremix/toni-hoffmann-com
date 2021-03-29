@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from 'src/app/services/photo.service';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,7 +11,7 @@ export class NavigationComponent implements OnInit {
 
   public isNavbarCollapsed = true;
 
-  constructor(public photoService: PhotoService) { }
+  constructor(public photoService: PhotoService, public appService: AppService) { }
 
   ngOnInit(): void {
   }

@@ -9,6 +9,10 @@ import { PhotographyComponent } from './components/photography/photography.compo
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 import { ImprintComponent } from './components/imprint/imprint.component';
 import { AlbumComponent } from './components/photography/album/album.component';
+import { AppsComponent } from './components/apps/apps.component';
+import { AppDetailComponent } from './components/apps/app-detail/app-detail.component';
+import { AppImprintComponent } from './components/apps/app-imprint/app-imprint.component';
+import { AppTermsComponent } from './components/apps/app-terms/app-terms.component';
 
 const routes: Routes = [
   { path: 'cityscapes', redirectTo: '/photography/cityscapes/1'}, // legacy
@@ -17,6 +21,10 @@ const routes: Routes = [
   { path: 'contact/:action', component: ContactComponent },
   { path: 'development', component: DevelopmentComponent },
   { path: 'music', component: MusicComponent },
+  { path: 'apps', component: AppsComponent },
+  { path: 'apps/:appid', component: AppDetailComponent },
+  { path: 'apps/:appid/data-privacy', component: AppImprintComponent },
+  { path: 'apps/:appid/terms', component: AppTermsComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'photography/:album', component: AlbumComponent },
   { path: 'photography/:album/:page', component: AlbumComponent },

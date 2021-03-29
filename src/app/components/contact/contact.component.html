@@ -7,18 +7,17 @@
     <div class="d-flex justify-content-around mt-5 mx-auto container-small">
       <ng-template #popContent><a>kontakt@toni-hoffmann.com</a></ng-template>
       <a class="btn btn-outline-primary" [ngbPopover]="popContent" href="mailto:kontakt@toni-hoffmann.com" [autoClose]="false" triggers="manual" #p="ngbPopover" (mouseover)="p.open()">
-          <i class="fas fa-envelope"></i> E-Mail
+        <fa-icon icon="envelope"></fa-icon> E-Mail
       </a>
 
       <a href="https://www.xing.com/profile/Toni_Hoffmann7/" target="_blank" class="btn btn-outline-primary">
-          <i class="fab fa-xing"></i> Xing
+          <fa-icon [icon]="['fab', 'xing']"></fa-icon> Xing
       </a>
 
       <a href="https://www.linkedin.com/in/toni-hoffmann-munich/" target="_blank" class="btn btn-outline-primary">
-          <i class="fab fa-linkedin"></i> LinkedIn
+          <fa-icon [icon]="['fab', 'linkedin']"></fa-icon> LinkedIn
       </a>
     </div>
   </div>
-
 
 </div>
