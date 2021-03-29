@@ -162,13 +162,29 @@ export class AppService {
   },{
     title: 'ETF Saving Plan Calculator',
     id: 'etf-saving-plan-calculator',
-    iconUrl: 'https://is2-ssl.mzstatic.com/image/thumb/Purple114/v4/52/a2/56/52a25652-33ba-088e-2b18-97c14131ea03/AppIcon-1x_U007emarketing-0-7-0-85-220.png/492x0w.png',
-    appStoreUrl: 'https://apps.apple.com/de/app/geo-file-converter-gpx-kml/id1550304849',
+    iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/62/1b/13/621b13a0-9c2a-c48d-2234-1feee8ab7ddc/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/savings-plan-calculator-etf/id1560548643',
     screenshotUrls: [
-      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/7b/ea/9e/7bea9edd-b2c2-a201-8968-bc04baf0b429/7440c837-fa00-4b59-87ad-f4c2cd2a6f46_iPhone_6-5_-_1__U2013_1@3x.png/230x0w.png',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/bf/b1/81/bfb1810b-6637-f486-b70b-8cc4b0dcd3fd/f59dcd6a-2e1c-4dea-a7ba-ca20954993df_iPhone_6-5_-_5__U2013_1@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/1a/e0/54/1ae054d0-3c3d-50f3-0b56-52e5812b5483/603afe34-a81a-411b-b429-d5516ed3b44e_iPhone_6-5_-_5__U2013_2@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/1a/e0/54/1ae054d0-3c3d-50f3-0b56-52e5812b5483/603afe34-a81a-411b-b429-d5516ed3b44e_iPhone_6-5_-_5__U2013_2@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/79/d2/21/79d221ac-79fa-f7b2-8631-0cb224731b0e/196682f4-71d0-4c30-850b-53586efcda1e_iPhone_6-5_-_5__U2013_4@3x.png/1242x2688bb.png'
     ],
-    shortDescription: '',
-    description: ``
+    shortDescription: 'The most simple way to calculate the revenue of your ETF saving plans. Just fill in your parameters and see how your investment could increase over the next years.',
+    description: `The most simple way to calculate the return from your ETF savings plan. Just fill in your parameters and see how your investment can perform over the next years.<br/>
+    <br/>
+    You can choose from a sample ETF to pre-fill the values for the yearly return and TER.<br/>
+    <br/>
+    The following parameters are available:
+    <ul>
+    <li>Start Invest</li>
+    <li>Monthly Rate</li>
+    <li>Years of Invest</li>
+    <li>Annual Return</li>
+    <li>Annual Fund Costs (TER)</li>
+    <li>Rate Dynamic</li>
+    <li>Yearly Inflation Adjustment</li>
+    </ul>`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }
