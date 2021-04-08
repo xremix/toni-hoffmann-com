@@ -9,13 +9,11 @@ import { LeisureProject } from 'src/app/models/leisure-project';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
-
 @Component({
   selector: 'app-app-imprint',
   templateUrl: './app-imprint.component.html'
 })
 export class AppImprintComponent {
-
   public app: App;
 
   constructor(public router: Router, private route: ActivatedRoute, private seoService: SeoService, private appService: AppService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
@@ -31,5 +29,4 @@ export class AppImprintComponent {
       this.app = this.appService.getApp(params['appid']);
     });
   }
-
 }
