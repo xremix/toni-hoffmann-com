@@ -25,6 +25,7 @@ import { XGallerifyModule } from '@xremix/ng-x-gallerify';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
+import { LayoutComponent } from './components/shared/layout/layout.component'
 import { PhotoService } from './services/photo.service';
 import { AppService } from './services/app.service';
 import { SafePipe } from './safe-pipe';
@@ -55,6 +56,7 @@ import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
     AlbumComponent,
     BannerLinkComponent,
     NavigationComponent,
+    LayoutComponent,
     SafePipe,
     PhotoModalComponent,
     ImageCardComponent,
