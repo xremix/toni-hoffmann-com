@@ -11,11 +11,11 @@ import { UtilitiesService } from 'src/app/services/utilities.service'
 export class AppService {
 
   private apps: Array<App> = [{
-    title: 'Cope Stress App (Beta)',
+    title: 'Cope Stress - Daily Challenge',
     id: 'cope-stress',
     bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.png',
     iconUrl: '/assets/apps/The-Cope-Stress-App-Icon.png',
-    betaUrl: 'https://forms.gle/xs32Fo49tAx8swZF7',
+    appStoreUrl: 'https://apps.apple.com/us/app/cope-stress-daily-challenge/id1545228555?ign-mpt=uo%3D2',
     primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.png',
     primaryColor: '#329D9C',
     features: [{
@@ -30,7 +30,11 @@ export class AppService {
       icon: 'fas fa-bath',
       title: 'Learn how to calm',
       description: 'Continue to work on yourself every day, to get a mind change and see long term results.'
-    }]
+    }],
+    shortDescription: 'Calm and increase your awareness with over a hundred different little fun lessons for every day.',
+    description: `When was the last time you built a paper plane or walked in the rain?<br/>
+<br/>
+This App helps you to calm and increase your awareness with over a hundred different little fun lessons for every day. Challenge yourself, to be more in focus and less stressed.`
   },{
     title: 'Pretty GS1 Scanner',
     id: 'pretty-gs1-scanner',
@@ -185,6 +189,50 @@ export class AppService {
     <li>Rate Dynamic</li>
     <li>Yearly Inflation Adjustment</li>
     </ul>`
+  },{
+    title: 'Nautic Speed and Compass',
+    id: 'boat-speedometer',
+    iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/f0/91/40/f0914007-5770-3fc2-5fe3-47fb8d310d36/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/nautic-speed-and-compass/id1578165239',
+    screenshotUrls: [
+      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/9b/f4/fa/9bf4fa85-d12c-8437-1447-efef61b35596/9938717a-9e1e-4125-af6d-7bfe11837766_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/6a/07/b5/6a07b5d7-09b8-65c6-bbf0-0bead8abdd79/84433d15-81d5-4371-91ab-923f16a67632_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/1e/ef/34/1eef3437-3fdf-8cff-43ad-322f53cdac56/25529121-319a-4ff7-a1b9-401301d8440c_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Ever wondered which speed you are heading? Or which direction you are driving with your boat?',
+    description: `Ever wondered which speed you are heading? Or which direction you are driving with your boat?<br/>
+    <br/>
+    This app will provide you all important information you need for your next boat ride.<br/>
+    <ul>
+    <li>Compass with the your direction</li>
+    <li>See the current Speed in knots, miles or kilometers</li>
+    <li>Set Speed Limits</li>
+    <li>Simply switch between unites</li>
+    <li>See a map of your cruise and share it with others</li>
+    <li>See your maximum and average speed</li>
+    <li>Works in Portrait and Landscape Mode</li>
+    </ul>`
+  },{
+    title: 'Curve Tracker',
+    id: 'curve-tracker',
+    iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/83/74/ff/8374ffcf-868d-6758-d0c0-a19669de6400/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/moto-leaning-angle/id1579524063?ign-mpt=uo%3D2',
+    screenshotUrls: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/4b/ae/dc/4baedcd4-2c3c-b02d-5fa4-6c5426058239/0f6bce03-3dc5-48ea-af86-f0c78a1df240_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/00/f5/ef/00f5ef9c-c0e5-10a3-ad96-ec9af6b4a39c/3dff279c-ec94-4496-ae19-10e933a1992e_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/48/86/23/488623e7-eb87-6f02-7eac-d4c37d100e90/73eee7be-f94c-4397-9765-5753201a075a_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/44/a3/16/44a316e6-677d-fb1e-46de-61626679add1/5b267f1b-7d68-416b-94df-db1b1b383e01_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/f8/a0/48/f8a04817-f130-2b03-b9b8-a2197b4552cb/4e23c449-f92b-4be5-93ee-fdf59684eb47_App_Store_Screenshot_6_U002c5_-_1__U2013_5@3x.png/1242x2688bb.png',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/a7/0b/bb/a70bbb95-8af8-0b1b-9e2a-21e678b11cc6/3761af48-2326-485d-a928-22e686968b4f_App_Store_Screenshot_6_U002c5_-_1__U2013_6@3x.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Ever wondered how good your cornering is, when driving your motorbike?',
+    description: `Ever wondered how good your cornering is, when driving your motorbike?<br/>
+<br/>
+Moto Leaning Angle is your App to improve your driving by analyzing and tracking your rides with the sensors of your smartphone.<br/>
+<br/>
+Use this App to track your leaning angle while driving bike. It allows you to record a map with you route, that includes all the corners, including their speed and leaning angle.
+Improve your driving skills and get a more secure driver.`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }
