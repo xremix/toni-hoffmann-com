@@ -216,7 +216,7 @@ This App helps you to calm and increase your awareness with over a hundred diffe
     title: 'Curve Tracker',
     id: 'curve-tracker',
     iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/83/74/ff/8374ffcf-868d-6758-d0c0-a19669de6400/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
-    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.png',
+    bannerUrl: 'https://ph-files.imgix.net/a161fede-dc8a-4f1d-a83c-365358e554c3.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&fit=max&dpr=2',
     appStoreUrl: 'https://apps.apple.com/us/app/moto-leaning-angle/id1579524063?ign-mpt=uo%3D2',
     screenshotUrls: [
       'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/4b/ae/dc/4baedcd4-2c3c-b02d-5fa4-6c5426058239/0f6bce03-3dc5-48ea-af86-f0c78a1df240_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',

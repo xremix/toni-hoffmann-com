@@ -77,6 +77,12 @@ var sites = [{
   url: '/apps/etf-saving-plan-calculator',
   priority: '1.00',
 }, {
+  url: '/apps/boat-speedometer',
+  priority: '1.00',
+}, {
+  url: '/apps/curve-tracker',
+  priority: '1.00',
+}, {
   url: '/development',
   priority: '1.00',
 }, {
