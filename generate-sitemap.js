@@ -83,6 +83,9 @@ var sites = [{
   url: '/apps/curve-tracker',
   priority: '1.00',
 }, {
+  url: '/apps/mindful-focus',
+  priority: '1.00',
+}, {
   url: '/development',
   priority: '1.00',
 }, {

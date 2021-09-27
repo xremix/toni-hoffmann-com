@@ -195,9 +195,11 @@ This App helps you to calm and increase your awareness with over a hundred diffe
     iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/f0/91/40/f0914007-5770-3fc2-5fe3-47fb8d310d36/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
     appStoreUrl: 'https://apps.apple.com/us/app/nautic-speed-and-compass/id1578165239',
     screenshotUrls: [
-      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/9b/f4/fa/9bf4fa85-d12c-8437-1447-efef61b35596/9938717a-9e1e-4125-af6d-7bfe11837766_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
-      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/6a/07/b5/6a07b5d7-09b8-65c6-bbf0-0bead8abdd79/84433d15-81d5-4371-91ab-923f16a67632_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
-      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/1e/ef/34/1eef3437-3fdf-8cff-43ad-322f53cdac56/25529121-319a-4ff7-a1b9-401301d8440c_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png'
+      'https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/bf/dc/89/bfdc89af-94a4-750d-6c99-e06fb479907f/5b55c724-d504-4123-a1eb-f18d064c128f_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/0f/04/37/0f04376d-ea03-1d00-ba75-563dc719755b/a8e0e6e3-4d74-48b6-9f31-c940c7202e6a_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/95/c6/14/95c614e3-b824-d7d5-4df4-d94c1b677d9d/59fd10d6-1709-4fc4-ba51-0e926dd3538b_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/48/f8/9a/48f89a7d-40d9-dfbb-2fe3-f0aada8939a6/2bcd849a-cee8-48c5-ae85-44b4b0cd5e56_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/52/7a/06/527a066b-d276-e859-52b5-08a9b3b50441/369d776e-46da-4f6e-b7e0-39b9be31f7a1_App_Store_Screenshot_6_U002c5_-_1__U2013_6@3x.png/1242x2688bb.png'
     ],
     shortDescription: 'Ever wondered which speed you are heading? Or which direction you are driving with your boat?',
     description: `Ever wondered which speed you are heading? Or which direction you are driving with your boat?<br/>
@@ -219,12 +221,12 @@ This App helps you to calm and increase your awareness with over a hundred diffe
     bannerUrl: 'https://ph-files.imgix.net/a161fede-dc8a-4f1d-a83c-365358e554c3.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&fit=max&dpr=2',
     appStoreUrl: 'https://apps.apple.com/us/app/moto-leaning-angle/id1579524063?ign-mpt=uo%3D2',
     screenshotUrls: [
-      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/4b/ae/dc/4baedcd4-2c3c-b02d-5fa4-6c5426058239/0f6bce03-3dc5-48ea-af86-f0c78a1df240_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
-      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/00/f5/ef/00f5ef9c-c0e5-10a3-ad96-ec9af6b4a39c/3dff279c-ec94-4496-ae19-10e933a1992e_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
-      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/48/86/23/488623e7-eb87-6f02-7eac-d4c37d100e90/73eee7be-f94c-4397-9765-5753201a075a_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
-      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/44/a3/16/44a316e6-677d-fb1e-46de-61626679add1/5b267f1b-7d68-416b-94df-db1b1b383e01_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png',
-      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/f8/a0/48/f8a04817-f130-2b03-b9b8-a2197b4552cb/4e23c449-f92b-4be5-93ee-fdf59684eb47_App_Store_Screenshot_6_U002c5_-_1__U2013_5@3x.png/1242x2688bb.png',
-      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/a7/0b/bb/a70bbb95-8af8-0b1b-9e2a-21e678b11cc6/3761af48-2326-485d-a928-22e686968b4f_App_Store_Screenshot_6_U002c5_-_1__U2013_6@3x.png/1242x2688bb.png'
+      'https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/a3/cf/44/a3cf4468-a0bb-e137-3af7-e11d08aa10dc/0f6bce03-3dc5-48ea-af86-f0c78a1df240_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/8e/a0/25/8ea0253e-da68-952f-fb78-3bb66b257137/b9b0abc4-68cb-4e22-af74-15df02900324_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/09/5a/b1/095ab1f2-f506-a8b8-f001-4a3fb37d02e8/73eee7be-f94c-4397-9765-5753201a075a_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/fa/6d/9d/fa6d9d0a-26ba-8638-70bb-1421c446b6a5/5b267f1b-7d68-416b-94df-db1b1b383e01_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/09/61/8f/09618f42-c970-fc2d-6f4b-186e6edc6820/4e23c449-f92b-4be5-93ee-fdf59684eb47_App_Store_Screenshot_6_U002c5_-_1__U2013_5@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/bb/17/7c/bb177cec-9471-c85a-9e79-a0b3c1c25aa9/3761af48-2326-485d-a928-22e686968b4f_App_Store_Screenshot_6_U002c5_-_1__U2013_6@3x.png/1242x2688bb.png'
     ],
     shortDescription: 'Ever wondered how good your cornering is, when driving your motorbike?',
     description: `Ever wondered how good your cornering is, when driving your motorbike?<br/>
@@ -233,6 +235,25 @@ Moto Leaning Angle is your App to improve your driving by analyzing and tracking
 <br/>
 Use this App to track your leaning angle while driving bike. It allows you to record a map with you route, that includes all the corners, including their speed and leaning angle.
 Improve your driving skills and get a more secure driver.`
+  },{
+    title: 'Mindful Focus',
+    id: 'mindful-focus',
+    iconUrl: 'https://is4-ssl.mzstatic.com/image/thumb/Purple115/v4/53/18/78/531878cd-3178-6a12-8e08-62716f2566ec/AppIcon-85-220-4-2x.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/mindful-focus-time-awareness/id1586293102',
+    screenshotUrls: [
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/57/33/27/5733273b-a156-206e-cd70-d9b19d31a455/cd75594b-d9a1-4444-8734-ceed92998733_Screenshot__U2013_1.png/2880x1800bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/9d/9a/bb/9d9abb89-4206-2d3c-467d-3193be8dd3c7/4c371cca-e348-46bd-a885-4960ce680e7d_Screenshot__U2013_2.png/2880x1800bb.png',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/37/f2/6c/37f26c06-9fe1-e81b-95a5-b2e5a1e416a8/b7de613c-030c-4334-83a4-d1b2c10ad261_Screenshot__U2013_3.png/2880x1800bb.png'
+    ],
+    shortDescription: 'With Mindful Focus you can see how long you are working concentrated on your computer without having a break.',
+    description: `How long are you in focus? Should you take a break?<br/>
+<br/>
+With Mindful Focus you can see how long you are working concentrated on your computer without having a break. While checking when your last computer input was, this App will let you know when you had your last off-screen break. Therefore Mindful Focus will automatically recognize breaks you do.<br/>
+<br/>
+Mindful Focus will sit in your Macs toolbar, while not interrupting or disturbing your focus. This will help you getting a better awareness of your focus times and if you take enough breaks to stay concentrated. <br/>
+<br/>
+<br/>
+Thanks to David van Dijk (@dvandijk) for publishing the photo on unsplash.com.`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }
