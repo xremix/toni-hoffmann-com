@@ -45,6 +45,11 @@ export class AlbumComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // if(window.location.hostname.indexOf('localhost') >= 0){
+    //   console.warn('disable paging')
+    //   this.pageSize = 99;
+    // }
+    
     this.route.params.subscribe(params => {
       this.createGallery(params);
     });
@@ -69,8 +74,8 @@ export class AlbumComponent implements OnInit {
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 
         data = data.map(i =>{
-          i.bigurl = i.url;
-          i.url = i.middleurl;
+          i.bigurl = 'https://toni-hoffmann.com/externalimages/' + i.url;
+          i.url = 'https://toni-hoffmann.com/externalimages/' + i.middleurl;
           return i;
         });
 

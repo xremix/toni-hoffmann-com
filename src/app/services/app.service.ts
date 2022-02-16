@@ -247,13 +247,31 @@ Improve your driving skills and get a more secure driver.`
     ],
     shortDescription: 'With Mindful Focus you can see how long you are working concentrated on your computer without having a break.',
     description: `How long are you in focus? Should you take a break?<br/>
-<br/>
-With Mindful Focus you can see how long you are working concentrated on your computer without having a break. While checking when your last computer input was, this App will let you know when you had your last off-screen break. Therefore Mindful Focus will automatically recognize breaks you do.<br/>
-<br/>
-Mindful Focus will sit in your Macs toolbar, while not interrupting or disturbing your focus. This will help you getting a better awareness of your focus times and if you take enough breaks to stay concentrated. <br/>
-<br/>
-<br/>
-Thanks to David van Dijk (@dvandijk) for publishing the photo on unsplash.com.`
+      <br/>
+      With Mindful Focus you can see how long you are working concentrated on your computer without having a break. While checking when your last computer input was, this App will let you know when you had your last off-screen break. Therefore Mindful Focus will automatically recognize breaks you do.<br/>
+      <br/>
+      Mindful Focus will sit in your Macs toolbar, while not interrupting or disturbing your focus. This will help you getting a better awareness of your focus times and if you take enough breaks to stay concentrated. <br/>
+      <br/>
+      <br/>
+      Thanks to David van Dijk (@dvandijk) for publishing the photo on unsplash.com.`
+  },{
+    title: 'Nautic Converter - Boat Tool',
+    id: 'nautic-converter',
+    iconUrl: 'https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/58/a4/d5/58a4d56c-a470-74ac-3186-7ca83bfb793e/AppIcon-1x_U007emarketing-0-7-0-85-220.png/135x135bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/nautic-converter-boat-tool/id1588238361',
+    screenshotUrls: [
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/d4/51/e2/d451e2ff-3c71-e9fd-7ca7-5791141f6955/20cc5681-e2b0-486d-a5f9-67db802bd0a8_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/67/24/b0/6724b0a6-e548-7ff9-bf38-061329f14f99/2bfc6712-103b-4e17-9f1f-714ab5ad2b02_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/66/ca/a9/66caa999-36e5-0e78-655b-a089d20c5d12/59cc6253-af9f-44d0-8762-d7d422787a5b_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/81/82/dd/8182dd2a-14c5-f0bf-c1cf-2fee3e3286cb/b65c0c36-2d02-4761-b477-bb815959799e_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Nautic Converter is the tool that will help to convert all common boat units with a simple, intuitive user interface.',
+    description: `Nautic Converter is the tool that will help to convert all common boat units with a simple, intuitive user interface.<br/>
+<br/><ul>
+<li>Convert miles, meters, kilometers, miles and feet
+<li>Convert knots / Nautic miles per hour, km/h, mph, meters per second</li>
+<li>See the Beaufort scale of certain speed</li>
+<li>Convert DD, DDM and DMS coordinates and pick them on the map, or by your current location</li></ul>`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }

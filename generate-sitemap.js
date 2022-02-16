@@ -1,3 +1,17 @@
+console.log('x')
+const https = require('https')
+
+var x = "";
+https.get('https://www.toni-hoffmann.com/api/flickr/?gallery=winterlandscapes', (res) => {
+  res.on('data', (d) => {
+    x += d
+    process.stdout.write(d);
+  });
+
+});
+
+return;
+
 var fs = require('fs');
 
 var currentDate = new Date();
@@ -84,6 +98,9 @@ var sites = [{
   priority: '1.00',
 }, {
   url: '/apps/mindful-focus',
+  priority: '1.00',
+}, {
+  url: '/apps/nautic-converter',
   priority: '1.00',
 }, {
   url: '/development',
