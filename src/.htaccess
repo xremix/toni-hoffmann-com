@@ -7,9 +7,7 @@ RewriteBase /
 # to adaptive-images.php
 
 RewriteCond %{REQUEST_URI} !/ai-cache [NC]
-# RewriteRule ^/flickrimages/\.(jpe?g|gif|png)$ api/flickr/images/image_loader.php [L]
 RewriteRule ^galleryimages/.+\.jpg/? api/flickr/images/index.php [NC,L]
-# RewriteRule \.(jpe?g|gif|png)$ api/flickr/images/image_loader.php [L]
 
 
 # Legacy Routes
