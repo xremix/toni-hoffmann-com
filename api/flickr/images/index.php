@@ -2,8 +2,10 @@
 
 $uri =  $_SERVER['REQUEST_URI']; // prints /api/logger/all
 
+
 // $str = 'Hello there';
-$parameters = str_replace('/api/flickr/images/?id=', '', $uri);
+$parameters = str_replace('/externalimages/', '', $uri);
+// $parameters = str_replace('/api/flickr/images/?id=', '', $uri);
 $parts = explode('-', $parameters);
 $farm = $parts[0];
 $folder = $parts[1];
