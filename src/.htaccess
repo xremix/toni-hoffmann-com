@@ -2,32 +2,23 @@ RewriteEngine on
 
 
 
- RewriteBase /
-
-  # Send any GIF, JPG, or PNG request that IS NOT stored inside ai-cache
-  # to adaptive-images.php
+RewriteBase /
+# Send any GIF, JPG, or PNG request that IS NOT stored inside ai-cache
+# to adaptive-images.php
 
 RewriteCond %{REQUEST_URI} !/ai-cache [NC]
-#   RewriteRule ^/flickrimages/\.(jpe?g|gif|png)$ api/flickr/images/image_loader.php [L]
-  RewriteRule ^externalimages/.+\.jpg/? api/flickr/images/index.php [L]
+# RewriteRule ^/flickrimages/\.(jpe?g|gif|png)$ api/flickr/images/image_loader.php [L]
+RewriteRule ^galleryimages/.+\.jpg/? api/flickr/images/index.php [NC,L]
 # RewriteRule \.(jpe?g|gif|png)$ api/flickr/images/image_loader.php [L]
 
 
-
-
-
-
-
+# Legacy Routes
 Redirect 301 /landscapes/ http://www.toni-hoffmann.com/photography/landscapes/1
 Redirect 301 /cityscapes/ http://www.toni-hoffmann.com/photography/cityscapes/1
 Redirect 301 /products/ http://www.toni-hoffmann.com/photography/products/1
 Redirect 301 /subways/ https://www.toni-hoffmann.com/photography/subways/1
 Redirect 301 /imprint.php https://www.toni-hoffmann.com/imprint
 Redirect 301 /datenschutz https://www.toni-hoffmann.com/data-privacy
-
-# Image Redirect
-# RedirectRule ^\/(.+\/(.+\.(jpe?g|gif|png|tif|bmp)))$ /image_loader.php?a:$1&b=$2
-RewriteRule ^/tmp/([^\.]+)\.jpg$ /xremix/v5/image_loader.php?file=$1.png [NC,L]
 
 
 # WWW Redirect
@@ -39,12 +30,12 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^/?secure/(.*) https://%{SERVER_NAME}/secure/$1 [R,L]
 
 # Angular Redirects
-# RewriteCond %{REQUEST_FILENAME} -s [OR]
-# RewriteCond %{REQUEST_FILENAME} -l [OR]
-# RewriteCond %{REQUEST_FILENAME} -d
-# RewriteRule ^.*$ - [NC,L]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
 
-# RewriteRule ^(.*) /index.html [NC,L]
+RewriteRule ^(.*) /index.html [NC,L]
 
 # Browser Caching from https://strato.de/blog/wordpress-beine-machen-htaccess/
 <IfModule mod_expires.c>

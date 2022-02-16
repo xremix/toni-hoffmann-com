@@ -74,8 +74,8 @@ export class AlbumComponent implements OnInit {
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 
         data = data.map(i =>{
-          i.bigurl = 'https://toni-hoffmann.com/externalimages/' + i.url;
-          i.url = 'https://toni-hoffmann.com/externalimages/' + i.middleurl;
+          i.bigurl = 'https://www.toni-hoffmann.com/galleryimages/' + i.url;
+          i.url = 'https://www.toni-hoffmann.com/galleryimages/' + i.middleurl;
           return i;
         });
 
