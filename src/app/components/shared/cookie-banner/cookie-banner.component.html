@@ -4,18 +4,18 @@
     <div class="p-2">
       This site uses cookies to improve the experience of the website. Please check the <a routerLink="/data-privacy"><u>Data-Privacy</u></a> section for more information.
       <div class="float-right mt-2">
-        <a class="btn btn-primary mr-3" (click)="optIn()">
+        <button class="btn btn-primary mr-3" (click)="optIn()">
           accept all
-        </a>
-        <a class="btn btn-outline-primary" (click)="optOut()">
+        </button>
+        <button class="btn btn-outline-primary" (click)="optOut()">
           reject all
-        </a>
+        </button>
       </div>
     </div>
 
-    <a class="absolute-top-right mr-3 mt-3 large" (click)="optOut()">
+    <span class="absolute-top-right mr-3 mt-3 large" (click)="optOut()">
       <fa-icon icon="times"></fa-icon>
-    </a>
+    </span>
   </div>
 
 </div>
