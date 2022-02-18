@@ -64,7 +64,7 @@ export class AlbumComponent implements OnInit {
       );
 
       if(params['page']){
-        this.page = +params['page'];
+        this.page = + params['page'];
       }else{
         var url = `/photography/${this.album.id}/1`;
 
@@ -74,8 +74,10 @@ export class AlbumComponent implements OnInit {
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 
         data = data.map(i =>{
-          i.bigurl = 'https://www.toni-hoffmann.com/galleryimages/' + i.url;
-          i.url = 'https://www.toni-hoffmann.com/galleryimages/' + i.middleurl;
+          // i.bigurl = 'https://www.toni-hoffmann.com/galleryimages/' + i.url;
+          i.bigurl = `https://www.toni-hoffmann.com/images/${albumParameter}/full/${i.url}`;
+          // i.url = 'https://www.toni-hoffmann.com/galleryimages/' + i.middleurl;
+          i.url = `https://www.toni-hoffmann.com/images/${albumParameter}/thumbnail/${i.middleurl}`;
           return i;
         });
 

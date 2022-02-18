@@ -54,7 +54,8 @@ export class PhotoService {
 
   // TODO use the model instead of any
   public getPhotosFromAlbum(album: string): Observable<any> {
-    var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
+    var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/images/${album}.json` : `/api/images/${album}.json`;
+    // var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
 
     return this.http.get(url);
 
