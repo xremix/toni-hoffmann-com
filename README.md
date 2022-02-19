@@ -6,7 +6,7 @@ The website is hosted at [toni-hoffmann.com](https://www.toni-hoffmann.com).
 
 The base idea is to have a portfolio, that represents me in different kind of ways. On one site, it is the contents, like the photography, projects and music that I created. But then it's also the minimalistic bright design, the animation contents or the tons of images I fit in on the pages.
 
-![alt text](src/assets/website-mockup.png)
+![alt text](src/assets/website-mockup.webp)
 
 ## To-Do´s
 

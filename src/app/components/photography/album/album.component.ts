@@ -22,6 +22,7 @@ export class AlbumComponent implements OnInit {
   public modalPhoto: any = null;
   public callToAction = 999999;//get's set in constructor
 
+  // TODO change this also in generate-sizemap.js
   private pageSize: number = 21;
   private page: number = 1;
 
@@ -58,10 +59,6 @@ export class AlbumComponent implements OnInit {
   createGallery(params: any){
       var albumParameter = params['album'];
       this.album = this.photoService.getAlbumMetaData(albumParameter);
-      this.seoService.updatePageMetaData(
-        `${this.album.title} Photography by Toni Hoffmann`,
-        this.album.subTitle // TODO make this more meaningful / longer?
-      );
 
       if(params['page']){
         this.page = + params['page'];
@@ -70,6 +67,14 @@ export class AlbumComponent implements OnInit {
 
         this.router.navigate([url], { relativeTo: this.route });
       }
+
+
+      this.seoService.updatePageMetaData(
+        `${this.album.title} Photography Page ${this.page} by Toni Hoffmann`,
+        this.album.subTitle // TODO make this more meaningful / longer?
+      );
+
+
 
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 

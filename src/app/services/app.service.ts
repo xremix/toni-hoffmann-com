@@ -13,10 +13,10 @@ export class AppService {
   private apps: Array<App> = [{
     title: 'Cope Stress - Daily Challenge',
     id: 'cope-stress',
-    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.png',
-    iconUrl: '/assets/apps/The-Cope-Stress-App-Icon.png',
+    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.webp',
+    iconUrl: '/assets/apps/The-Cope-Stress-App-Icon.webp',
     appStoreUrl: 'https://apps.apple.com/us/app/cope-stress-daily-challenge/id1545228555?ign-mpt=uo%3D2',
-    primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.png',
+    primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.webp',
     primaryColor: '#329D9C',
     features: [{
       icon: 'fas fa-bath',
@@ -38,10 +38,10 @@ This App helps you to calm and increase your awareness with over a hundred diffe
   },{
     title: 'Pretty GS1 Scanner',
     id: 'pretty-gs1-scanner',
-    bannerUrl: '/assets/apps/The-Pretty-GS1-Reader-Header.png',
+    bannerUrl: '/assets/apps/The-Pretty-GS1-Reader-Header.webp',
     iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/4f/4f/8b/4f4f8bdd-ceec-4e28-f594-39edd5066ba0/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.png',
     appStoreUrl: 'https://apps.apple.com/us/app/pretty-gs1-reader/id1545547560',
-    primaryScreenshotUrl: '/assets/apps/The-Pretty-GS1-Reader-Screenshot.png',
+    primaryScreenshotUrl: '/assets/apps/The-Pretty-GS1-Reader-Screenshot.webp',
     primaryColor: '#1D6D90',
     screenshotUrls: [
       'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/22/cf/64/22cf64be-edaa-b6b4-b2dd-5af1694f195b/e5bab91f-7fc1-4c01-b662-42539f4b3af0_iPhone_XR_U002c_XS_Max_U002c_11__U2013_4@3x.png/1242x2688bb.png',

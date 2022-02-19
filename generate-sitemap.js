@@ -1,16 +1,15 @@
-console.log('x')
-const https = require('https')
+// const https = require('https')
 
-var x = "";
-https.get('https://www.toni-hoffmann.com/api/flickr/?gallery=winterlandscapes', (res) => {
-  res.on('data', (d) => {
-    x += d
-    process.stdout.write(d);
-  });
+// var x = "";
+// https.get('https://www.toni-hoffmann.com/api/flickr/?gallery=winterlandscapes', (res) => {
+//   res.on('data', (d) => {
+//     x += d
+//     process.stdout.write(d);
+//   });
 
-});
+// });
 
-return;
+// return;
 
 var fs = require('fs');
 
@@ -18,7 +17,7 @@ var currentDate = new Date();
 function twoDigit(s){
   return ("0" + s).slice(-2);
 }
-var dateString = `${currentDate.getFullYear()}-${twoDigit(currentDate.getMonth())}-${twoDigit(currentDate.getDate())}T${twoDigit(currentDate.getHours())}:${twoDigit(currentDate.getMinutes())}:${twoDigit(currentDate.getSeconds())}+00:00`;
+var dateString = `${currentDate.getFullYear()}-${twoDigit(currentDate.getMonth())}-${twoDigit(currentDate.getDate())}`;
 
 
 var sites = [{
@@ -46,10 +45,16 @@ var sites = [{
   url: '/photography/landscapes/6',
   priority: '1.00',
 }, {
+  url: '/photography/landscapes/7',
+  priority: '1.00',
+}, {
   url: '/photography/winterlandscapes/1',
   priority: '1.00',
 }, {
   url: '/photography/winterlandscapes/2',
+  priority: '1.00',
+},{
+  url: '/photography/winterlandscapes/3',
   priority: '1.00',
 }, {
   url: '/photography/cityscapes/1',
@@ -74,6 +79,9 @@ var sites = [{
   priority: '1.00',
 }, {
   url: '/photography/products/3',
+  priority: '1.00',
+}, {
+  url: '/photography/products/4',
   priority: '1.00',
 }, {
   url: '/apps',
@@ -104,10 +112,10 @@ var sites = [{
   priority: '1.00',
 }, {
   url: '/development',
-  priority: '1.00',
+  priority: '0.8',
 }, {
   url: '/music',
-  priority: '1.00',
+  priority: '0.8',
 }, {
   url: '/contact',
   priority: '0.40',
@@ -119,12 +127,46 @@ var sites = [{
   priority: '0.40',
 }];
 
+
+function chunkArray(myArray, chunk_size){
+  var index = 0;
+  var arrayLength = myArray.length;
+  var tempArray = [];
+
+  for (index = 0; index < arrayLength; index += chunk_size) {
+    var myChunk = myArray.slice(index, index + chunk_size);
+    tempArray.push(myChunk);
+  }
+
+  return tempArray;
+}
+
+
+function loadImages(url){
+  if(!url.includes('/photography/')){
+    return '';
+  }
+
+  var album = url.slice('/photography/'.length).split('/')[0];
+  var page =  url.slice('/photography/'.length).split('/')[1] - 1;
+  var images = JSON.parse(fs.readFileSync(`../toni-hoffmann-com/api/images/${album}.json`));
+  var pageImages = chunkArray(images, 21)[page];
+
+  var output = pageImages.map(image =>`
+  <image:image>
+    <image:loc>https://www.toni-hoffmann.com/images/${album}/full/${image.url}</image:loc>
+    <image:caption>${image.title}</image:caption>
+  </image:image>
+`).join('');
+return output;
+}
+
 var sitesXml = sites.map(s =>{
   return `
   <url>
     <loc>https://www.toni-hoffmann.com${s.url}</loc>
     <lastmod>${dateString}</lastmod>
-    <priority>${s.priority}</priority>
+    <priority>${s.priority}</priority>${loadImages(s.url)}
   </url>`
 }).join('');
 
@@ -133,7 +175,8 @@ var xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+            xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
