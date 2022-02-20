@@ -80,8 +80,8 @@ export class AlbumComponent implements OnInit {
 
         data = data.map(i =>{
           // i.bigurl = 'https://www.toni-hoffmann.com/galleryimages/' + i.url;
-          i.bigurl = `https://www.toni-hoffmann.com/images/${albumParameter}/full/${i.url}`;
           // i.url = 'https://www.toni-hoffmann.com/galleryimages/' + i.middleurl;
+          i.bigurl = `https://www.toni-hoffmann.com/images/${albumParameter}/full/${i.url}`;
           i.url = `https://www.toni-hoffmann.com/images/${albumParameter}/thumbnail/${i.middleurl}`;
           return i;
         });

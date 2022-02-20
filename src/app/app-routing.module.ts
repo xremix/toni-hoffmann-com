@@ -23,8 +23,8 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'cityscapes', redirectTo: '/photography/cityscapes/1'}, // legacy
-      { path: 'landscapes', redirectTo: '/photography/landscapes/1'}, // legacy
+      // { path: 'cityscapes', redirectTo: '/photography/cityscapes/1'}, // legacy
+      // { path: 'landscapes', redirectTo: '/photography/landscapes/1'}, // legacy
       { path: 'contact', component: ContactComponent },
       { path: 'contact/:action', component: ContactComponent },
       { path: 'development', component: DevelopmentComponent },

@@ -1,16 +1,3 @@
-// const https = require('https')
-
-// var x = "";
-// https.get('https://www.toni-hoffmann.com/api/flickr/?gallery=winterlandscapes', (res) => {
-//   res.on('data', (d) => {
-//     x += d
-//     process.stdout.write(d);
-//   });
-
-// });
-
-// return;
-
 var fs = require('fs');
 
 var currentDate = new Date();
