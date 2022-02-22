@@ -98,6 +98,9 @@ var sites = [{
   url: '/apps/nautic-converter/',
   priority: '1.00',
 }, {
+  url: '/apps/cope-stress/',
+  priority: '1.00',
+}, {
   url: '/development/',
   priority: '0.8',
 }, {

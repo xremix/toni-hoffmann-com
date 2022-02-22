@@ -13,12 +13,28 @@ RewriteBase /
 
 
 # Legacy Routes
-Redirect 301 /landscapes/ http://www.toni-hoffmann.com/photography/landscapes/1/
-Redirect 301 /cityscapes/ http://www.toni-hoffmann.com/photography/cityscapes/1/
-Redirect 301 /products/ http://www.toni-hoffmann.com/photography/products/1/
-Redirect 301 /subways/ https://www.toni-hoffmann.com/photography/subways/1/
+Redirect 301 /landscapes http://www.toni-hoffmann.com/photography/landscapes/1/
+Redirect 301 /cityscapes http://www.toni-hoffmann.com/photography/cityscapes/1/
+Redirect 301 /products http://www.toni-hoffmann.com/photography/products/1/
+Redirect 301 /subways https://www.toni-hoffmann.com/photography/subways/1/
+# Redirect 301 /landscapes http://www.toni-hoffmann.com/photography/landscapes/1/
+# Redirect 301 /cityscapes http://www.toni-hoffmann.com/photography/cityscapes/1/
+# Redirect 301 /products http://www.toni-hoffmann.com/photography/products/1/
+# Redirect 301 /subways https://www.toni-hoffmann.com/photography/subways/1/
+
+# Redirect 301 /photography/landscapes/ http://www.toni-hoffmann.com/photography/landscapes/1/
+# Redirect 301 /photography/cityscapes/ http://www.toni-hoffmann.com/photography/cityscapes/1/
+# Redirect 301 /photography/products/ http://www.toni-hoffmann.com/photography/products/1/
+# Redirect 301 /photography/subways/ https://www.toni-hoffmann.com/photography/subways/1/
+
+# Redirect 301 /photography/landscapes http://www.toni-hoffmann.com/photography/landscapes/1/
+# Redirect 301 /photography/cityscapes http://www.toni-hoffmann.com/photography/cityscapes/1/
+# Redirect 301 /photography/products http://www.toni-hoffmann.com/photography/products/1/
+# Redirect 301 /photography/subways https://www.toni-hoffmann.com/photography/subways/1/
+
 Redirect 301 /imprint.php https://www.toni-hoffmann.com/imprint/
 Redirect 301 /datenschutz https://www.toni-hoffmann.com/data-privacy/
+Redirect 301 /datenschutz.php https://www.toni-hoffmann.com/data-privacy/
 
 
 # WWW Redirect
