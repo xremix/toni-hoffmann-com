@@ -16,31 +16,27 @@
       <ul class="nav navbar-nav navbar-right mr-md-3">
 
         <li ngbDropdown class="nav-item" ngbDropdown #myDrop="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop.close();">
-          <a routerLink="/photography" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();" routerLinkActive="active">Photography</a>
+          <a routerLink="/photography/." class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();" routerLinkActive="active">Photography</a>
           <div ngbDropdownMenu>
-            <a ngbDropdownItem routerLink="photography/{{album.id}}" *ngFor="let album of photoService.getAlbumOverview()" routerLinkActive="active">{{album.title}}</a>
+            <a ngbDropdownItem routerLink="photography/{{album.id}}/1/." *ngFor="let album of photoService.getAlbumOverview()" routerLinkActive="active">{{album.title}}</a>
           </div>
         </li>
 
 
         <li ngbDropdown class="nav-item" ngbDropdown #myDrop2="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop2.close();">
-          <a routerLink="/apps" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop2.open();" routerLinkActive="active">Apps</a>
+          <a routerLink="/apps/." class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop2.open();" routerLinkActive="active">Apps</a>
           <div ngbDropdownMenu>
-            <a ngbDropdownItem routerLink="apps/{{app.id}}" *ngFor="let app of appService.getApps()" routerLinkActive="active">{{app.title}}</a>
+            <a ngbDropdownItem routerLink="apps/{{app.id}}/." *ngFor="let app of appService.getApps()" routerLinkActive="active">{{app.title}}</a>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/development" routerLinkActive="active">Software Development</a>
+          <a class="nav-link" routerLink="/development/." routerLinkActive="active">Software Development</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/music" routerLinkActive="active">Music</a>
+          <a class="nav-link" routerLink="/music/." routerLinkActive="active">Music</a>
         </li>
-
-        <!-- <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact</a>
-        </li> -->
 
       </ul>
     </div>

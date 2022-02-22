@@ -7,7 +7,7 @@
     <ng-template #imageTemplate let-image="image">
       <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
         <figure class="m-0 p-0">
-          <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" alt="{{image.title}}" loading="lazy" />
+          <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" alt="{{image.title}}" title="{{image.title}}" loading="lazy" />
           <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
             <figcaption>{{image.title}}</figcaption>
           </div>
@@ -17,7 +17,7 @@
 
     <div class="text-center p-4" *ngIf="pages && pages.length && pages.length > 1">
       <a
-      routerLink="/photography/{{album.id}}/{{i == 1 ? '' : i}}"
+      routerLink="/photography/{{album.id}}/{{i == 1 ? '' : i}}/."
       class="btn btn-outline-light ml-2"
       [ngClass]="{'btn-light': i == page, 'btn-outline-light': i != page}"
       *ngFor="let i of pages">

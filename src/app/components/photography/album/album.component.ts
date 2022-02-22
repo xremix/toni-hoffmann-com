@@ -70,8 +70,8 @@ export class AlbumComponent implements OnInit {
 
 
       this.seoService.updatePageMetaData(
-        `${this.album.title} Photography Page ${this.page} by Toni Hoffmann`,
-        this.album.subTitle // TODO make this more meaningful / longer?
+        `${this.album.title} Photography - Gallery ${this.page}`,
+        `Professional photo gallery with pictures of ${this.album.subTitle}` // TODO make this more meaningful / longer?
       );
 
 

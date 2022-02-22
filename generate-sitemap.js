@@ -11,106 +11,106 @@ var sites = [{
   url: '/',
   priority: '1.00',
 },{
-  url: '/photography',
+  url: '/photography/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/1',
+  url: '/photography/landscapes/1/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/2',
+  url: '/photography/landscapes/2/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/3',
+  url: '/photography/landscapes/3/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/4',
+  url: '/photography/landscapes/4/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/5',
+  url: '/photography/landscapes/5/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/6',
+  url: '/photography/landscapes/6/',
   priority: '1.00',
 }, {
-  url: '/photography/landscapes/7',
+  url: '/photography/landscapes/7/',
   priority: '1.00',
 }, {
-  url: '/photography/winterlandscapes/1',
+  url: '/photography/winterlandscapes/1/',
   priority: '1.00',
 }, {
-  url: '/photography/winterlandscapes/2',
+  url: '/photography/winterlandscapes/2/',
   priority: '1.00',
 },{
-  url: '/photography/winterlandscapes/3',
+  url: '/photography/winterlandscapes/3/',
   priority: '1.00',
 }, {
-  url: '/photography/cityscapes/1',
+  url: '/photography/cityscapes/1/',
   priority: '1.00',
 }, {
-  url: '/photography/cityscapes/2',
+  url: '/photography/cityscapes/2/',
   priority: '1.00',
 }, {
-  url: '/photography/cityscapes/3',
+  url: '/photography/cityscapes/3/',
   priority: '1.00',
 }, {
-  url: '/photography/cityscapes/4',
+  url: '/photography/cityscapes/4/',
   priority: '1.00',
 }, {
-  url: '/photography/subways/1',
+  url: '/photography/subways/1/',
   priority: '1.00',
 }, {
-  url: '/photography/products/1',
+  url: '/photography/products/1/',
   priority: '1.00',
 }, {
-  url: '/photography/products/2',
+  url: '/photography/products/2/',
   priority: '1.00',
 }, {
-  url: '/photography/products/3',
+  url: '/photography/products/3/',
   priority: '1.00',
 }, {
-  url: '/photography/products/4',
+  url: '/photography/products/4/',
   priority: '1.00',
 }, {
-  url: '/apps',
+  url: '/apps/',
   priority: '1.00',
 }, {
-  url: '/apps/pretty-gs1-scanner',
+  url: '/apps/pretty-gs1-scanner/',
   priority: '1.00',
 }, {
-  url: '/apps/smart-gs1-barcode-generator',
+  url: '/apps/smart-gs1-barcode-generator/',
   priority: '1.00',
 }, {
-  url: '/apps/geo-file-converter',
+  url: '/apps/geo-file-converter/',
   priority: '1.00',
 }, {
-  url: '/apps/etf-saving-plan-calculator',
+  url: '/apps/etf-saving-plan-calculator/',
   priority: '1.00',
 }, {
-  url: '/apps/boat-speedometer',
+  url: '/apps/boat-speedometer/',
   priority: '1.00',
 }, {
-  url: '/apps/curve-tracker',
+  url: '/apps/curve-tracker/',
   priority: '1.00',
 }, {
-  url: '/apps/mindful-focus',
+  url: '/apps/mindful-focus/',
   priority: '1.00',
 }, {
-  url: '/apps/nautic-converter',
+  url: '/apps/nautic-converter/',
   priority: '1.00',
 }, {
-  url: '/development',
+  url: '/development/',
   priority: '0.8',
 }, {
-  url: '/music',
+  url: '/music/',
   priority: '0.8',
 }, {
-  url: '/contact',
+  url: '/contact/',
   priority: '0.40',
 }, {
-  url: '/imprint',
+  url: '/imprint/',
   priority: '0.40',
 }, {
-  url: '/data-privacy',
+  url: '/data-privacy/',
   priority: '0.40',
 }];
 
@@ -130,12 +130,13 @@ function chunkArray(myArray, chunk_size){
 
 
 function loadImages(url){
-  if(!url.includes('/photography/')){
+  if(!url.includes('/photography/') || url == '/photography/' ){
     return '';
   }
 
-  var album = url.slice('/photography/'.length).split('/')[0];
-  var page =  url.slice('/photography/'.length).split('/')[1] - 1;
+
+  var album = url.slice('/photography/'.length).slice(0, -1).split('/')[0];
+  var page =  url.slice('/photography/'.length).slice(0, -1).split('/')[1] - 1;
   var images = JSON.parse(fs.readFileSync(`../toni-hoffmann-com/api/images/${album}.json`));
   var pageImages = chunkArray(images, 21)[page];
 
@@ -177,10 +178,20 @@ fs.writeFile('src/sitemap.xml', xmlContent, function (err) {
 });
 
 var txtContent = sites.map(s =>{
-  return `${s.url}
-`
-}).join('');
+  return `${s.url.slice(0,-1)}`
+}).join('\n');
 fs.writeFile('routes.txt', txtContent, function (err) {
   if (err) throw err;
   console.log('Generated routes.txt');
+
+
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('!!!!!!Dont Forget to remove /.!!!!!');
+  console.log('!!!!!!Then build one more time with /. for the js!!!!!');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 });

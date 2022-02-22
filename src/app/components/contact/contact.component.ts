@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { SeoService } from 'src/app/services/seo.service';
 
 @Component({

@@ -38,10 +38,13 @@
     <div class ="header-vertical-center">
       <div class="fixed-header-text no-hidden text-gradient" [style.opacity]="contentOpacity">
         <div class="p-2">
-          <h1 class="py-0 h1 mt-0" *ngIf="asHeader">Toni Hoffmann</h1>
+          <h1 class="py-0 h1 mt-0" *ngIf="asHeader">
+            Toni Hoffmann
+            <span class="p-0" style="font-size:0.8em;" *ngIf="galleryTitle"><br/>{{galleryTitle}}</span>
+          </h1>
           <div class="py-0 h1 mt-0" *ngIf="!asHeader">Toni Hoffmann</div>
-          <h2 class="p-0" *ngIf="galleryTitle">{{galleryTitle}}</h2>
-          <h3 class="p-0" *ngIf="gallerySubtitle">{{gallerySubtitle}}</h3>
+          <!-- <h2 class="p-0" *ngIf="galleryTitle">{{galleryTitle}}</h2> -->
+          <h2 class="p-0 pt-4 pb-4" style="font-size: 1.5rem;" *ngIf="gallerySubtitle">{{gallerySubtitle}}</h2>
         </div>
       </div>
     </div>
