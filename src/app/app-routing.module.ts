@@ -37,6 +37,21 @@ const routes: Routes = [
       { path: 'photography/:album/photo/:photoid/.', component: AlbumComponent },
       { path: 'imprint/.', component: ImprintComponent },
       { path: 'data-privacy/.', component: DataPrivacyComponent },
+
+      // Needed when doing the prerendering for the HTML
+      // { path: 'contact', component: ContactComponent },
+      // { path: 'contact/:action', component: ContactComponent },
+      // { path: 'development', component: DevelopmentComponent },
+      // { path: 'music', component: MusicComponent },
+      // { path: 'apps', component: AppsComponent },
+      // { path: 'apps/:appid', component: AppDetailComponent },
+      // { path: 'photography', component: PhotographyComponent },
+      // { path: 'photography/:album', component: AlbumComponent },
+      // { path: 'photography/:album/:page', component: AlbumComponent },
+      // { path: 'photography/:album/photo/:photoid', component: AlbumComponent },
+      // { path: 'imprint', component: ImprintComponent },
+      // { path: 'data-privacy', component: DataPrivacyComponent },
+
       { path: '', component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,
       { path: '404', component: PageNotFoundComponent },
       { path: '**', redirectTo: '/404' }
