@@ -19,15 +19,15 @@ export class AppService {
     primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.webp',
     primaryColor: '#329D9C',
     features: [{
-      icon: 'fas fa-bath',
+      icon: 'fa-solid fa-bath',
       title: 'Cope Stress',
       description: 'Over a hundred little lessons to get you more calm and forget about your daily stress.'
     },{
-      icon: 'fas fa-rocket',
+      icon: 'fa-solid fa-rocket',
       title: 'Daily Challenge',
       description: 'Get out of your comfort zone gives you the best results.'
     },{
-      icon: 'fas fa-bath',
+      icon: 'fa-solid fa-bath',
       title: 'Learn how to calm',
       description: 'Continue to work on yourself every day, to get a mind change and see long term results.'
     }],
@@ -50,15 +50,15 @@ This App helps you to calm and increase your awareness with over a hundred diffe
       'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/07/40/72/0740729c-64b7-f412-9b84-159d8a76ba3a/66025b8c-bc2c-4fb5-970b-221bdfebba82_iPhone_XR_U002c_XS_Max_U002c_11__U2013_7@3x.png/1242x2688bb.png'
     ],
     features:[{
-      icon: 'fas fa-barcode',
+      icon: 'fa-solid fa-barcode',
       title: 'Scan GS1 Barcodes',
       description: 'The App supports all common barcode types, but furthermore can understand the GS1 Standard and show all values that are inside of the barcode.'
     },{
-      icon: 'fas fa-history',
+      icon: 'fa-solid fa-history',
       title: 'History',
       description: 'Keep track of your history and revisit your barcodes later.',
     },{
-      icon: 'fas fa-share-square',
+      icon: 'fa-solid fa-share-square',
       title: 'Share',
       description: 'Share the total raw barcode with any other App or person, or copy the values out of the barcode'
     }],

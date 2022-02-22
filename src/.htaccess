@@ -65,11 +65,11 @@ RewriteRule ^(.*) /index.html [NC,L]
 # Browser Caching from https://strato.de/blog/wordpress-beine-machen-htaccess/
 <IfModule mod_expires.c>
 	ExpiresActive On
-    ExpiresByType text/html "access plus 1 day"
-	ExpiresByType text/javascript "access plus 3 days"
-	ExpiresByType application/x-javascript "access plus 3 days"
-	ExpiresByType application/javascript "access plus 3 days"
-	ExpiresByType text/css "access plus 1 months"
+    ExpiresByType text/html "access plus 30 day"
+	ExpiresByType text/javascript "access plus 1 year"
+	ExpiresByType application/x-javascript "access plus 1 year"
+	ExpiresByType application/javascript "access plus 1 year"
+	ExpiresByType text/css "access plus 1 year"
 	ExpiresByType image/gif "access plus 1 year"
 	ExpiresByType image/ico "access plus 1 year"
 	ExpiresByType image/jpeg "access plus 1 year"
