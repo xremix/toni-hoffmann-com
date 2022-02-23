@@ -67,11 +67,23 @@ export class AlbumComponent implements OnInit {
 
         this.router.navigate([url], { relativeTo: this.route });
       }
+  
+      var galleryDescription = `Professional photo gallery with pictures of ${this.album.subTitle}`;
+      if(albumParameter == 'landscapes'){
+        galleryDescription = 'Landscape of moody sunset and cloud photos of Ammersee, Chiemsee, Plansee, Garmisch-Patenkirchen, Berchtesgaden, Allgäu, Bavaria and Austria Alps'
+      }else if(albumParameter == 'winterlandscapes'){
+        galleryDescription = 'Winter Outdoor photography of the snow wonderland in Garmisch-Patenkirchen, Hallstatt, Berchtesgaden, Allgäu and the Alps'
+      }else if(albumParameter == 'subways'){
+        galleryDescription = 'Abstract architecture photography with urban pictures of the subway and train stations of Munich, Bavaria and Berlin, Germany'
+      }else if(albumParameter == 'cityscapes'){
+        galleryDescription = 'Architecture pictures of Munich, Cologne, Berlin, Frankfurt at Blue Hour, Sunset and rainy days'
+      }else if(albumParameter == 'products'){
+        galleryDescription = 'Product photography of bikes, cars, watches and lifestyle products with moody look in Bavaria, Germany'
+      }
 
-
-      this.seoService.updatePageMetaData(
+      this.seoService.setPageMetaData(
         `${this.album.title} Photography - Gallery ${this.page}`,
-        `Professional photo gallery with pictures of ${this.album.subTitle}` // TODO make this more meaningful / longer?
+        galleryDescription, // TODO make this more meaningful / longer?
       );
 
 

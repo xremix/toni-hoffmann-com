@@ -18,7 +18,7 @@ export class AppTermsComponent {
 
   constructor(public router: Router, private route: ActivatedRoute, private seoService: SeoService, private appService: AppService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
 
-    this.seoService.updatePageMetaData(
+    this.seoService.setPageMetaData(
       `Fullstack Software Developer from Munich`,
       'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
     );

@@ -11,16 +11,29 @@ export class SeoService {
   constructor(private title: Title, private meta: Meta, @Inject(DOCUMENT) private dom, private router: Router, private utilitiesService: UtilitiesService) {
    }
 
-  public updatePageMetaData(title: string, description: string){
-    this.updateTitleRaw('Toni Hoffmann - ' + title);
-    this.updateDescription(description);
+   
+  public setPageMetaData(title: string, description: string, keywords?: string){
+    this.setTitleRaw('Toni Hoffmann - ' + title);
+    this.setDescription(description);
     if(this.utilitiesService.isBrowser()){
-      this.updateCanonicalUrl(this.fixUrl(window.location.href));
+      this.setCanonicalUrl(this.fixUrl(window.location.href));
     }
+    if(keywords){
+      this.setKeywords(keywords)
+    };
   }
 
-  private updateTitleRaw(rawTitle: string) {
+  public getDefaultKeywords(additionalKeywords?: string[]){
+    var additionalKeywordString = "";
+    if(additionalKeywords && additionalKeywords.length){
+      additionalKeywordString = `, ${additionalKeywords.join(', ')}`;
+    }
+    return `Toni Hoffmann, Bavaria, Bayern, Munich, München${additionalKeywordString}`;
+  }
+
+  private setTitleRaw(rawTitle: string) {
     this.title.setTitle(rawTitle);
+    this.meta.updateTag({ name: 'og:title', content: rawTitle })
   }
 
   private fixUrl(url: string){
@@ -34,7 +47,7 @@ export class SeoService {
     return url;
   }
 
-  private updateCanonicalUrl(url:string){
+  private setCanonicalUrl(url:string){
     const head = this.dom.getElementsByTagName('head')[0];
     var element: HTMLLinkElement= this.dom.querySelector(`link[rel='canonical']`) || null
     if (element==null) {
@@ -43,17 +56,19 @@ export class SeoService {
     }
     element.setAttribute('rel','canonical')
     element.setAttribute('href',url)
+    this.setOgUrl(url);
   }
 
-  private updateOgUrl(url: string) {
+  private setOgUrl(url: string) {
     this.meta.updateTag({ name: 'og:url', content: url })
   }
 
-  private updateDescription(desc: string) {
+  private setDescription(desc: string) {
     this.meta.updateTag({ name: 'description', content: desc })
+    this.meta.updateTag({ name: 'og:description', content: desc })
   }
 
-  private updateKeywords(keywords: string) {
+  private setKeywords(keywords: string) {
     this.meta.updateTag({ name: 'keywords', content: keywords })
   }
 }

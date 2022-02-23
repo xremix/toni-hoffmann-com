@@ -11,7 +11,7 @@ export class PhotographyComponent implements OnInit {
   public albums: Array<Album> = [];
 
   constructor(private seoService: SeoService, private photoService: PhotoService) {
-    this.seoService.updatePageMetaData(
+    this.seoService.setPageMetaData(
       'Photography Portfolio by Toni Hoffmann',
       'Passionated Landscape, Architecture and Portrait Photograph in Munich, Bavaria, Germany'
     );

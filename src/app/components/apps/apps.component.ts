@@ -19,9 +19,9 @@ export class AppsComponent implements OnInit {
 
   constructor(private seoService: SeoService, private appService: AppService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
     // TODO change this
-    this.seoService.updatePageMetaData(
-      `Fullstack Software Developer from Munich`,
-      'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
+    this.seoService.setPageMetaData(
+      `iOS and macOS Apps for iPhone and iPad`,
+      'Motorbike, Barcode and GEO Apps for your iPhone, iPad and MacBook developed by Software Developer from Munich, Bavaria, Germany'
     );
 
   }

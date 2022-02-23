@@ -20,16 +20,21 @@ export class AppDetailComponent {
 
   constructor(public router: Router, private route: ActivatedRoute, private seoService: SeoService, private appService: AppService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
 
-    this.seoService.updatePageMetaData(
-      `Fullstack Software Developer from Munich`,
-      'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
-    );
 
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
+
+
+      
+      
       this.app = this.appService.getApp(params['appid']);
+      
+      this.seoService.setPageMetaData(
+        this.app.title,
+        `${this.app.title} Mobile App for iOS, iPhone, iPad and macOS, Developed by Toni Hoffmann from Munich, Bavaria, Germany`
+      );
     });
   }
 
