@@ -32,7 +32,7 @@ export class PhotoService {
     title: 'Urban Subways',
     subTitle: 'Places that connect People',
     id: 'subways',
-    imageUrl: '/assets/49459119791_9bff7bbe5f_k_d.webp',
+    imageUrl: '/assets/49459119791_9bff7bbe5f_k.webp',
     photos: []
   },{
     title: 'Products',
