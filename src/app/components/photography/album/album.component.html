@@ -24,8 +24,30 @@
       </a>
     </div>
 
+
+    <div class="row py-4 text-center">
+      <div class="w-100 text-white mb-3">
+        Find more images
+      </div>
+      <div class="w-100">
+        <a href="https://www.gettyimages.de/search/photographer?photographer=toni%20hoffmann" target="_blank" class="btn btn-sm btn-outline-light btn-lg mx-3">
+          <i class="fa-brands fa-goodreads-g"></i> Getty Images
+        </a>
+        <a href="https://www.flickr.com/people/xremix/" target="_blank" class="btn btn-sm btn-outline-light btn-lg mx-3">
+          <i class="fa-brands fa-flickr"></i> Flickr
+        </a>
+    </div>
+    </div>
+
+
+
   </div>
   <app-photo-modal #photoModal></app-photo-modal>
 </ng-container>
+
+
+<div class="container">
+ 
+</div>
 
 <app-call-to-action [showScrollPosition]="callToAction" [text]="album.id === 'products' ? 'Interest in a collaboration?' : 'Interest in a picture?'"></app-call-to-action>
