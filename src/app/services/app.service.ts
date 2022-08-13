@@ -272,6 +272,20 @@ Improve your driving skills and get a more secure driver.`
 <li>Convert knots / Nautic miles per hour, km/h, mph, meters per second</li>
 <li>See the Beaufort scale of certain speed</li>
 <li>Convert DD, DDM and DMS coordinates and pick them on the map, or by your current location</li></ul>`
+  },{
+    title: 'Coordinate Converter',
+    id: 'coordinate-converter',
+    iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/cf/5c/a6/cf5ca6b3-a460-2342-79e1-a930b4e9076f/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/convert-coordinates-dd-dms-ddm/1639685414',
+    screenshotUrls: [
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/b6/1d/5d/b61d5da8-dbf7-6c1f-acc5-797d7591b505/7876209d-89c5-4983-b31f-b67cb38f4ce0_App_Store_Screenshot_6_U002c5_-_1.png/400x800bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/0c/f3/0c/0cf30c98-b8cc-f10f-929d-53d59ce32cb1/3da567ca-0e9e-408a-9e9a-05e4e402ad8d_App_Store_Screenshot_6_U002c5_-_2.png/400x800bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/b5/c2/48/b5c248f9-3246-c327-38b8-29e6ceacb2d4/c87aa28f-6fc4-4d3c-ad39-afc31f424881_App_Store_Screenshot_6_U002c5_-_3.png/400x800bb.png'
+    ],
+    shortDescription: 'Easily convert all common coordinates with the Coordinate Converter App.',
+    description: `Easily convert all common coordinates with the Coordinate Converter App.<br/>
+    <br/>
+    The App supports converting DD, DMS, DDM and UTM. You can also choose coordinates from your current location or select them on a map.`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }
