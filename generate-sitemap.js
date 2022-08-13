@@ -35,6 +35,9 @@ var sites = [{
   url: '/photography/landscapes/7/',
   priority: '1.00',
 }, {
+  url: '/photography/landscapes/8/',
+  priority: '1.00',
+}, {
   url: '/photography/winterlandscapes/1/',
   priority: '1.00',
 }, {
