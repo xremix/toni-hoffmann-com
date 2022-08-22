@@ -28,16 +28,7 @@ var sites = [{
 }, {
   url: '/photography/landscapes/5/',
   priority: '1.00',
-}, {
-  url: '/photography/landscapes/6/',
-  priority: '1.00',
-}, {
-  url: '/photography/landscapes/7/',
-  priority: '1.00',
-}, {
-  url: '/photography/landscapes/8/',
-  priority: '1.00',
-}, {
+},{
   url: '/photography/winterlandscapes/1/',
   priority: '1.00',
 }, {
@@ -56,9 +47,6 @@ var sites = [{
   url: '/photography/cityscapes/3/',
   priority: '1.00',
 }, {
-  url: '/photography/cityscapes/4/',
-  priority: '1.00',
-}, {
   url: '/photography/subways/1/',
   priority: '1.00',
 }, {
@@ -69,9 +57,6 @@ var sites = [{
   priority: '1.00',
 }, {
   url: '/photography/products/3/',
-  priority: '1.00',
-}, {
-  url: '/photography/products/4/',
   priority: '1.00',
 }, {
   url: '/apps/',
@@ -145,7 +130,8 @@ function loadImages(url){
   var page =  url.slice('/photography/'.length).slice(0, -1).split('/')[1] - 1;
   var images = JSON.parse(fs.readFileSync(`../toni-hoffmann-com/api/images/${album}.json`));
   var pageImages = chunkArray(images, 21)[page];
-
+console.log(album, page);
+// if(!pageImages) return '';
   var output = pageImages.map(image =>`
   <image:image>
     <image:loc>https://www.toni-hoffmann.com/images/${album}/full/${image.url}</image:loc>
