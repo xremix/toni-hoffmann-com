@@ -286,6 +286,24 @@ Improve your driving skills and get a more secure driver.`
     description: `Easily convert all common coordinates with the Coordinate Converter App.<br/>
     <br/>
     The App supports converting DD, DMS, DDM and UTM. You can also choose coordinates from your current location or select them on a map.`
+  },{
+    title: 'SOS - This is my Location',
+    id: 'sos-location',
+    iconUrl: 'https://is2-ssl.mzstatic.com/image/thumb/Purple122/v4/ac/45/e0/ac45e02e-16b5-d817-6e54-d5e5861a4307/AppIcon-1x_U007emarketing-0-7-0-85-220.png/135x135bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/sos-this-is-my-location/1640902948',
+    screenshotUrls: [
+      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/c0/6f/ca/c06fca59-5d10-be88-c0d2-7b591705ebac/149c6e30-70f2-4d71-8e45-a854237f8d79_App_Store_Screenshot_6_U002c5_-_1.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/54/ad/e5/54ade51e-7dbd-14d1-59bf-58049ce962fa/28f03cba-250c-4b3a-ab5c-8f6961ef1741_App_Store_Screenshot_6_U002c5_-_2.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/aa/5d/03/aa5d03c7-0875-84cd-2eab-b78e66cc794f/b578be1c-730b-4a5a-b25c-0a7c9c2cceaf_App_Store_Screenshot_6_U002c5_-_3__U2013_1.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Are you in trouble and need an emergency number? Or tell others where you exactly at, right now?',
+    description: `Are you in trouble and need an emergency number? Or tell others where you exactly at, right now?<br/>
+    Better prepare yourself.<br/>
+    <br/>
+    It was never easier to load your current GPS Coordinates, or the address where you are.<br/>
+    <br/>
+    No internet is required to load your Coordinates and you can simply share them via SMS, directly from the App. So you can even ask for help without a internet connection. <br/>
+    And if your iPhone has a internet connection, the App will load your current address and show your location on the Map.`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }
