@@ -14,31 +14,31 @@ export class PhotoService {
     title: 'Landscapes',
     subTitle: 'Bavarian Alps, Austria, Italy and Portugal',
     id: 'landscapes',
-    imageUrl: 'https://farm2.staticflickr.com/1805/43296374782_c5cbb7d864_h.jpg',
+    imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
     photos: []
   },{
     title: 'Winter Outdoors',
     subTitle: 'Cozy Moments in the cold Season',
     id: 'winterlandscapes',
-    imageUrl: 'https://farm5.staticflickr.com/4649/39767964544_9ba2c3c3b8_b.jpg',
+    imageUrl: '/assets/39767964544_9ba2c3c3b8_b.webp',
     photos: []
   },{
     title: 'Cityscapes',
     subTitle: 'Big City Lights, Urbans and Mountan Villages',
     id: 'cityscapes',
-    imageUrl: 'https://farm5.staticflickr.com/4227/34959811331_73537fc40b_h.jpg',
+    imageUrl: '/assets/34959811331_73537fc40b_h.webp',
     photos: []
   },{
     title: 'Urban Subways',
     subTitle: 'Places that connect People',
     id: 'subways',
-    imageUrl: 'https://farm5.staticflickr.com/65535/49459119791_9bff7bbe5f_k_d.jpg',
+    imageUrl: '/assets/49459119791_9bff7bbe5f_k.webp',
     photos: []
   },{
     title: 'Products',
     subTitle: 'Lifestyle Products that trigger Emotions',
     id: 'products',
-    imageUrl: 'https://farm8.staticflickr.com/7927/46699689084_fae0ac838b_h.jpg',
+    imageUrl: '/assets/46699689084_fae0ac838b_h.webp',
     photos: []
   }];
 
@@ -54,7 +54,8 @@ export class PhotoService {
 
   // TODO use the model instead of any
   public getPhotosFromAlbum(album: string): Observable<any> {
-    var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
+    var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/images/${album}.json` : `/api/images/${album}.json`;
+    // var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
 
     return this.http.get(url);
 

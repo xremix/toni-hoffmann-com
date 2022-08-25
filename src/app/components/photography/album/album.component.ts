@@ -22,6 +22,7 @@ export class AlbumComponent implements OnInit {
   public modalPhoto: any = null;
   public callToAction = 999999;//get's set in constructor
 
+  // TODO change this also in generate-sizemap.js
   private pageSize: number = 21;
   private page: number = 1;
 
@@ -45,6 +46,11 @@ export class AlbumComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // if(window.location.hostname.indexOf('localhost') >= 0){
+    //   console.warn('disable paging')
+    //   this.pageSize = 99;
+    // }
+    
     this.route.params.subscribe(params => {
       this.createGallery(params);
     });
@@ -53,24 +59,42 @@ export class AlbumComponent implements OnInit {
   createGallery(params: any){
       var albumParameter = params['album'];
       this.album = this.photoService.getAlbumMetaData(albumParameter);
-      this.seoService.updatePageMetaData(
-        `${this.album.title} Photography by Toni Hoffmann`,
-        this.album.subTitle // TODO make this more meaningful / longer?
-      );
 
       if(params['page']){
-        this.page = +params['page'];
+        this.page = + params['page'];
       }else{
         var url = `/photography/${this.album.id}/1`;
 
         this.router.navigate([url], { relativeTo: this.route });
       }
+  
+      var galleryDescription = `Professional photo gallery with pictures of ${this.album.subTitle}`;
+      if(albumParameter == 'landscapes'){
+        galleryDescription = 'Landscape of moody sunset and cloud photos of Ammersee, Chiemsee, Plansee, Garmisch-Patenkirchen, Berchtesgaden, Allgäu, Bavaria and Austria Alps'
+      }else if(albumParameter == 'winterlandscapes'){
+        galleryDescription = 'Winter Outdoor photography of the snow wonderland in Garmisch-Patenkirchen, Hallstatt, Berchtesgaden, Allgäu and the Alps'
+      }else if(albumParameter == 'subways'){
+        galleryDescription = 'Abstract architecture photography with urban pictures of the subway and train stations of Munich, Bavaria and Berlin, Germany'
+      }else if(albumParameter == 'cityscapes'){
+        galleryDescription = 'Architecture pictures of Munich, Cologne, Berlin, Frankfurt at Blue Hour, Sunset and rainy days'
+      }else if(albumParameter == 'products'){
+        galleryDescription = 'Product photography of bikes, cars, watches and lifestyle products with moody look in Bavaria, Germany'
+      }
+
+      this.seoService.setPageMetaData(
+        `${this.album.title} Photography - Gallery ${this.page}`,
+        galleryDescription, // TODO make this more meaningful / longer?
+      );
+
+
 
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 
         data = data.map(i =>{
-          i.bigurl = i.url;
-          i.url = i.middleurl;
+          // i.bigurl = 'https://www.toni-hoffmann.com/galleryimages/' + i.url;
+          // i.url = 'https://www.toni-hoffmann.com/galleryimages/' + i.middleurl;
+          i.bigurl = `https://www.toni-hoffmann.com/images/${albumParameter}/full/${i.url}`;
+          i.url = `https://www.toni-hoffmann.com/images/${albumParameter}/thumbnail/${i.middleurl}`;
           return i;
         });
 

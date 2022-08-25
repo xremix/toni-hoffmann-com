@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
 
@@ -25,6 +25,7 @@ import { XGallerifyModule } from '@xremix/ng-x-gallerify';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerLinkComponent } from './components/photography/banner-link/banner-link.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component'
+import { LayoutComponent } from './components/shared/layout/layout.component'
 import { PhotoService } from './services/photo.service';
 import { AppService } from './services/app.service';
 import { SafePipe } from './safe-pipe';
@@ -39,33 +40,36 @@ import { CookieService } from 'ngx-cookie-service';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faCoffee, faEnvelope, faTimes, faAddressCard, faQuoteRight  } from '@fortawesome/free-solid-svg-icons';
 import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { SeoService } from './services/seo.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    PageNotFoundComponent,
-    DevelopmentComponent,
-    PhotographyComponent,
-    MusicComponent,
-    ImprintComponent,
-    DataPrivacyComponent,
     AlbumComponent,
-    BannerLinkComponent,
-    NavigationComponent,
-    SafePipe,
-    PhotoModalComponent,
-    ImageCardComponent,
-    ContactComponent,
-    SpinnerComponent,
-    CallToActionComponent,
-    CookieBannerComponent,
-    AppsComponent,
+    AppComponent,
     AppDetailComponent,
     AppImprintComponent,
-    AppTermsComponent
+    AppsComponent,
+    AppTermsComponent,
+    BannerLinkComponent,
+    CallToActionComponent,
+    ContactComponent,
+    CookieBannerComponent,
+    DataPrivacyComponent,
+    DevelopmentComponent,
+    FooterComponent,
+    HeaderComponent,
+    HomeComponent,
+    ImageCardComponent,
+    ImprintComponent,
+    LayoutComponent,
+    MusicComponent,
+    NavigationComponent,
+    PageNotFoundComponent,
+    PhotographyComponent,
+    PhotoModalComponent,
+    SafePipe,
+    SpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -76,7 +80,7 @@ import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
     XGallerifyModule,
     FontAwesomeModule
   ],
-  providers: [PhotoService, AppService, CookieService],
+  providers: [PhotoService, AppService, CookieService, SeoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

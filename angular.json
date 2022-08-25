@@ -27,6 +27,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/sitemap.xml",
+              "src/robots.txt",
               "src/.htaccess"
             ],
             "styles": [
@@ -45,7 +46,6 @@
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -118,7 +118,7 @@
           "options": {
             "browserTarget": "toni-hoffmann-com:build:production",
             "serverTarget": "toni-hoffmann-com:server:production",
-            "routes": ["/", "/photography/landscapes/1"] // <-- Here you should put the routes you want to prender
+            "routes": ["/"] // <-- Here you should put the routes you want to prender
           },
           "configurations": {
             "production": {}

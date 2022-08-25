@@ -11,33 +11,37 @@ import { UtilitiesService } from 'src/app/services/utilities.service'
 export class AppService {
 
   private apps: Array<App> = [{
-    title: 'Cope Stress App (Beta)',
+    title: 'Cope Stress - Daily Challenge',
     id: 'cope-stress',
-    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.png',
-    iconUrl: '/assets/apps/The-Cope-Stress-App-Icon.png',
-    betaUrl: 'https://forms.gle/xs32Fo49tAx8swZF7',
-    primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.png',
+    bannerUrl: '/assets/apps/The-Cope-Stress-App-Header.webp',
+    iconUrl: '/assets/apps/The-Cope-Stress-App-Icon.webp',
+    appStoreUrl: 'https://apps.apple.com/us/app/cope-stress-daily-challenge/id1545228555?ign-mpt=uo%3D2',
+    primaryScreenshotUrl: '/assets/apps/The-Cope-Stress-App-Screenshot.webp',
     primaryColor: '#329D9C',
     features: [{
-      icon: 'fas fa-bath',
+      icon: 'fa-solid fa-bath',
       title: 'Cope Stress',
       description: 'Over a hundred little lessons to get you more calm and forget about your daily stress.'
     },{
-      icon: 'fas fa-rocket',
+      icon: 'fa-solid fa-rocket',
       title: 'Daily Challenge',
       description: 'Get out of your comfort zone gives you the best results.'
     },{
-      icon: 'fas fa-bath',
+      icon: 'fa-solid fa-bath',
       title: 'Learn how to calm',
       description: 'Continue to work on yourself every day, to get a mind change and see long term results.'
-    }]
+    }],
+    shortDescription: 'Calm and increase your awareness with over a hundred different little fun lessons for every day.',
+    description: `When was the last time you built a paper plane or walked in the rain?<br/>
+<br/>
+This App helps you to calm and increase your awareness with over a hundred different little fun lessons for every day. Challenge yourself, to be more in focus and less stressed.`
   },{
     title: 'Pretty GS1 Scanner',
     id: 'pretty-gs1-scanner',
-    bannerUrl: '/assets/apps/The-Pretty-GS1-Reader-Header.png',
+    bannerUrl: '/assets/apps/The-Pretty-GS1-Reader-Header.webp',
     iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/4f/4f/8b/4f4f8bdd-ceec-4e28-f594-39edd5066ba0/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.png',
     appStoreUrl: 'https://apps.apple.com/us/app/pretty-gs1-reader/id1545547560',
-    primaryScreenshotUrl: '/assets/apps/The-Pretty-GS1-Reader-Screenshot.png',
+    primaryScreenshotUrl: '/assets/apps/The-Pretty-GS1-Reader-Screenshot.webp',
     primaryColor: '#1D6D90',
     screenshotUrls: [
       'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/22/cf/64/22cf64be-edaa-b6b4-b2dd-5af1694f195b/e5bab91f-7fc1-4c01-b662-42539f4b3af0_iPhone_XR_U002c_XS_Max_U002c_11__U2013_4@3x.png/1242x2688bb.png',
@@ -46,15 +50,15 @@ export class AppService {
       'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/07/40/72/0740729c-64b7-f412-9b84-159d8a76ba3a/66025b8c-bc2c-4fb5-970b-221bdfebba82_iPhone_XR_U002c_XS_Max_U002c_11__U2013_7@3x.png/1242x2688bb.png'
     ],
     features:[{
-      icon: 'fas fa-barcode',
+      icon: 'fa-solid fa-barcode',
       title: 'Scan GS1 Barcodes',
       description: 'The App supports all common barcode types, but furthermore can understand the GS1 Standard and show all values that are inside of the barcode.'
     },{
-      icon: 'fas fa-history',
+      icon: 'fa-solid fa-history',
       title: 'History',
       description: 'Keep track of your history and revisit your barcodes later.',
     },{
-      icon: 'fas fa-share-square',
+      icon: 'fa-solid fa-share-square',
       title: 'Share',
       description: 'Share the total raw barcode with any other App or person, or copy the values out of the barcode'
     }],
@@ -185,6 +189,121 @@ export class AppService {
     <li>Rate Dynamic</li>
     <li>Yearly Inflation Adjustment</li>
     </ul>`
+  },{
+    title: 'Nautic Speed and Compass',
+    id: 'boat-speedometer',
+    iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/f0/91/40/f0914007-5770-3fc2-5fe3-47fb8d310d36/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/nautic-speed-and-compass/id1578165239',
+    screenshotUrls: [
+      'https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/bf/dc/89/bfdc89af-94a4-750d-6c99-e06fb479907f/5b55c724-d504-4123-a1eb-f18d064c128f_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/0f/04/37/0f04376d-ea03-1d00-ba75-563dc719755b/a8e0e6e3-4d74-48b6-9f31-c940c7202e6a_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/95/c6/14/95c614e3-b824-d7d5-4df4-d94c1b677d9d/59fd10d6-1709-4fc4-ba51-0e926dd3538b_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/48/f8/9a/48f89a7d-40d9-dfbb-2fe3-f0aada8939a6/2bcd849a-cee8-48c5-ae85-44b4b0cd5e56_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/52/7a/06/527a066b-d276-e859-52b5-08a9b3b50441/369d776e-46da-4f6e-b7e0-39b9be31f7a1_App_Store_Screenshot_6_U002c5_-_1__U2013_6@3x.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Ever wondered which speed you are heading? Or which direction you are driving with your boat?',
+    description: `Ever wondered which speed you are heading? Or which direction you are driving with your boat?<br/>
+    <br/>
+    This app will provide you all important information you need for your next boat ride.<br/>
+    <ul>
+    <li>Compass with the your direction</li>
+    <li>See the current Speed in knots, miles or kilometers</li>
+    <li>Set Speed Limits</li>
+    <li>Simply switch between unites</li>
+    <li>See a map of your cruise and share it with others</li>
+    <li>See your maximum and average speed</li>
+    <li>Works in Portrait and Landscape Mode</li>
+    </ul>`
+  },{
+    title: 'Curve Tracker',
+    id: 'curve-tracker',
+    iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/83/74/ff/8374ffcf-868d-6758-d0c0-a19669de6400/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    bannerUrl: 'https://ph-files.imgix.net/a161fede-dc8a-4f1d-a83c-365358e554c3.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&fit=max&dpr=2',
+    appStoreUrl: 'https://apps.apple.com/us/app/moto-leaning-angle/id1579524063?ign-mpt=uo%3D2',
+    screenshotUrls: [
+      'https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/a3/cf/44/a3cf4468-a0bb-e137-3af7-e11d08aa10dc/0f6bce03-3dc5-48ea-af86-f0c78a1df240_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/8e/a0/25/8ea0253e-da68-952f-fb78-3bb66b257137/b9b0abc4-68cb-4e22-af74-15df02900324_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/09/5a/b1/095ab1f2-f506-a8b8-f001-4a3fb37d02e8/73eee7be-f94c-4397-9765-5753201a075a_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/fa/6d/9d/fa6d9d0a-26ba-8638-70bb-1421c446b6a5/5b267f1b-7d68-416b-94df-db1b1b383e01_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/09/61/8f/09618f42-c970-fc2d-6f4b-186e6edc6820/4e23c449-f92b-4be5-93ee-fdf59684eb47_App_Store_Screenshot_6_U002c5_-_1__U2013_5@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/bb/17/7c/bb177cec-9471-c85a-9e79-a0b3c1c25aa9/3761af48-2326-485d-a928-22e686968b4f_App_Store_Screenshot_6_U002c5_-_1__U2013_6@3x.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Ever wondered how good your cornering is, when driving your motorbike?',
+    description: `Ever wondered how good your cornering is, when driving your motorbike?<br/>
+<br/>
+Moto Leaning Angle is your App to improve your driving by analyzing and tracking your rides with the sensors of your smartphone.<br/>
+<br/>
+Use this App to track your leaning angle while driving bike. It allows you to record a map with you route, that includes all the corners, including their speed and leaning angle.
+Improve your driving skills and get a more secure driver.`
+  },{
+    title: 'Mindful Focus',
+    id: 'mindful-focus',
+    iconUrl: 'https://is4-ssl.mzstatic.com/image/thumb/Purple115/v4/53/18/78/531878cd-3178-6a12-8e08-62716f2566ec/AppIcon-85-220-4-2x.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/mindful-focus-time-awareness/id1586293102',
+    screenshotUrls: [
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/57/33/27/5733273b-a156-206e-cd70-d9b19d31a455/cd75594b-d9a1-4444-8734-ceed92998733_Screenshot__U2013_1.png/2880x1800bb.png',
+      'https://is3-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/9d/9a/bb/9d9abb89-4206-2d3c-467d-3193be8dd3c7/4c371cca-e348-46bd-a885-4960ce680e7d_Screenshot__U2013_2.png/2880x1800bb.png',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/37/f2/6c/37f26c06-9fe1-e81b-95a5-b2e5a1e416a8/b7de613c-030c-4334-83a4-d1b2c10ad261_Screenshot__U2013_3.png/2880x1800bb.png'
+    ],
+    shortDescription: 'With Mindful Focus you can see how long you are working concentrated on your computer without having a break.',
+    description: `How long are you in focus? Should you take a break?<br/>
+      <br/>
+      With Mindful Focus you can see how long you are working concentrated on your computer without having a break. While checking when your last computer input was, this App will let you know when you had your last off-screen break. Therefore Mindful Focus will automatically recognize breaks you do.<br/>
+      <br/>
+      Mindful Focus will sit in your Macs toolbar, while not interrupting or disturbing your focus. This will help you getting a better awareness of your focus times and if you take enough breaks to stay concentrated. <br/>
+      <br/>
+      <br/>
+      Thanks to David van Dijk (@dvandijk) for publishing the photo on unsplash.com.`
+  },{
+    title: 'Nautic Converter - Boat Tool',
+    id: 'nautic-converter',
+    iconUrl: 'https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/58/a4/d5/58a4d56c-a470-74ac-3186-7ca83bfb793e/AppIcon-1x_U007emarketing-0-7-0-85-220.png/135x135bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/nautic-converter-boat-tool/id1588238361',
+    screenshotUrls: [
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/d4/51/e2/d451e2ff-3c71-e9fd-7ca7-5791141f6955/20cc5681-e2b0-486d-a5f9-67db802bd0a8_App_Store_Screenshot_6_U002c5_-_1__U2013_1@3x.png/1242x2688bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/67/24/b0/6724b0a6-e548-7ff9-bf38-061329f14f99/2bfc6712-103b-4e17-9f1f-714ab5ad2b02_App_Store_Screenshot_6_U002c5_-_1__U2013_2@3x.png/1242x2688bb.png',
+      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/66/ca/a9/66caa999-36e5-0e78-655b-a089d20c5d12/59cc6253-af9f-44d0-8762-d7d422787a5b_App_Store_Screenshot_6_U002c5_-_1__U2013_3@3x.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/81/82/dd/8182dd2a-14c5-f0bf-c1cf-2fee3e3286cb/b65c0c36-2d02-4761-b477-bb815959799e_App_Store_Screenshot_6_U002c5_-_1__U2013_4@3x.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Nautic Converter is the tool that will help to convert all common boat units with a simple, intuitive user interface.',
+    description: `Nautic Converter is the tool that will help to convert all common boat units with a simple, intuitive user interface.<br/>
+<br/><ul>
+<li>Convert miles, meters, kilometers, miles and feet
+<li>Convert knots / Nautic miles per hour, km/h, mph, meters per second</li>
+<li>See the Beaufort scale of certain speed</li>
+<li>Convert DD, DDM and DMS coordinates and pick them on the map, or by your current location</li></ul>`
+  },{
+    title: 'Coordinate Converter',
+    id: 'coordinate-converter',
+    iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/cf/5c/a6/cf5ca6b3-a460-2342-79e1-a930b4e9076f/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/convert-coordinates-dd-dms-ddm/1639685414',
+    screenshotUrls: [
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/b6/1d/5d/b61d5da8-dbf7-6c1f-acc5-797d7591b505/7876209d-89c5-4983-b31f-b67cb38f4ce0_App_Store_Screenshot_6_U002c5_-_1.png/400x800bb.png',
+      'https://is4-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/0c/f3/0c/0cf30c98-b8cc-f10f-929d-53d59ce32cb1/3da567ca-0e9e-408a-9e9a-05e4e402ad8d_App_Store_Screenshot_6_U002c5_-_2.png/400x800bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/b5/c2/48/b5c248f9-3246-c327-38b8-29e6ceacb2d4/c87aa28f-6fc4-4d3c-ad39-afc31f424881_App_Store_Screenshot_6_U002c5_-_3.png/400x800bb.png'
+    ],
+    shortDescription: 'Easily convert all common coordinates with the Coordinate Converter App.',
+    description: `Easily convert all common coordinates with the Coordinate Converter App.<br/>
+    <br/>
+    The App supports converting DD, DMS, DDM and UTM. You can also choose coordinates from your current location or select them on a map.`
+  },{
+    title: 'SOS - This is my Location',
+    id: 'sos-location',
+    iconUrl: 'https://is2-ssl.mzstatic.com/image/thumb/Purple122/v4/ac/45/e0/ac45e02e-16b5-d817-6e54-d5e5861a4307/AppIcon-1x_U007emarketing-0-7-0-85-220.png/135x135bb.png',
+    appStoreUrl: 'https://apps.apple.com/us/app/sos-this-is-my-location/1640902948',
+    screenshotUrls: [
+      'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/c0/6f/ca/c06fca59-5d10-be88-c0d2-7b591705ebac/149c6e30-70f2-4d71-8e45-a854237f8d79_App_Store_Screenshot_6_U002c5_-_1.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/54/ad/e5/54ade51e-7dbd-14d1-59bf-58049ce962fa/28f03cba-250c-4b3a-ab5c-8f6961ef1741_App_Store_Screenshot_6_U002c5_-_2.png/1242x2688bb.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/aa/5d/03/aa5d03c7-0875-84cd-2eab-b78e66cc794f/b578be1c-730b-4a5a-b25c-0a7c9c2cceaf_App_Store_Screenshot_6_U002c5_-_3__U2013_1.png/1242x2688bb.png'
+    ],
+    shortDescription: 'Are you in trouble and need an emergency number? Or tell others where you exactly at, right now?',
+    description: `Are you in trouble and need an emergency number? Or tell others where you exactly at, right now?<br/>
+    Better prepare yourself.<br/>
+    <br/>
+    It was never easier to load your current GPS Coordinates, or the address where you are.<br/>
+    <br/>
+    No internet is required to load your Coordinates and you can simply share them via SMS, directly from the App. So you can even ask for help without a internet connection. <br/>
+    And if your iPhone has a internet connection, the App will load your current address and show your location on the Map.`
   }];
 
   constructor(private utilitiesService: UtilitiesService) { }

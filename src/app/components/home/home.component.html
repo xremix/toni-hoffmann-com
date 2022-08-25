@@ -2,27 +2,48 @@
 <div class="content container-fluid overflow-hidden">
 
   <div class="row">
-    <h1 class="text-center w-100">My Story Porfolio</h1>
+    <h1 class="text-center w-100">Toni Hoffmanns Porfolio</h1>
   </div>
 
   <div class="row py-5 larger">
 
     <div class="col-md-4 p-0 m-0">
-      <app-image-card [title]="'Software Development'" [description]="'Professional Full-Time-Coder, since over a decade'" [href]="'/development'" [imageUrl]="'/assets/software-developer-banner-small.jpg'"></app-image-card>
+      <app-image-card [title]="'Software Development'"
+        [description]="'Professional Full-Time-Coder, since over a decade'" href="/development/."
+        [imageUrl]="'/assets/software-developer-banner-small.webp'"></app-image-card>
     </div>
 
     <div class="col-md-4 p-0 m-0">
-      <app-image-card [title]="'Photography'" [description]="'Passionated photographer, for half of a decade'" [href]="'/photography'" [imageUrl]="'https://farm2.staticflickr.com/1805/43296374782_3341d7d698_z.jpg'"></app-image-card>
+      <app-image-card [title]="'Photography'" [description]="'Passionated photographer, for half of a decade'"
+        href="/photography/." [imageUrl]="'https://farm2.staticflickr.com/1805/43296374782_3341d7d698_z.jpg'">
+      </app-image-card>
     </div>
 
     <div class="col-md-4 p-0 m-0">
-      <app-image-card [title]="'Music'" [description]="'Hobby DJ, a decade ago'" [href]="'/music'" [imageUrl]="'/assets/20180303-040401-DSC04777_edit_small_edit.jpg'"></app-image-card>
+      <app-image-card [title]="'Music'" [description]="'Hobby DJ, a decade ago'" href="/music/."
+        [imageUrl]="'/assets/20180303-040401-DSC04777_edit_small_edit.webp'"></app-image-card>
     </div>
 
   </div>
+  <div class="container pb-5">
+    <div class="row">
+      <div class="text-black-50 text-center larger">
+        <span>
+          <fa-icon icon="quote-right"></fa-icon>
+        </span>
+        Hi there,<br />
+        my name is <b>Toni</b> and I'm located near Munich, Bavaria, Germany.<br/>
+        <br/>
+        As I profession I work as a Senior Software Developer, and next to my passion to technology, I love to concern myself with photography, music and nature.
+        It is simply a great feeling, to hike at sunrise and frame this moment forever in a picture.
 
+      </div>
+    </div>
+  </div>
   <div class="row">
-    <a routerLink="/contact" class="btn btn-outline-dark btn-lg mx-auto"><fa-icon icon="address-card"></fa-icon> Contact me</a>
+    <a routerLink="/contact/." class="btn btn-outline-dark btn-lg mx-auto">
+      <fa-icon icon="address-card"></fa-icon> Contact me
+    </a>
   </div>
 
 </div>

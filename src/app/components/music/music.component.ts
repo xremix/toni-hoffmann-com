@@ -9,7 +9,7 @@ export class MusicComponent implements OnInit {
   public songs: Array<string> = [];
 
   constructor(private _seoService: SeoService) {
-    this._seoService.updatePageMetaData('Hobby DJ in Munich, Bavaria, Germany', 'House, Techno and Tech House under the label Karl & Lexy');
+    this._seoService.setPageMetaData('Hobby DJ in Munich, Bavaria, Germany', 'House, Techno and Tech House under the label Karl & Lexy');
   }
 
   ngOnInit(): void {

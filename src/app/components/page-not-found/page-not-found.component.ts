@@ -8,7 +8,7 @@ import { SeoService } from 'src/app/services/seo.service';
 export class PageNotFoundComponent implements OnInit {
 
   constructor(private seoService: SeoService) {
-    this.seoService.updatePageMetaData(
+    this.seoService.setPageMetaData(
       `Page not Found`,
       'Page you tried to visit was not found!'
     );

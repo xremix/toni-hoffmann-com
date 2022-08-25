@@ -21,7 +21,7 @@ export class DevelopmentComponent implements OnInit {
   public callToAction = 999999;//get's set in constructor
 
   constructor(private seoService: SeoService, private developmentService: DevelopmentService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
-    this.seoService.updatePageMetaData(
+    this.seoService.setPageMetaData(
       `Fullstack Software Developer from Munich`,
       'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
     );

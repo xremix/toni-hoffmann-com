@@ -7,17 +7,16 @@
     <ng-template #imageTemplate let-image="image">
       <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
         <figure class="m-0 p-0">
-          <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" />
+          <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" alt="{{image.title}}" title="{{image.title}}" loading="lazy" />
           <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
             <figcaption>{{image.title}}</figcaption>
           </div>
         </figure>
       </div>
     </ng-template>
-
     <div class="text-center p-4" *ngIf="pages && pages.length && pages.length > 1">
       <a
-      routerLink="/photography/{{album.id}}/{{i == 1 ? '' : i}}"
+      routerLink="/photography/{{album.id}}/{{i}}/."
       class="btn btn-outline-light ml-2"
       [ngClass]="{'btn-light': i == page, 'btn-outline-light': i != page}"
       *ngFor="let i of pages">
@@ -25,8 +24,30 @@
       </a>
     </div>
 
+
+    <div class="row py-4 text-center">
+      <div class="w-100 text-white mb-3">
+        Find more images
+      </div>
+      <div class="w-100">
+        <a href="https://www.gettyimages.de/search/photographer?photographer=toni%20hoffmann" target="_blank" class="btn btn-sm btn-outline-light btn-lg mx-3">
+          <i class="fa-brands fa-goodreads-g"></i> Getty Images
+        </a>
+        <a href="https://www.flickr.com/people/xremix/" target="_blank" class="btn btn-sm btn-outline-light btn-lg mx-3">
+          <i class="fa-brands fa-flickr"></i> Flickr
+        </a>
+    </div>
+    </div>
+
+
+
   </div>
   <app-photo-modal #photoModal></app-photo-modal>
 </ng-container>
+
+
+<div class="container">
+ 
+</div>
 
 <app-call-to-action [showScrollPosition]="callToAction" [text]="album.id === 'products' ? 'Interest in a collaboration?' : 'Interest in a picture?'"></app-call-to-action>

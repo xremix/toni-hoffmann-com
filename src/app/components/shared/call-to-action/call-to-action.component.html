@@ -1,5 +1,5 @@
 <div class="{{position}} text-center call-to-action-container" [ngClass]="{'hideThis': hide}">
-  <a target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}" *ngIf="!href">{{text}}</a>
+  <button target="_blank" (click)="clickCallToAction()" class="btn btn-{{style}}" *ngIf="!href">{{text}}</button>
   <a target="_blank" [href]="href" target="_blank" class="btn btn-{{style}}" *ngIf="href">{{text}}</a>
 </div>
 
@@ -9,9 +9,9 @@
 </div>
 
 <div class="fixed-bottom bg-white text-center pb-5 fade-bottom-in" [ngClass]="{'show': contentVisible}" style="z-index:99999999999">
-  <a class="absolute-top-right mr-3 mt-3 large" (click)="hideContent()">
+  <button class="absolute-top-right mr-3 mt-3 large" (click)="hideContent()">
     <fa-icon icon="times"></fa-icon>
-  </a>
+  </button>
   <div class="container">
     <div class="h1">Interest in a Picture?</div>
     <p>I'm glad you enjoy my photography. Many of the photos <b>can be purchased</b>, so feel free to reach out to me. The portfolio is just a reference and I have many more perspectives, angles and light conditions of these places.</p>

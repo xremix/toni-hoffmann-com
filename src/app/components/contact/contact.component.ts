@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
@@ -11,8 +10,8 @@ export class ContactComponent implements OnInit {
   constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
-    this.seoService.updatePageMetaData(
-      `Contact Toni Hoffmann`,
+    this.seoService.setPageMetaData(
+      `Contact`,
       'Contact Toni Hoffmann from Munich via E-Mail or Social media like LinkedIn or Xing'
     );
   }

@@ -1,11 +1,11 @@
-<div>
-  <div class="navigation-spacer"></div>
+<app-header [galleryTitle]="'Mobile App Developer'" [galleryImage]="'/assets/apps/MobileAppBanner.webp'"></app-header>
+<div class="content">
   <div class="container">
 
     <h1>App Portfolio</h1>
 
-    <div class="row mt-4 card-group">
-      <div class="card mx-2 border-left rounded" *ngFor="let app of apps">
+    <div class="row mt-4">
+      <div class="mx-2 col-md-3 border mb-3 rounded" *ngFor="let app of apps">
 
         <div class="card-body">
           <div class="text-center">
@@ -15,13 +15,11 @@
             </h5>
           </div>
 
-          <div style="">
+          <div>
             {{app.shortDescription}}
           </div>
           <p class="card-text">
-
-
-            <a href="/apps/{{app.id}}" class="btn btn-primary mt-2">More details</a>
+            <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mt-2">More details</a>
           </p>
         </div>
       </div>
