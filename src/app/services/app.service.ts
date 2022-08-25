@@ -289,7 +289,7 @@ Improve your driving skills and get a more secure driver.`
   },{
     title: 'SOS - This is my Location',
     id: 'sos-location',
-    iconUrl: 'https://is2-ssl.mzstatic.com/image/thumb/Purple122/v4/ac/45/e0/ac45e02e-16b5-d817-6e54-d5e5861a4307/AppIcon-1x_U007emarketing-0-7-0-85-220.png/135x135bb.png',
+    iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple122/v4/fc/6c/cb/fc6ccb81-5a2e-f0b6-ef21-f1944e84930c/AppIcon-1x_U007emarketing-0-7-0-85-220.png/300x300bb.png',
     appStoreUrl: 'https://apps.apple.com/us/app/sos-this-is-my-location/1640902948',
     screenshotUrls: [
       'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/c0/6f/ca/c06fca59-5d10-be88-c0d2-7b591705ebac/149c6e30-70f2-4d71-8e45-a854237f8d79_App_Store_Screenshot_6_U002c5_-_1.png/1242x2688bb.png',
