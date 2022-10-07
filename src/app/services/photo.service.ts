@@ -17,6 +17,12 @@ export class PhotoService {
     imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
     photos: []
   },{
+    title: 'Moody Outdoors',
+    subTitle: 'Rainy autumn vibes',
+    id: 'moody',
+    imageUrl: '/images/landscapes/full/66-65535-50345186656_ea820ae553_b.webp',
+    photos: []
+  },{
     title: 'Winter Outdoors',
     subTitle: 'Cozy Moments in the cold Season',
     id: 'winterlandscapes',

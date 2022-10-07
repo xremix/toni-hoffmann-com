@@ -25,8 +25,11 @@ var sites = [{
 }, {
   url: '/photography/landscapes/4/',
   priority: '1.00',
+},{
+  url: '/photography/moody/1/',
+  priority: '1.00',
 }, {
-  url: '/photography/landscapes/5/',
+  url: '/photography/moody/2/',
   priority: '1.00',
 },{
   url: '/photography/winterlandscapes/1/',
