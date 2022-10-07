@@ -22,8 +22,26 @@ export class AlbumComponent implements OnInit {
   public modalPhoto: any = null;
   public callToAction = 999999;//get's set in constructor
 
+  public xGalleryBreakpoints = [{
+    min: 0,
+    max: 720,
+    columns: 1
+  }, {
+    min: 720,
+    max: 960,
+    columns: 2
+  }, {
+    min: 960,
+    max: 1140,
+    columns: 3
+  }, {
+    min: 1140,
+    max: 999999,
+    columns: 4
+  }];
+
   // TODO change this also in generate-sizemap.js
-  private pageSize: number = 21;
+  private pageSize: number = 20;
   private page: number = 1;
 
   public pages: Array<number> = [];

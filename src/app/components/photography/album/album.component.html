@@ -2,7 +2,7 @@
   <app-header [galleryTitle]="album.title" [gallerySubtitle]="album.subTitle" [galleryImage]="album.imageUrl" [asHeader]="true"></app-header>
   <div class="content bg-dark" *ngIf="images && images.length">
 
-    <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" #myGallery></ui-xGallerify>
+    <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" [breakPoints]="xGalleryBreakpoints" #myGallery></ui-xGallerify>
 
     <ng-template #imageTemplate let-image="image">
       <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
