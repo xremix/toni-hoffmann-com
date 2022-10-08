@@ -22,9 +22,6 @@ var sites = [{
 }, {
   url: '/photography/landscapes/3/',
   priority: '1.00',
-}, {
-  url: '/photography/landscapes/4/',
-  priority: '1.00',
 },{
   url: '/photography/moody/1/',
   priority: '1.00',

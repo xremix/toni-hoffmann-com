@@ -32,10 +32,10 @@ export class AlbumComponent implements OnInit {
     columns: 2
   }, {
     min: 960,
-    max: 1140,
+    max: 1400,
     columns: 3
   }, {
-    min: 1140,
+    min: 1400,
     max: 999999,
     columns: 4
   }];

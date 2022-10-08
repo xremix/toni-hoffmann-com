@@ -12,15 +12,15 @@ export class PhotoService {
 
   private albums: Array<Album> = [{
     title: 'Landscapes',
-    subTitle: 'Bavarian Alps, Austria, Italy and Portugal',
+    subTitle: 'Sunsets and blue hour in the mountains',
     id: 'landscapes',
-    imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
+    imageUrl: '/images/landscapes/full/9-8133-29792118260_ec0e89d85e_b.webp',
     photos: []
   },{
     title: 'Moody Outdoors',
-    subTitle: 'Rainy autumn vibes',
+    subTitle: 'Cloudy, rainy and autumn mood',
     id: 'moody',
-    imageUrl: '/images/landscapes/full/66-65535-50345186656_ea820ae553_b.webp',
+    imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
     photos: []
   },{
     title: 'Winter Outdoors',

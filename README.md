@@ -44,7 +44,7 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 - Make sure deploy the api in the folder `/api` on the same level than the angular application. The API is part of a private repository
 
 ### Build and Prerender
-- Remove all `/.` from the `app-routing.module.ts`
+- Remove all `/.` from the `src/app/app-routing.module.ts`
 - Run `npm run prerender` to [prerender](https://dev.to/michaeljota/how-to-prerender-your-angular-app-using-angular-universal-4g0b) and build the project. This will generate static files for each route and prepare for SEO.
 - Upload all prerendered subfolders from `dist/toni-hoffmann-com/browser` to the web server
 - Add all `/.` back to the `app-routing.module.ts`
