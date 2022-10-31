@@ -12,19 +12,19 @@ export class PhotoService {
 
   private albums: Array<Album> = [{
     title: 'Landscapes',
-    subTitle: 'Sunsets and blue hour in the mountains',
+    subTitle: 'Sunsets and Blue Hour and Golden Light',
     id: 'landscapes',
-    imageUrl: '/images/landscapes/full/9-8133-29792118260_ec0e89d85e_b.webp',
+    imageUrl: '/assets/20201021-071303-DSC04840_edit_middle.jpg',
     photos: []
   },{
     title: 'Moody Outdoors',
-    subTitle: 'Cloudy, rainy and autumn mood',
+    subTitle: 'Cloudy, Rainy and Autumn Mood',
     id: 'moody',
     imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
     photos: []
   },{
     title: 'Winter Outdoors',
-    subTitle: 'Cozy Moments in the cold Season',
+    subTitle: 'Cozy Moments in the Cold Season',
     id: 'winterlandscapes',
     imageUrl: '/assets/39767964544_9ba2c3c3b8_b.webp',
     photos: []
