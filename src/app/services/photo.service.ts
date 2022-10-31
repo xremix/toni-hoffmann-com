@@ -14,7 +14,7 @@ export class PhotoService {
     title: 'Landscapes',
     subTitle: 'Sunsets and Blue Hour and Golden Light',
     id: 'landscapes',
-    imageUrl: '/assets/20201021-071303-DSC04840_edit_middle.jpg',
+    imageUrl: '/assets/20201021-071303-DSC04840_edit_middle.webp',
     photos: []
   },{
     title: 'Moody Outdoors',

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { Injectable, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
 
@@ -41,7 +41,6 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { faCoffee, faEnvelope, faTimes, faAddressCard, faQuoteRight  } from '@fortawesome/free-solid-svg-icons';
 import { faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { SeoService } from './services/seo.service';
-
 
 @NgModule({
   declarations: [
