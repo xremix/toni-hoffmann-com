@@ -4,23 +4,37 @@
 
     <h1>App Portfolio</h1>
 
-    <div class="row mt-4">
-      <div class="mx-2 col-md-3 border mb-3 rounded" *ngFor="let app of apps">
+    <div class="row row-cols-3 mt-4">
+      <div class="mb-3 p-3" style="" *ngFor="let app of apps">
 
-        <div class="card-body">
-          <div class="text-center">
-            <img src="{{app.iconUrl}}" style="max-height: 60px; border-radius: 10px;" alt=""><br />
-            <h5 class="card-title mt-2">
-              {{app.title}}
-            </h5>
+        <div  class="border rounded">
+          <div class="card-body">
+            <div class="text-center">
+              <img src="{{app.iconUrl}}" style="max-height: 60px; border-radius: 10px;" alt=""><br />
+              <h5 class="card-title mt-2">
+                {{app.title}}
+              </h5>
+            </div>
+            <div class="">
+              <div class="app-description">
+                {{app.description?.split('\n')[0]}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col p-1">
+                <img src="{{app.screenshotUrls[0]}}" alt="" class="w-100" style="border-radius: 10px">
+              </div>
+              <div class="col p-1">
+                <img src="{{app.screenshotUrls[1]}}" alt="" class="w-100" style="border-radius: 10px">
+              </div>
+              <div class="col p-1">
+                <img src="{{app.screenshotUrls[2]}}" alt="" class="w-100" style="border-radius: 10px">
+              </div>
+            </div>
+            <p class="card-text">
+              <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mt-2">More details</a>
+            </p>
           </div>
-
-          <div>
-            {{app.shortDescription}}
-          </div>
-          <p class="card-text">
-            <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mt-2">More details</a>
-          </p>
         </div>
       </div>
     </div>
