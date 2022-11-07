@@ -10,10 +10,12 @@
         <div  class="border rounded">
           <div class="card-body">
             <div class="text-center">
+              <a routerLink="/apps/{{app.id}}/." class="text-black">
               <img src="{{app.iconUrl}}" style="max-height: 60px; border-radius: 10px;" alt=""><br />
               <h5 class="card-title mt-2">
-                {{app.title}}
-              </h5>
+                  {{app.title}}
+                </h5>
+              </a>
             </div>
             <div class="">
               <div class="app-description">
@@ -31,8 +33,11 @@
                 <img src="{{app.screenshotUrls[2]}}" alt="" class="w-100" style="border-radius: 10px">
               </div>
             </div>
-            <p class="card-text">
-              <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mt-2">More details</a>
+            <p class="card-text mt-2">
+              <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mr-2">More details</a>
+              <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary" style="background: {{app.primaryColor}}; border: 0px">
+                <i class="fa-brands fa-apple"></i> App Store
+              </a>
             </p>
           </div>
         </div>
