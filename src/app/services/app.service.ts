@@ -341,7 +341,7 @@ export class AppService {
         '- Packaging Date\n' +
         '- Best Before Date\n' +
         '- Put in any raw content',
-      iconUrl: undefined,
+      iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/2c/38/28/2c38286f-fd69-a3d2-ea4e-e4fc6111f40c/AppIcon-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp',
       screenshotUrls: [
         'https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/c0/3d/a1/c03da101-dbf8-7398-1ece-9c70d6bbf172/3087648c-7881-4a80-b726-d1c625a257a7_iPhone_6-5_-_1__U2013_1@3x.png/1024x1024bb.png',
         'https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/65/85/33/658533a2-c42d-f071-d606-3ef13e10886d/156f48ef-2686-4bde-b6ab-fa12eadf9a9a_iPhone_6-5_-_2__U2013_1@3x.png/1024x1024bb.png',
