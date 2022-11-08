@@ -23,7 +23,7 @@ export class PhotoService {
     imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
     photos: []
   },{
-    title: 'Winter Outdoors',
+    title: 'Winter Miracles',
     subTitle: 'Cozy Moments in the Cold Season',
     id: 'winterlandscapes',
     imageUrl: '/assets/39767964544_9ba2c3c3b8_b.webp',

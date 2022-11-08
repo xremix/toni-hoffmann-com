@@ -33,9 +33,9 @@
                 <img src="{{app.screenshotUrls[2]}}" alt="" class="w-100" style="border-radius: 10px">
               </div>
             </div>
-            <p class="card-text mt-2">
+            <p class="card-text mt-2 text-center">
               <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mr-2">More details</a>
-              <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary" style="background: {{app.primaryColor}}; border: 0px">
+              <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary" style="border: 0px">
                 <i class="fa-brands fa-apple"></i> App Store
               </a>
             </p>

@@ -4,7 +4,6 @@ export class App {
   public appStoreUrl?: string;
   public iconUrl?: String;
   public screenshotUrls?: Array<string>;
-  public primaryColor?: string;
   public description?: string;
 }
 export class AppFeature {
