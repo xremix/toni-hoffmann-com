@@ -19,7 +19,9 @@
         </div>
         <div class="row">
           <div class="col" style="padding: 3px; " *ngFor="let screenshot of app.screenshotUrls">
-            <img src="{{screenshot}}" alt="" class="w-100" style="border-radius: 12px;">
+            <a href="{{screenshot}}" target="_blank" rel="noopener noreferrer">
+              <img src="{{screenshot}}" alt="" class="w-100" style="border-radius: 12px;">
+            </a>
           </div>
           <div class="col" *ngIf="app.screenshotUrls.length <= 4"></div>
           <div class="col" *ngIf="app.screenshotUrls.length <= 3"></div>
