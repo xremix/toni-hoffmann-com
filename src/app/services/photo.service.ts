@@ -12,13 +12,14 @@ export class PhotoService {
 
   private albums: Array<Album> = [{
     title: 'Landscapes',
-    subTitle: 'Sunsets and Blue Hour and Golden Light',
+    subTitle: 'Sunsets, Blue Hour and Golden Light',
     id: 'landscapes',
-    imageUrl: '/assets/20201021-071303-DSC04840_edit_middle.webp',
+    // imageUrl: '/assets/20201021-071303-DSC04840_edit_middle.webp',
+    imageUrl: '/assets/20221018-184408-DSC06635-edit.webp',
     photos: []
   },{
     title: 'Moody Outdoors',
-    subTitle: 'Cloudy, Rainy and Autumn Mood',
+    subTitle: 'Clouds, Rain and Autumn Mood',
     id: 'moody',
     imageUrl: '/assets/43296374782_c5cbb7d864_h.webp',
     photos: []
