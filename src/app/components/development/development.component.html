@@ -1,80 +1,84 @@
-<app-header [galleryTitle]="'Software Developer'" [galleryImage]="'/assets/software-developer-banner.webp'"></app-header>
+<app-header [galleryImage]="'/assets/software-developer-banner.webp'"></app-header>
 <div class="content">
-  <div class="container text-center pt-5 ">
-    <h1 class="mt-0">Software Development Portfolio</h1>
-    <p>
-      <span class="text-black-50 pr-1"><fa-icon icon="quote-right"></fa-icon></span> <b class="larger">Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</b>
-      <br/>
-      <span class="larger">~ Toni Hoffmann ~</span>
-    </p>
+  <div class="container ">
+    <div class="row text-center">
+      <h1>Software Development Portfolio</h1>
+      <p>
+        <span class="text-black-50 pr-1"><fa-icon icon="quote-right"></fa-icon></span> 
+        <span class="larger">Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</span>
+        <br/>
+        <span class="larger">~ Toni Hoffmann ~</span>
+      </p>
 
-    <!-- Skills -->
+      <!-- Skills -->
 
-    <h2>Skills</h2>
+      <h2>Skills</h2>
 
-    <div class="row large">
-      <div class="col-md-4">
-        <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/native-mobile-apps-banner.webp'" [hoverAnimation]="false"></app-image-card>
+      <div class="row">
+        <div class="col-md-4">
+          <app-image-card [title]="'Native mobile Apps'" [imageUrl]="'assets/native-mobile-apps-banner.webp'" [hoverAnimation]="false"></app-image-card>
+        </div>
+        <div class="col-md-4">
+          <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'assets/business-web-apps-banner.webp'" [hoverAnimation]="false"></app-image-card>
+        </div>
+        <div class="col-md-4">
+          <app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.webp'" [hoverAnimation]="false"></app-image-card>
+        </div>
       </div>
-      <div class="col-md-4">
-        <app-image-card [title]="'Business Web-Apps'" [imageUrl]="'assets/business-web-apps-banner.webp'" [hoverAnimation]="false"></app-image-card>
+
+      <!-- Designs -->
+
+      <h2>UX-Designs</h2>
+      <p class="larger">
+        An intuitive, simple, user-centric design is as important as a solid and scalable code. That's why I belive professional engineers should have design skills.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h3 class="w-100">Gamification Sales App</h3>
+          <div class="w-100 pb-4 larger">A concept for a sales centric designed app, which motivates users intrinsic and extrinsic, by using gamification elements.</div>
+          <app-image-card [imageUrl]="'assets/Gamification-Banner.webp'" [title]="'Gamification Sales App'" [description]="'Published on Behance.net'" [href]="'https://www.behance.net/gallery/105079179/Sales-Gamification-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
+        </div>
+
+        <div class="col-lg-6">
+          <h3 class="w-100">The Cope Stress App</h3>
+          <div class="w-100 pb-4 larger">A intuitive mobile App that helps you coping with stress, by giving you a daily lesson that helps you to calm.<br/>
+          </div>
+          <div class="overflow-hidden">
+
+            <app-image-card [imageUrl]="'https://xremix.github.io/The-Cope-Stress-App/assets/images/The-Cope-Stress-App-Header.png'" [title]="'Cope Stress App'" [description]="'Visit the Website to find out more'" [href]="'/apps/cope-stress'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
+
+          </div>
+
+        </div>
       </div>
-      <div class="col-md-4">
-        <app-image-card [title]="'UX-Design'" [imageUrl]="'assets/ux-design-banner.webp'" [hoverAnimation]="false"></app-image-card>
+
+      <!-- Open Source -->
+      <h2>Open Source Projects</h2>
+      
+      <div class="w-100">
+        <a href="https://github.com/xremix" target="_blank" class="btn btn-primary my-3">Github Profile</a>
+      </div>
+
+      <p class="larger">
+        The idea of Open Source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
+      </p>
+
+      <div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
+        <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
+
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+          </div>
+
+          <div class="card-footer">
+            <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">More</a>
+          </div>
+
+        </div>
       </div>
     </div>
-
-<!-- Designs -->
-
-<h2>UX-Designs</h2>
-<p class="larger">
-  An intuitive, simple, user-centric design is as important as a solid and scalable code. That's why I belive professional engineers should have design skills.
-</p>
-<div class="row justify-content-center">
-  <div class="col-lg-6">
-    <h3 class="w-100">Gamification Sales App - Concept</h3>
-    <div class="w-100 py-4 larger">A concept for a sales centric designed mobile app, which motivates users intrinsic and extrinsic, while using gamification elements.</div>
-    <app-image-card [imageUrl]="'assets/Gamification-Banner.webp'" [title]="'Gamification Sales App'" [description]="'Published on Behance.net'" [href]="'https://www.behance.net/gallery/105079179/Sales-Gamification-App'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
   </div>
-
-    <div class="col-lg-6">
-      <h3 class="w-100">The Cope Stress App</h3>
-      <div class="w-100 py-4 larger">A intuitive mobile App that helps you coping with stress, by giving you a daily lesson that helps you to calm.<br/>
-      </div>
-      <div class="overflow-hidden">
-
-        <app-image-card [imageUrl]="'https://xremix.github.io/The-Cope-Stress-App/assets/images/The-Cope-Stress-App-Header.png'" [title]="'Cope Stress App'" [description]="'Visit the Website to find out more'" [href]="'/apps/cope-stress'" [hideBoxTitle]="true" [textBackground]="false" [titlePosition]="'center'" [target]="'_blank'"></app-image-card>
-
-      </div>
-
-    </div>
-</div>
-
-<!-- Open Source -->
-<h2>Open Source Projects</h2>
-
-<a href="https://github.com/xremix" target="_blank" class="btn btn-primary my-3">Github Profile</a>
-
-<p class="larger">
-  The idea of Open source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
-</p>
-
-<div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
-  <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
-
-    <div class="card-body">
-      <h5 class="card-title">{{project.title}}</h5>
-      <p class="card-text">{{project.description}}</p>
-    </div>
-
-    <div class="card-footer">
-      <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">More</a>
-    </div>
-
-  </div>
-</div>
-
-</div>
 </div>
 
 

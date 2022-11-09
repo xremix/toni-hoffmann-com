@@ -3,25 +3,35 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-9">
-        <h1>
-          <img src="{{app.iconUrl}}" style="max-height: 56px; border-radius: 12px;" alt=""> {{app.title}}
-        </h1>
+      <div class="col">
+        <div class="d-flex justify-content-between">
+          <div>
+          <h1>
+              <img src="{{app.iconUrl}}" style="max-height: 56px; border-radius: 12px;" alt="App Icon {{app.title}}">
+              {{app.title}}
+          </h1>
+        </div>
+        <div style="padding-top:40px;">
+          <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary btn-lg mb-3 text-nowrap" style="border: 0px">
+            <i class="fa-brands fa-apple"></i> App Store
+          </a>
+        </div>
+        </div>
         <div class="row">
-          <div class="col" style="padding: 3px;" *ngFor="let screenshot of app.screenshotUrls">
-            <img src="{{screenshot}}" alt="" class="w-100" style="border-radius: 12px">
+          <div class="col" style="padding: 3px; " *ngFor="let screenshot of app.screenshotUrls">
+            <img src="{{screenshot}}" alt="" class="w-100" style="border-radius: 12px;">
           </div>
+          <div class="col" *ngIf="app.screenshotUrls.length <= 4"></div>
+          <div class="col" *ngIf="app.screenshotUrls.length <= 3"></div>
+          <div class="col" *ngIf="app.screenshotUrls.length <= 2"></div>
         </div>
 
         <div class="row mt-5">
-          <div class="col" [innerHtml]="app.description" style="white-space: pre-line"></div>
+          <div class="col" style="white-space: pre-line">
+            {{app.description}}
+          </div>
         </div>
 
-      </div>
-      <div class="col-3 text-center" style="margin-top: 5em;">
-        <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary btn-lg mb-3" style="border: 0px">
-          <i class="fa-brands fa-apple"></i> App Store
-        </a>
       </div>
     </div>
   </div>

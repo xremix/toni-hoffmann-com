@@ -1,48 +1,49 @@
-<app-header [galleryTitle]="'Mobile App Developer'" [galleryImage]="'/assets/apps/MobileAppBanner.webp'"></app-header>
+<app-header [galleryImage]="'/assets/apps/MobileAppBanner.webp'"></app-header>
 <div class="content">
   <div class="container">
+    <div class="row">
+      <h1>App Portfolio</h1>
 
-    <h1>App Portfolio</h1>
+      <div class="row row-cols-3">
+        <div class="mb-3 p-3" style="" *ngFor="let app of apps">
 
-    <div class="row row-cols-3 mt-4">
-      <div class="mb-3 p-3" style="" *ngFor="let app of apps">
-
-        <div  class="border rounded">
-          <div class="card-body">
-            <div class="text-center">
-              <a routerLink="/apps/{{app.id}}/." class="text-black">
-              <img src="{{app.iconUrl}}" style="max-height: 60px; border-radius: 10px;" alt=""><br />
-              <h5 class="card-title mt-2">
-                  {{app.title}}
-                </h5>
-              </a>
+          <div  class="border rounded">
+            <div class="card-body">
+              <div class="text-center">
+                <a routerLink="/apps/{{app.id}}/." class="text-black">
+                <img src="{{app.iconUrl}}" style="max-height: 60px; border-radius: 10px;" alt=""><br />
+                <h5 class="card-title mt-2">
+                    {{app.title}}
+                  </h5>
+                </a>
+              </div>
+              <div class="">
+                <div class="app-description">
+                  {{app.description?.split('\n')[0]}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col p-1">
+                  <img src="{{app.screenshotUrls[0]}}" alt="" class="w-100" style="border-radius: 10px">
+                </div>
+                <div class="col p-1">
+                  <img src="{{app.screenshotUrls[1]}}" alt="" class="w-100" style="border-radius: 10px">
+                </div>
+                <div class="col p-1">
+                  <img src="{{app.screenshotUrls[2]}}" alt="" class="w-100" style="border-radius: 10px">
+                </div>
+              </div>
+              <p class="card-text mt-2 text-center">
+                <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mr-2 mb-2">more</a>
+                <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary mb-2" style="border: 0px">
+                  <i class="fa-brands fa-apple"></i> App Store
+                </a>
+              </p>
             </div>
-            <div class="">
-              <div class="app-description">
-                {{app.description?.split('\n')[0]}}
-              </div>
-            </div>
-            <div class="row">
-              <div class="col p-1">
-                <img src="{{app.screenshotUrls[0]}}" alt="" class="w-100" style="border-radius: 10px">
-              </div>
-              <div class="col p-1">
-                <img src="{{app.screenshotUrls[1]}}" alt="" class="w-100" style="border-radius: 10px">
-              </div>
-              <div class="col p-1">
-                <img src="{{app.screenshotUrls[2]}}" alt="" class="w-100" style="border-radius: 10px">
-              </div>
-            </div>
-            <p class="card-text mt-2 text-center">
-              <a routerLink="/apps/{{app.id}}/." class="btn btn-primary mr-2">More details</a>
-              <a *ngIf="app.appStoreUrl" href="{{app.appStoreUrl}}" target="_blank" class="btn btn-primary" style="border: 0px">
-                <i class="fa-brands fa-apple"></i> App Store
-              </a>
-            </p>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
