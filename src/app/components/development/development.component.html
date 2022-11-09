@@ -67,12 +67,12 @@
         <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
 
           <div class="card-body">
-            <h5 class="card-title">{{project.title}}</h5>
+            <h5 class="card-title"><a class="text-black" href="{{project.url}}" target="_blank" rel="noopener noreferrer">{{project.title}}</a></h5>
             <p class="card-text">{{project.description}}</p>
           </div>
 
           <div class="card-footer">
-            <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">More</a>
+            <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">more</a>
           </div>
 
         </div>
