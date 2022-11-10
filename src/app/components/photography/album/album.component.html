@@ -1,6 +1,6 @@
 <ng-container *ngIf="album">
   <app-header [galleryTitle]="album.title" [gallerySubtitle]="album.subTitle" [galleryImage]="album.imageUrl" [asHeader]="true"></app-header>
-  <div class="content bg-dark" *ngIf="images && images.length">
+  <div class="content photo-content bg-dark" *ngIf="images && images.length">
 
     <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" [breakPoints]="xGalleryBreakpoints" #myGallery></ui-xGallerify>
 
