@@ -16,7 +16,7 @@ public getOpenSourceProjects(): Array<OpenSourceProject>{
     },{
       'title': 'Flashlight for OS X',
       'url': 'https://github.com/nate-parrott/Flashlight/graphs/contributors',
-      'description': 'An Open-Source project that allows to bore up the search in macOS. It was used by thousands of users. Next to the founder I was the top contributor with over 120 commits, until the project was stopped.'
+      'description': 'Flashlight allows to put the built-in search in macOS on steroids. It was used by thousands of users. Next to the founder I was the top contributor, until the project was stopped.'
     },
     {
       'title': 'SwiftGS1Barcode',
