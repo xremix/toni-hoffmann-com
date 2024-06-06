@@ -16,7 +16,7 @@ export class AppService {
           '- Smart Algorithms: The App can recognize your pauses, burned calories, find the highest point, the peak of your tour or highlight your fastest part of your tour\n' +
           '\n' +
           'Thanks to Sebastian Marx for providing the background pictures on unsplash.\n',
-      iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple112/v4/c9/77/8b/c9778b94-9286-cfe6-3064-9bdf52f33a98/Icon-83.5@2x.png.png/167x167bb.png',
+      iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/44/ac/3e/44ac3e7d-91e4-49d0-345c-b87b94699225/AppIcon-0-0-1x_U007ephone-0-85-220.png/135x135bb.png',
       screenshotUrls: [
        
         'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/e8/b7/a9e8b789-c579-b1ec-5d47-6bb128cad90f/6e31c05c-b6a8-4c2c-a8fd-3138dc68cdaa_iPhone_EN_-_1.jpg/0x0ss.png',
@@ -398,6 +398,26 @@ export class AppService {
       title: 'Mindful Focus - Time Awareness',
       id: 'mindful-focus',
       appStoreUrl: 'https://itunes.apple.com/us/app/undefined/id1586293102?mt=8'
+    }, {
+      description: 'This Photo Sort App helps to easily sort a picture of random unorganized pictures. Effortlessly transform your chaotic photo collection into your organized folder structure. \n' +
+'It will help you\n' +
+'\n' +
+'- Sort pictures by date to a specific folder\n' +
+'- Quickly move favorite photos and delete unwanted ones\n' +
+'- Compare images to find the sharpest and most stunning shots\n' +
+'- View the photos on a map\n' +
+'- Use shortcuts to default folders for faster photo management\n' +
+'\n' +
+'Simplify your photo sorting today with the Photo Sort to Folders App!\n' ,
+      iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fe/78/b0/fe78b071-ac21-5604-f636-094cfef72021/App_Icon-0-0-85-220-0-4-0-2x.png/135x135bb.png',
+      screenshotUrls: [
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/06/df/12/06df123c-210b-2ac4-b1fc-abd10f739000/dba66022-a88c-4f9e-881f-182968ba0c6e_Photo_Sorter_Screenshot.png/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/75/43/a6/7543a6c5-dd17-7b2a-fe00-23414163c12e/7752fda1-cf19-44ab-8586-a7037eb652a5_Photo_Sorter_Screenshot-1.png/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/75/43/a6/7543a6c5-dd17-7b2a-fe00-23414163c12e/7752fda1-cf19-44ab-8586-a7037eb652a5_Photo_Sorter_Screenshot-1.png/0x0ss.png'
+      ],
+      title: 'Photo Sort to Folders',
+      id: 'photo-sort-to-folders',
+      appStoreUrl: 'https://itunes.apple.com/us/app/undefined/id6503186648?mt=8'
     }
   ]
   
