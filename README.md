@@ -26,10 +26,10 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 
 ## Setup
 
-- Install [Node.js](https://nodejs.org/en/)
+- Install [Node.js](https://nodejs.org/en/) version 16.16.0
 - Install [Angular CLI](https://github.com/angular/angular-cli)
 - Clone the Repository via `git clone git@github.com:xremix/toni-hoffmann-com.git`
-- Run `npm i` in your local repository
+- Run `npm install --legacy-peer-deps` in your local repository
 
 ## Run
 
