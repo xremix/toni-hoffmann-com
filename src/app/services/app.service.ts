@@ -8,6 +8,30 @@ export class AppService {
 
   private apps: Array<App> = [
     {
+      description: 'This app is the perfect companion for all cycling enthusiasts, whether you\'re a pro or a casual rider. Transform your iPhone into a powerful bike computer with a variety of useful features:\n' +
+          '\n' +
+          '- Overview: See all your trips in the map overview. You can try to fill the map and explore new areas around you\n' +
+          '- Detailed Live Data: See your Speed, burned calories or made altitude live\n' +
+          '- Import / Export Trips: Import .gpx Files with trips or any planned route, so you can follow the path\n' +
+          '- Smart Algorithms: The App can recognize your pauses, burned calories, find the highest point, the peak of your tour or highlight your fastest part of your tour\n' +
+          '\n' +
+          'Thanks to Sebastian Marx for providing the background pictures on unsplash.\n',
+      iconUrl: 'https://is3-ssl.mzstatic.com/image/thumb/Purple112/v4/c9/77/8b/c9778b94-9286-cfe6-3064-9bdf52f33a98/Icon-83.5@2x.png.png/167x167bb.png',
+      screenshotUrls: [
+       
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/e8/b7/a9e8b789-c579-b1ec-5d47-6bb128cad90f/6e31c05c-b6a8-4c2c-a8fd-3138dc68cdaa_iPhone_EN_-_1.jpg/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/89/3d/c4/893dc463-cf1e-e732-0756-e6e77c8fdb2c/5ba05b3e-bbf1-46d4-aad1-b483ff49a39f_iPhone_EN_-_2.jpg/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/91/c3/ac/91c3ac60-c144-fa77-5edc-b8f5608e7bd0/d83b631d-e3a6-48ee-a4a2-2d81bf91090c_iPhone_EN_-_3.jpg/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/74/3d/2b/743d2ba5-399f-2fe1-d512-7fa153f43ce5/c849698b-f491-4dc5-aaab-35bf8c613a7d_iPhone_EN_-_4.jpg/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ed/76/5c/ed765c52-7f80-f92e-35fc-ac45b153623a/7a56796b-9bcc-439a-a6f7-283f2fed71ba_iPhone_EN_-_5.jpg/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/4d/37/df4d3701-ca25-776a-b5c8-be002b53dd2b/589637f4-d278-4d7f-a061-61ffc8a0435d_iPhone_EN_-_6.jpg/0x0ss.png',
+        'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e7/6a/c7/e76ac7fc-3141-b287-4fc5-de277967e244/ba18a914-2c88-4379-9749-a172c87d58a6_iPhone_EN_-_7.jpg/0x0ss.png'
+      ],
+      title: 'Bike Speed & Tour Tracker',
+      id: 'bike-speed-tour-tracker',
+      appStoreUrl: 'https://itunes.apple.com/us/app/undefined/id6468916330?mt=8'
+    },
+    {
       description: "Your favorite Map doesn't support your GPS Maps files? \n" +
         '\n' +
         'Use this App to convert your hiking routes, run records, tracks or POI maps to the desired formats. You can use this map to import or export files with Applications like Google Earth (.kml / .kmz), GPS Receivers (.gpx), Webmaps in Browsers (.geoJSON), OmiExplorer (.kml, .gpx), TomTom (.gpx), Garmin(.gpx) and many more.\n' +
