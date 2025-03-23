@@ -31,7 +31,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "@nguniversal/express-engine": "^11.2.1",
     "@schematics/angular": "^10.1.6",
     "@xremix/ng-x-gallerify": "^0.1.1",
