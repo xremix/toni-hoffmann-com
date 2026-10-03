@@ -4,7 +4,7 @@
     <div class="row text-center">
       <h1>Software Development</h1>
       <p>
-        <span class="text-black-50 pr-1"><fa-icon icon="quote-right"></fa-icon></span> 
+        <span class="text-black-50 pe-1"><fa-icon icon="quote-right"></fa-icon></span>
         <span class="larger">Software Engineering is about complex problem solving, understanding people, creating aesthetic design, being a communicator between domain areas, achieving goals, performing creativity, thinking in strategies... but it's also about coding and a passion to tech.</span>
         <br/>
         <span class="larger">~ Toni Hoffmann ~</span>
@@ -54,7 +54,7 @@
 
       <!-- Open Source -->
       <h2>Open Source Projects</h2>
-      
+
       <div class="w-100">
         <a href="https://github.com/xremix" target="_blank" class="btn btn-primary mb-2">Github Profile</a>
       </div>
@@ -63,20 +63,21 @@
         The idea of Open Source has deep roots and contributing to other projects is always fun. So I open sourced <a href="http://github.com/xremix/toni-hoffmann-com" target="_blank">the code of this website</a> too. Here are some more samples of my open source contributions.
       </p>
 
-      <div class="card-group mb-3" *ngFor="let openSourceProjects of openSourceProjectRows()">
-        <div class="card mx-2 border-left rounded" *ngFor="let project of openSourceProjects">
-
-          <div class="card-body">
-            <h5 class="card-title"><a class="text-black" href="{{project.url}}" target="_blank" rel="noopener noreferrer">{{project.title}}</a></h5>
-            <p class="card-text">{{project.description}}</p>
-          </div>
-
-          <div class="card-footer">
-            <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">more</a>
-          </div>
-
+      @for (openSourceProjects of openSourceProjectRows(); track openSourceProjects) {
+        <div class="card-group mb-3">
+          @for (project of openSourceProjects; track project) {
+            <div class="card mx-2 border-start rounded">
+              <div class="card-body">
+                <h5 class="card-title"><a class="text-black" href="{{project.url}}" target="_blank" rel="noopener noreferrer">{{project.title}}</a></h5>
+                <p class="card-text">{{project.description}}</p>
+              </div>
+              <div class="card-footer">
+                <a href="{{project.url}}" target="_blank" class="btn btn-outline-primary">more</a>
+              </div>
+            </div>
+          }
         </div>
-      </div>
+      }
     </div>
   </div>
 </div>
@@ -85,9 +86,7 @@
 <ng-template #content let-modal>
   <div class="modal-header border-0">
     <h4 class="modal-title" id="modal-basic-title">{{modalTitle}}</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
   </div>
   <div class="modal-body">
     {{modalText}}

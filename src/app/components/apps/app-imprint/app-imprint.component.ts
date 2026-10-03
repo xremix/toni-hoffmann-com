@@ -10,23 +10,22 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
-  selector: 'app-app-imprint',
-  templateUrl: './app-imprint.component.html'
+    selector: 'app-app-imprint',
+    templateUrl: './app-imprint.component.html',
+    standalone: false
 })
 export class AppImprintComponent {
   public app: App;
 
-  constructor(public router: Router, private route: ActivatedRoute, private seoService: SeoService, private appService: AppService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {
-
-    this.seoService.setPageMetaData(
-      `Fullstack Software Developer from Munich`,
-      'Passionated Fullstack Software Developer for Business and Marketing mobile Apps and Websites in Munich, Bavaria, Germany'
-    );
-  }
+  constructor(public router: Router, private route: ActivatedRoute, private seoService: SeoService, private appService: AppService, private modalService: NgbModal, private utilitiesService: UtilitiesService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.app = this.appService.getApp(params['appid']);
+      this.seoService.setPageMetaData(
+        `${this.app.title} Privacy Policy`,
+        `Privacy policy for the ${this.app.title} app by Toni Hoffmann.`
+      );
     });
   }
 }

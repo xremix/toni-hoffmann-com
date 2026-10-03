@@ -9,8 +9,9 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
-  selector: 'app-development',
-  templateUrl: './development.component.html'
+    selector: 'app-development',
+    templateUrl: './development.component.html',
+    standalone: false
 })
 export class DevelopmentComponent implements OnInit {
 

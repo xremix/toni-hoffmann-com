@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    standalone: false
 })
 export class HomeComponent {
 

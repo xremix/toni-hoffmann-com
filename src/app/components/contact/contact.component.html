@@ -5,7 +5,7 @@
     <h1>Contact</h1>
     <p>I'm on social media - feel free to reach out.</p>
     <div class="d-flex justify-content-around mt-5 mx-auto container-small">
-      <ng-template #popContent><a>kontakt@toni-hoffmann.com</a></ng-template>
+      <ng-template #popContent><a>kontakt&#64;toni-hoffmann.com</a></ng-template>
       <a class="btn btn-outline-primary" [ngbPopover]="popContent" href="mailto:kontakt@toni-hoffmann.com" [autoClose]="false" triggers="manual" #p="ngbPopover" (mouseover)="p.open()">
         <fa-icon icon="envelope"></fa-icon> E-Mail
       </a>

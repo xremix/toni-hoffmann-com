@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
+import { CookieService } from 'src/app/services/cookie.service';
 import { Router } from '@angular/router';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { UtilitiesService } from 'src/app/services/utilities.service';
 
 @Component({
-  selector: 'app-cookie-banner',
-  templateUrl: './cookie-banner.component.html'
+    selector: 'app-cookie-banner',
+    templateUrl: './cookie-banner.component.html',
+    standalone: false
 })
 export class CookieBannerComponent implements OnInit {
 

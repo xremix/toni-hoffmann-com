@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { isDevMode } from '@angular/core';
 import { Album } from 'src/app/models/album';
 import { Observable } from 'rxjs';
 import { UtilitiesService } from 'src/app/services/utilities.service'
@@ -61,7 +60,9 @@ export class PhotoService {
 
   // TODO use the model instead of any
   public getPhotosFromAlbum(album: string): Observable<any> {
-    var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/images/${album}.json` : `/api/images/${album}.json`;
+    const url = this.utilitiesService.isBrowser()
+      ? `/api/images/${album}.json`
+      : `https://www.toni-hoffmann.com/api/images/${album}.json`;
     // var url = isDevMode() || !this.utilitiesService.isBrowser() ? `https://www.toni-hoffmann.com/api/flickr/?gallery=${album}` : `/api/flickr/?gallery=${album}`;
 
     return this.http.get(url);

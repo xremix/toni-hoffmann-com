@@ -12,7 +12,7 @@
       Toni Hoffmann<br>
       Bromberger Weg 1<br>
       82140 Olching, Deutschland<br>
-      E-Mail: <a href="mailto:kontakt@toni-hoffmann.com">kontakt@toni-hoffmann.com</a>
+      E-Mail: <a href="mailto:kontakt@toni-hoffmann.com">kontakt&#64;toni-hoffmann.com</a>
     </p>
 
     <h2>Hosting und Server-Logfiles</h2>
@@ -113,15 +113,17 @@
       Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder erneut erteilen:
     </p>
     <p>
-      <button class="btn btn-outline-primary mr-2" type="button" (click)="grantAnalyticsConsent()">
+      <button class="btn btn-outline-primary me-2" type="button" (click)="grantAnalyticsConsent()">
         Google Analytics zustimmen
       </button>
       <button class="btn btn-outline-primary" type="button" (click)="revokeAnalyticsConsent()">
         Google-Analytics-Einwilligung widerrufen
       </button>
-      <span *ngIf="analyticsConsentRevoked" role="status" class="ml-2">
-        Die Einwilligung wurde widerrufen.
-      </span>
+      @if (analyticsConsentRevoked) {
+        <span role="status" class="ms-2">
+          Die Einwilligung wurde widerrufen.
+        </span>
+      }
     </p>
     <p>
       Beim Widerruf wird das Tag für weitere Seitenaufrufe deaktiviert und die Ablehnung für sieben Tage gespeichert.
@@ -130,14 +132,14 @@
       der EU/des EWR verarbeiten; Informationen zu Verarbeitung, Speicherfristen und geeigneten Garantien finden Sie
       in der
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-        Datenschutzerklärung von Google</a> und den
+      Datenschutzerklärung von Google</a> und den
       <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">
-        Informationen zur Nutzung von Websites und Apps durch Google</a>.
+      Informationen zur Nutzung von Websites und Apps durch Google</a>.
     </p>
     <p>
       Google stellt Informationen zu
       <a href="https://support.google.com/analytics/answer/7667196?hl=de" target="_blank" rel="noopener noreferrer">
-        Datenaufbewahrung in Google Analytics</a> bereit. Die konkrete Aufbewahrungsdauer für ereignis- und
+      Datenaufbewahrung in Google Analytics</a> bereit. Die konkrete Aufbewahrungsdauer für ereignis- und
       nutzerbezogene Daten wird in den Einstellungen der Analytics-Property festgelegt.
     </p>
 
@@ -155,13 +157,13 @@
       (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie Widerspruch gegen Verarbeitungen, die auf Art. 6
       Abs. 1 lit. e oder f DSGVO beruhen (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung
       für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Zur Ausübung Ihrer Rechte genügt eine Nachricht an
-      <a href="mailto:kontakt@toni-hoffmann.com">kontakt@toni-hoffmann.com</a>.
+      <a href="mailto:kontakt@toni-hoffmann.com">kontakt&#64;toni-hoffmann.com</a>.
     </p>
     <p>
       Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO).
       Zuständig ist insbesondere das
       <a href="https://www.lda.bayern.de/de/beschwerde.html" target="_blank" rel="noopener noreferrer">
-        Bayerische Landesamt für Datenschutzaufsicht (BayLDA)</a>, Promenade 18, 91522 Ansbach.
+      Bayerische Landesamt für Datenschutzaufsicht (BayLDA)</a>, Promenade 18, 91522 Ansbach.
     </p>
 
     <h2>Automatisierte Entscheidungen</h2>

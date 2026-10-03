@@ -3,9 +3,10 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 import { UtilitiesService } from 'src/app/services/utilities.service';
 
 @Component({
-  selector: 'app-call-to-action',
-  templateUrl: './call-to-action.component.html',
-  styleUrls: ['./call-to-action.component.scss']
+    selector: 'app-call-to-action',
+    templateUrl: './call-to-action.component.html',
+    styleUrls: ['./call-to-action.component.scss'],
+    standalone: false
 })
 export class CallToActionComponent implements OnInit {
   @Input() public hide: boolean = true;

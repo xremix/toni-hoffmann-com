@@ -1,0 +1,7 @@
+{
+  "/api/**": {
+    "target": "https://www.toni-hoffmann.com",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

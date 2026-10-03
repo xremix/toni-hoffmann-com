@@ -4,7 +4,7 @@ var currentDate = new Date();
 function twoDigit(s){
   return ("0" + s).slice(-2);
 }
-var dateString = `${currentDate.getFullYear()}-${twoDigit(currentDate.getMonth())}-${twoDigit(currentDate.getDate())}`;
+var dateString = `${currentDate.getFullYear()}-${twoDigit(currentDate.getMonth() + 1)}-${twoDigit(currentDate.getDate())}`;
 
 
 var sites = [{
@@ -179,7 +179,7 @@ fs.writeFile('src/sitemap.xml', xmlContent, function (err) {
 });
 
 var txtContent = sites.map(s =>{
-  return `${s.url.slice(0,-1)}`
+  return s.url === '/' ? '/' : s.url.slice(0, -1);
 }).join('\n');
 fs.writeFile('routes.txt', txtContent, function (err) {
   if (err) throw err;

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
-  selector: 'app-music',
-  templateUrl: './music.component.html'
+    selector: 'app-music',
+    templateUrl: './music.component.html',
+    standalone: false
 })
 export class MusicComponent implements OnInit {
   public songs: Array<string> = [];

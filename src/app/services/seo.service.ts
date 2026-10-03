@@ -1,74 +1,69 @@
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+
+import { DOCUMENT, Inject, Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { UtilitiesService } from './utilities.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
-  constructor(private title: Title, private meta: Meta, @Inject(DOCUMENT) private dom, private router: Router, private utilitiesService: UtilitiesService) {
-   }
+  private readonly canonicalOrigin = 'https://www.toni-hoffmann.com';
 
-   
-  public setPageMetaData(title: string, description: string, keywords?: string){
+  constructor(
+    private title: Title,
+    private meta: Meta,
+    @Inject(DOCUMENT) private document: Document,
+    private router: Router
+  ) {}
+
+  public setPageMetaData(title: string, description: string, keywords?: string): void {
     this.setTitleRaw('Toni Hoffmann - ' + title);
     this.setDescription(description);
-    if(this.utilitiesService.isBrowser()){
-      this.setCanonicalUrl(this.fixUrl(window.location.href));
+    this.setCanonicalUrl(this.getCanonicalUrl());
+    if (keywords) {
+      this.setKeywords(keywords);
     }
-    if(keywords){
-      this.setKeywords(keywords)
-    };
   }
 
-  public getDefaultKeywords(additionalKeywords?: string[]){
-    var additionalKeywordString = "";
-    if(additionalKeywords && additionalKeywords.length){
+  public getDefaultKeywords(additionalKeywords?: string[]): string {
+    let additionalKeywordString = '';
+    if (additionalKeywords && additionalKeywords.length) {
       additionalKeywordString = `, ${additionalKeywords.join(', ')}`;
     }
     return `Toni Hoffmann, Bavaria, Bayern, Munich, München${additionalKeywordString}`;
   }
 
-  private setTitleRaw(rawTitle: string) {
+  private setTitleRaw(rawTitle: string): void {
     this.title.setTitle(rawTitle);
-    this.meta.updateTag({ name: 'og:title', content: rawTitle })
+    this.meta.updateTag({ property: 'og:title', content: rawTitle });
   }
 
-  private fixUrl(url: string){
-    if(!url.endsWith('/')){
-      url = `${url}/`; // url.substring(0, url.length - 1);
-    }
-    url = url.replace('/toni-hoffmann.com', '/www.toni-hoffmann.com')
-    url = url.replace('http:', 'https:')
-    
-    console.log(url);
-    return url;
+  private getCanonicalUrl(): string {
+    const path = this.router.url.split(/[?#]/, 1)[0] || '/';
+    return `${this.canonicalOrigin}${path.endsWith('/') ? path : `${path}/`}`;
   }
 
-  private setCanonicalUrl(url:string){
-    const head = this.dom.getElementsByTagName('head')[0];
-    var element: HTMLLinkElement= this.dom.querySelector(`link[rel='canonical']`) || null
-    if (element==null) {
-      element= this.dom.createElement('link') as HTMLLinkElement;
-      head.appendChild(element);
+  private setCanonicalUrl(url: string): void {
+    let element = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!element) {
+      element = this.document.createElement('link');
+      this.document.head.appendChild(element);
     }
-    element.setAttribute('rel','canonical')
-    element.setAttribute('href',url)
+    element.setAttribute('rel', 'canonical');
+    element.setAttribute('href', url);
     this.setOgUrl(url);
   }
 
-  private setOgUrl(url: string) {
-    this.meta.updateTag({ name: 'og:url', content: url })
+  private setOgUrl(url: string): void {
+    this.meta.updateTag({ property: 'og:url', content: url });
   }
 
-  private setDescription(desc: string) {
-    this.meta.updateTag({ name: 'description', content: desc })
-    this.meta.updateTag({ name: 'og:description', content: desc })
+  private setDescription(description: string): void {
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ property: 'og:description', content: description });
   }
 
-  private setKeywords(keywords: string) {
-    this.meta.updateTag({ name: 'keywords', content: keywords })
+  private setKeywords(keywords: string): void {
+    this.meta.updateTag({ name: 'keywords', content: keywords });
   }
 }

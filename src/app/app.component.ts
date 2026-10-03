@@ -4,8 +4,9 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 import { NavigationComponent } from 'src/app/components/shared/navigation/navigation.component'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent {
   @ViewChild('navigation') navigation: NavigationComponent;

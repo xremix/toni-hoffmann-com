@@ -11,8 +11,9 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
-  selector: 'app-app-detail',
-  templateUrl: './app-detail.component.html'
+    selector: 'app-app-detail',
+    templateUrl: './app-detail.component.html',
+    standalone: false
 })
 export class AppDetailComponent {
 

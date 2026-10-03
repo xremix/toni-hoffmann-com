@@ -49,7 +49,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', initialNavigation: 'enabled', relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+    initialNavigation: 'enabledBlocking'
+  })],
   providers: [{ provide: UrlSerializer, useClass: TrailingSlashUrlSerializer }],
   exports: [RouterModule]
 })

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
-  selector: 'app-imprint',
-  templateUrl: './imprint.component.html'
+    selector: 'app-imprint',
+    templateUrl: './imprint.component.html',
+    standalone: false
 })
 export class ImprintComponent implements OnInit {
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
+import { CookieService } from './cookie.service';
 import { environment } from 'src/environments/environment';
 import { UtilitiesService } from 'src/app/services/utilities.service';
 

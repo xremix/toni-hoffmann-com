@@ -4,8 +4,9 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
-  selector: 'app-data-privacy',
-  templateUrl: './data-privacy.component.html'
+    selector: 'app-data-privacy',
+    templateUrl: './data-privacy.component.html',
+    standalone: false
 })
 export class DataPrivacyComponent implements OnInit {
   public analyticsConsentRevoked = false;

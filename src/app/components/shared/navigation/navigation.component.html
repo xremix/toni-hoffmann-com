@@ -1,47 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
 
-  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-    <a class="navbar-brand ml-md-3" routerLink="/">Toni Hoffmann</a>
+    <a class="navbar-brand ms-md-3" routerLink="/">Toni Hoffmann</a>
 
     <!-- Spacer to push navigation to the right -->
-    <div class="mr-auto"></div>
+    <div class="me-auto"></div>
 
-    <div class="form-inline my-2 my-lg-0">
-      <ul class="nav navbar-nav navbar-right mr-md-3">
+    <div class="d-flex my-2 my-lg-0">
+      <ul class="nav navbar-nav ms-md-3">
 
         <li ngbDropdown class="nav-item" ngbDropdown #myDrop="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop.close();">
           <a routerLink="/photography/" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop.open();" routerLinkActive="active">Photography</a>
           <div ngbDropdownMenu>
-            <a ngbDropdownItem routerLink="/photography/{{album.id}}/1/" *ngFor="let album of photoService.getAlbumOverview()" routerLinkActive="active">{{album.title}}</a>
+            @for (album of photoService.getAlbumOverview(); track album) {
+              <a ngbDropdownItem routerLink="/photography/{{album.id}}/1/" routerLinkActive="active">{{album.title}}</a>
+            }
           </div>
         </li>
 
 
         <!-- <li ngbDropdown class="nav-item" ngbDropdown #myDrop2="ngbDropdown" (mouseleave)="$event.stopPropagation(); myDrop2.close();">
-          <a routerLink="/apps/" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop2.open();" routerLinkActive="active">Apps</a>
-          <div ngbDropdownMenu>
-            <a ngbDropdownItem routerLink="/apps/{{app.id}}/" *ngFor="let app of appService.getApps()" routerLinkActive="active">{{app.title}}</a>
-          </div>
-        </li> -->
-        <li class="nav-item">
-          <a routerLink="/apps/" class="nav-link" routerLinkActive="active">Apps</a>
-        </li>
+        <a routerLink="/apps/" class="nav-link"  (mouseenter)="$event.stopPropagation(); myDrop2.open();" routerLinkActive="active">Apps</a>
+        <div ngbDropdownMenu>
+          <a ngbDropdownItem routerLink="/apps/{{app.id}}/" *ngFor="let app of appService.getApps()" routerLinkActive="active">{{app.title}}</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a routerLink="/apps/" class="nav-link" routerLinkActive="active">Apps</a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/development/" routerLinkActive="active">Software Development</a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/development/" routerLinkActive="active">Software Development</a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/music/" routerLinkActive="active">Music</a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/music/" routerLinkActive="active">Music</a>
+      </li>
 
-      </ul>
-    </div>
+    </ul>
   </div>
+</div>
 </nav>

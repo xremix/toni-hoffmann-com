@@ -2,9 +2,10 @@ import { HostListener, Component, Input, ViewChild } from '@angular/core';
 import { CallToActionComponent } from 'src/app/components/shared/call-to-action/call-to-action.component';
 
 @Component({
-  selector: 'app-photo-modal',
-  templateUrl: './photo-modal.component.html',
-  styleUrls: ['./photo-modal.component.scss']
+    selector: 'app-photo-modal',
+    templateUrl: './photo-modal.component.html',
+    styleUrls: ['./photo-modal.component.scss'],
+    standalone: false
 })
 export class PhotoModalComponent {
 

@@ -2,6 +2,11 @@ a.text-black{
     color: #000;
 }
 
+.card{
+    --bs-card-spacer-x: 1.25rem;
+    --bs-card-spacer-y: 1.25rem;
+}
+
 .app-description{
     min-height: 120px;
 }

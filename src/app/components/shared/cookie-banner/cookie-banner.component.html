@@ -1,21 +1,20 @@
-<div class="fixed-bottom bg-white p-3 text-left border-top" *ngIf="show">
-  <div class="container">
-
-    <div class="p-2">
-      This site uses cookies to improve the experience of the website. Please check the <a routerLink="/data-privacy/"><u>Data-Privacy</u></a> section for more information.
-      <div class="float-right mt-2">
-        <button class="btn btn-primary mr-3" (click)="optIn()">
-          accept all
-        </button>
-        <button class="btn btn-outline-primary" (click)="optOut()">
-          reject all
-        </button>
+@if (show) {
+  <div class="fixed-bottom bg-white p-3 text-start border-top">
+    <div class="container">
+      <div class="p-2">
+        This site uses cookies to improve the experience of the website. Please check the <a routerLink="/data-privacy/"><u>Data-Privacy</u></a> section for more information.
+        <div class="float-end mt-2">
+          <button class="btn btn-primary me-3" (click)="optIn()">
+            accept all
+          </button>
+          <button class="btn btn-outline-primary" (click)="optOut()">
+            reject all
+          </button>
+        </div>
       </div>
+      <span class="absolute-top-right me-3 mt-3 large" (click)="optOut()">
+        <fa-icon icon="times"></fa-icon>
+      </span>
     </div>
-
-    <span class="absolute-top-right mr-3 mt-3 large" (click)="optOut()">
-      <fa-icon icon="times"></fa-icon>
-    </span>
   </div>
-
-</div>
+}

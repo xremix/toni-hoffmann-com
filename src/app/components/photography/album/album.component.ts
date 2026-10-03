@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PhotoService } from 'src/app/services/photo.service';
 import { SeoService } from 'src/app/services/seo.service';
@@ -9,9 +9,10 @@ import { UtilitiesService } from 'src/app/services/utilities.service';
 import { Album } from 'src/app/models/album';
 
 @Component({
-  selector: 'app-album',
-  templateUrl: './album.component.html',
-  styleUrls: ['./album.component.scss']
+    selector: 'app-album',
+    templateUrl: './album.component.html',
+    styleUrls: ['./album.component.scss'],
+    standalone: false
 })
 export class AlbumComponent implements OnInit {
 
@@ -52,15 +53,12 @@ export class AlbumComponent implements OnInit {
     private seoService: SeoService,
     private photoService: PhotoService,
     private route: ActivatedRoute,
-    private utilitiesService: UtilitiesService) {
+    private utilitiesService: UtilitiesService,
+    private changeDetectorRef: ChangeDetectorRef) {
 
     if(this.utilitiesService.isBrowser()){
       this.callToAction = window.screen.height * 1.7;
     }
-
-    route.params.subscribe(params => {
-      this.createGallery(params);
-    });
   }
 
   ngOnInit(): void {
@@ -127,6 +125,7 @@ export class AlbumComponent implements OnInit {
         this.album.photos = pages[this.page - 1];
 
         this.images = this.album.photos;
+        this.changeDetectorRef.detectChanges();
       });
   }
 

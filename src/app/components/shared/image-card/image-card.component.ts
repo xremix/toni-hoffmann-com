@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-image-card',
-  templateUrl: './image-card.component.html'
+    selector: 'app-image-card',
+    templateUrl: './image-card.component.html',
+    standalone: false
 })
 export class ImageCardComponent implements OnInit {
 

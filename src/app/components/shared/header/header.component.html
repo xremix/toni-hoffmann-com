@@ -1,55 +1,62 @@
-<ng-template [ngIf]="showDefaultHeader">
-<div class="header">
-  <!-- <div class="navigation-spacer"></div> -->
-  <div id="header-vertical-container">
-    <div id="header-vertical-content">
-      <div class="fixed-header-text no-hidden bg-lg-wallpapergray py-3" [style.opacity]="contentOpacity">
-
-        <div class="header-portrait-image">
+@if (showDefaultHeader) {
+  <div class="header">
+    <!-- <div class="navigation-spacer"></div> -->
+    <div id="header-vertical-container">
+      <div id="header-vertical-content">
+        <div class="fixed-header-text no-hidden bg-lg-wallpapergray py-3" [style.opacity]="contentOpacity">
+          <div class="header-portrait-image">
             <img src="assets/portrait-2.webp" alt="Toni Hoffmann Portrait" title="Toni Hoffmann Portrait" />
-        </div>
-
-        <h1 class="py-0 h1 mt-0" *ngIf="asHeader">Toni Hoffmann</h1>
-        <div class="py-0 h1 mt-0" *ngIf="!asHeader">Toni Hoffmann</div>
-
-        <hr class="seperator">
-
-        <div class="d-none d-lg-block">
-          <h2 class="larger">
-            <span class="px-3 border-right border-gray">Software Developer</span>
-            <span class="px-3 border-right border-gray">Photographer</span>
-            <span class="px-3">Musician</span>
-          </h2>
-        </div>
-        <div class="mt-3 d-block d-lg-none">
-          <h2 class="larger">     
-            <span>Software Developer</span><br/>
-            <span>Photographer</span><br/>
-            <span>Musician</span>
-          </h2>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="header-image" [ngClass]="{'header-image-right': coverRight}"></div>
-</div>
-</ng-template>
-
-<ng-template [ngIf]="!showDefaultHeader">
-<div class="header">
-  <div class="header-container-filler">
-    <div class ="header-vertical-center">
-      <div class="fixed-header-text no-hidden text-gradient" [style.opacity]="contentOpacity">
-        <div class="p-2" *ngIf="galleryTitle || gallerySubtitle">
-          <h1 class="py-0 h1 mt-0" *ngIf="asHeader">
-            <span class="p-0" style="font-size:0.8em;" *ngIf="galleryTitle">{{galleryTitle}}</span>
-          </h1>
-          <h2 class="p-0 pt-1 pb-3" style="font-size: 1.5rem;" *ngIf="gallerySubtitle">{{gallerySubtitle}}</h2>
+          </div>
+          @if (asHeader) {
+            <h1 class="py-0 h1 mt-0">Toni Hoffmann</h1>
+          }
+          @if (!asHeader) {
+            <div class="py-0 h1 mt-0">Toni Hoffmann</div>
+          }
+          <hr class="seperator">
+          <div class="d-none d-lg-block">
+            <h2 class="larger">
+              <span class="px-3 border-end border-gray">Software Developer</span>
+              <span class="px-3 border-end border-gray">Photographer</span>
+              <span class="px-3">Musician</span>
+            </h2>
+          </div>
+          <div class="mt-3 d-block d-lg-none">
+            <h2 class="larger">
+              <span>Software Developer</span><br/>
+              <span>Photographer</span><br/>
+              <span>Musician</span>
+            </h2>
+          </div>
         </div>
       </div>
     </div>
+    <div class="header-image" [ngClass]="{'header-image-right': coverRight}"></div>
   </div>
-  <div class="header-image" style="background-image:url('{{galleryImage}}')"></div>
-</div>
-</ng-template>
+}
+
+@if (!showDefaultHeader) {
+  <div class="header">
+    <div class="header-container-filler">
+      <div class ="header-vertical-center">
+        <div class="fixed-header-text no-hidden text-gradient" [style.opacity]="contentOpacity">
+          @if (galleryTitle || gallerySubtitle) {
+            <div class="p-2">
+              @if (asHeader) {
+                <h1 class="py-0 h1 mt-0">
+                  @if (galleryTitle) {
+                    <span class="p-0" style="font-size:0.8em;">{{galleryTitle}}</span>
+                  }
+                </h1>
+              }
+              @if (gallerySubtitle) {
+                <h2 class="p-0 pt-1 pb-3" style="font-size: 1.5rem;">{{gallerySubtitle}}</h2>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="header-image" style="background-image:url('{{galleryImage}}')"></div>
+  </div>
+}

@@ -7,9 +7,10 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
-  selector: 'app-apps',
-  templateUrl: './apps.component.html',
-  styleUrls: ['./apps.component.scss']
+    selector: 'app-apps',
+    templateUrl: './apps.component.html',
+    styleUrls: ['./apps.component.scss'],
+    standalone: false
 })
 export class AppsComponent implements OnInit {
 

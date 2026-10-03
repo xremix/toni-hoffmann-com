@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-banner-link',
-  templateUrl: './banner-link.component.html',
-  styleUrls: ['./banner-link.component.scss']
+    selector: 'app-banner-link',
+    templateUrl: './banner-link.component.html',
+    styleUrls: ['./banner-link.component.scss'],
+    standalone: false
 })
 export class BannerLinkComponent implements OnInit {
   @Input() public title: string;

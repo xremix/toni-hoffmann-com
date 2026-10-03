@@ -4,7 +4,10 @@ import { Router, UrlSerializer } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TrailingSlashUrlSerializer } from './trailing-slash-url-serializer';
 
-@Component({ template: '' })
+@Component({
+    template: '',
+    standalone: false
+})
 class RouteComponent {}
 
 describe('TrailingSlashUrlSerializer', () => {
