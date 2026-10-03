@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  googleAnalyticsId: 'UA-40522413-X'
+  googleAnalyticsId: ''
 };
 
 /*

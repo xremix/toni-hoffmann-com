@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(public router: Router, public analyaticsService: AnalyticsService){
       this.router.events.subscribe(event => {
          if(event instanceof NavigationEnd){
-           this.analyaticsService.init(event);
+           this.analyaticsService.init(event.urlAfterRedirects);
            if(this.navigation){
              this.navigation.isNavbarCollapsed = true;
            }           
