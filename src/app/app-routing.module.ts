@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, UrlSerializer } from '@angular/router';
+import { TrailingSlashUrlSerializer } from './trailing-slash-url-serializer';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DevelopmentComponent } from './components/development/development.component';
@@ -27,32 +28,18 @@ const routes: Routes = [
       // { path: 'landscapes', redirectTo: '/photography/landscapes/1'}, // legacy
 
 
-      // { path: 'apps', component: AppsComponent },
-      // { path: 'apps/:appid', component: AppDetailComponent },
-      // { path: 'contact', component: ContactComponent },
-      // { path: 'contact/:action', component: ContactComponent },
-      // { path: 'data-privacy', component: DataPrivacyComponent },
-      // { path: 'development', component: DevelopmentComponent },
-      // { path: 'imprint', component: ImprintComponent },
-      // { path: 'music', component: MusicComponent },
-      // { path: 'photography', component: PhotographyComponent },
-      // { path: 'photography/:album/:page', component: AlbumComponent },
-      // { path: 'photography/:album/photo/:photoid', component: AlbumComponent },
-
-
-      { path: 'apps/.', component: AppsComponent },
-      { path: 'apps/:appid/.', component: AppDetailComponent },
-      { path: 'contact/.', component: ContactComponent },
-      { path: 'contact/:action/.', component: ContactComponent },
-      { path: 'data-privacy/.', component: DataPrivacyComponent },
-      { path: 'development/.', component: DevelopmentComponent },
-      { path: 'imprint/.', component: ImprintComponent },
-      { path: 'music/.', component: MusicComponent },
-      { path: 'photography/.', component: PhotographyComponent },
+      { path: 'apps', component: AppsComponent },
+      { path: 'apps/:appid', component: AppDetailComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'contact/:action', component: ContactComponent },
+      { path: 'data-privacy', component: DataPrivacyComponent },
+      { path: 'development', component: DevelopmentComponent },
+      { path: 'imprint', component: ImprintComponent },
+      { path: 'music', component: MusicComponent },
+      { path: 'photography', component: PhotographyComponent },
       { path: 'photography/:album', component: AlbumComponent },
-      { path: 'photography/:album/:page/.', component: AlbumComponent },
-      { path: 'photography/:album/.', component: AlbumComponent },
-      { path: 'photography/:album/photo/:photoid/.', component: AlbumComponent },
+      { path: 'photography/:album/:page', component: AlbumComponent },
+      { path: 'photography/:album/photo/:photoid', component: AlbumComponent },
 
       { path: '', component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,
       { path: '404', component: PageNotFoundComponent },
@@ -63,6 +50,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', initialNavigation: 'enabled', relativeLinkResolution: 'legacy' })],
+  providers: [{ provide: UrlSerializer, useClass: TrailingSlashUrlSerializer }],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

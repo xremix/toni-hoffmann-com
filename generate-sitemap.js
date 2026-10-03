@@ -176,14 +176,4 @@ fs.writeFile('routes.txt', txtContent, function (err) {
   if (err) throw err;
   console.log('Generated routes.txt');
 
-
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-  console.log('!!!!!!Dont Forget to remove /.!!!!!');
-  console.log('!!!!!!Then build one more time with /. for the js!!!!!');
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 });

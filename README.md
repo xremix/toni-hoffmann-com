@@ -29,7 +29,10 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 - Install [Node.js](https://nodejs.org/en/) version 16.16.0
 - Install [Angular CLI](https://github.com/angular/angular-cli)
 - Clone the Repository via `git clone git@github.com:xremix/toni-hoffmann-com.git`
+- If using [nvm](https://github.com/nvm-sh/nvm), run `nvm install` and `nvm use` in the repository to select the version pinned in `.nvmrc`.
 - Run `npm install --legacy-peer-deps` in your local repository
+
+This legacy Angular 11 / Webpack build requires the pinned Node version. Node 17+ uses OpenSSL 3 and can fail with `ERR_OSSL_EVP_UNSUPPORTED`. Node 16 is end-of-life; use it only for this legacy build until the toolchain is upgraded.
 
 ## Run
 
@@ -44,10 +47,7 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 - Make sure deploy the api in the folder `/api` on the same level than the angular application. The API is part of a private repository
 
 ### Build and Prerender
-- Remove all `/.` from the `src/app/app-routing.module.ts`
+- Run `nvm use` in the deployment terminal before building (or otherwise ensure Node 16.16.0 is selected).
 - Run `npm run prerender` to [prerender](https://dev.to/michaeljota/how-to-prerender-your-angular-app-using-angular-universal-4g0b) and build the project. This will generate static files for each route and prepare for SEO.
-- Upload all prerendered subfolders from `dist/toni-hoffmann-com/browser` to the web server
-- Add all `/.` back to the `app-routing.module.ts`
-- Run `npm run prerender` one more time
-- Upload all JS, HTML, Fonts from the root folder of `dist/toni-hoffmann-com/browser` to the web server
-
+- Upload the complete contents of `dist/toni-hoffmann-com/browser` (including all prerendered subfolders and the root files) to the web server.
+- Browser navigation and SSR use the same routes and generate URLs with a trailing slash. No route edits or second build are needed. Old `/.` URLs are still accepted.
