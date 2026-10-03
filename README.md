@@ -49,3 +49,12 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 - Upload the complete contents of `dist/toni-hoffmann-com/browser` (including all prerendered subfolders and the root files) to the web server.
 - Browser navigation, SSR, and prerendering use the same routes and generate URLs with a trailing slash. Old `/.` URLs are still accepted.
 - For Node hosting instead of static hosting, run `npm run build:ssr` and then `npm run serve:ssr`.
+
+### Gallery image indexing
+- Gallery HTML includes full-size image sources, descriptive alternative text and captions, and direct image links that also work without JavaScript. Small screens use thumbnails; normal clicks still open the lightbox.
+- Each gallery page includes `ImageGallery` / `ImageObject` structured data with full-size URLs and photographer attribution. This helps describe the images; it does not guarantee rankings or rich results.
+- `npm run prerender` generates image sitemap entries and gallery routes from `api/images/*.json`. Pagination is shared with the gallery through `src/app/models/gallery-config.json`; update the metadata before building whenever photos change.
+- Prerendering reads gallery metadata from the live API. Deploy matching `api/images/*.json` files and image files before building so prerendered gallery pages and the locally generated sitemap describe the same photos.
+- The sitemap deliberately omits `lastmod` rather than reporting the build date as a content change date. `robots.txt` advertises the sitemap, and pages allow large image previews.
+- After deployment, submit `https://www.toni-hoffmann.com/sitemap.xml` in Google Search Console and inspect a gallery URL's crawled HTML. Ensure `/images/` still serves actual image files without authentication or crawler-blocking headers. Google needs time to recrawl, and inclusion in image search is not guaranteed.
+- Run `node --test generate-sitemap.test.js` to check sitemap pagination and XML escaping.

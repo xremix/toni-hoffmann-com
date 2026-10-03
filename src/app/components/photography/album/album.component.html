@@ -4,14 +4,15 @@
     <div class="content photo-content bg-dark">
       <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" [breakPoints]="xGalleryBreakpoints" #myGallery></ui-xGallerify>
       <ng-template #imageTemplate let-image="image">
-        <div class="xgallerify-container hover-container overflow-hidden" (click)="showPhotoModal(image)">
+        <a class="xgallerify-container hover-container overflow-hidden d-block" [href]="image.bigurl" (click)="showPhotoModal(image, $event)">
           <figure class="m-0 p-0">
-            <img class="xgallerify-img hover-scale-child" src="{{image.url}}" (load)="myGallery.imageLoaded($event, image)" alt="{{image.title}}" title="{{image.title}}" loading="lazy" />
-            <div class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
-              <figcaption>{{image.title}}</figcaption>
-            </div>
+            <picture>
+              <source media="(max-width: 719px)" [srcset]="image.url" />
+              <img class="xgallerify-img hover-scale-child" [src]="image.bigurl" (load)="myGallery.imageLoaded($event, image)" [alt]="image.title" [title]="image.title" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">{{image.title}}</figcaption>
           </figure>
-        </div>
+        </a>
       </ng-template>
       @if (pages && pages.length && pages.length > 1) {
         <div class="text-center p-4">

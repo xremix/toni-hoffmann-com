@@ -1,188 +1,81 @@
-var fs = require('fs');
+const fs = require('node:fs');
+const path = require('node:path');
+const galleryConfig = require('./src/app/models/gallery-config.json');
 
-var currentDate = new Date();
-function twoDigit(s){
-  return ("0" + s).slice(-2);
+const origin = 'https://www.toni-hoffmann.com';
+const appIds = [
+  'bunny-herbs', 'yapa-photo-video-cleaner', 'airport-weather',
+  'pretty-gs1-scanner', 'smart-gs1-barcode-generator', 'geo-file-converter',
+  'etf-saving-plan-calculator', 'boat-speedometer', 'curve-tracker',
+  'mindful-focus', 'nautic-converter', 'cope-stress'
+];
+
+function escapeXml(value) {
+  return value.replace(/[<>&"']/g, character => ({
+    '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;'
+  })[character]);
 }
-var dateString = `${currentDate.getFullYear()}-${twoDigit(currentDate.getMonth() + 1)}-${twoDigit(currentDate.getDate())}`;
 
+function getSites() {
+  const sites = [
+    { url: '/', priority: '1.00' },
+    { url: '/photography/', priority: '1.00' }
+  ];
 
-var sites = [{
-  url: '/',
-  priority: '1.00',
-},{
-  url: '/photography/',
-  priority: '1.00',
-}, {
-  url: '/photography/landscapes/1/',
-  priority: '1.00',
-}, {
-  url: '/photography/landscapes/2/',
-  priority: '1.00',
-}, {
-  url: '/photography/landscapes/3/',
-  priority: '1.00',
-},{
-  url: '/photography/moody/1/',
-  priority: '1.00',
-}, {
-  url: '/photography/moody/2/',
-  priority: '1.00',
-},{
-  url: '/photography/winterlandscapes/1/',
-  priority: '1.00',
-}, {
-  url: '/photography/winterlandscapes/2/',
-  priority: '1.00',
-},{
-  url: '/photography/winterlandscapes/3/',
-  priority: '1.00',
-}, {
-  url: '/photography/cityscapes/1/',
-  priority: '1.00',
-}, {
-  url: '/photography/cityscapes/2/',
-  priority: '1.00',
-}, {
-  url: '/photography/cityscapes/3/',
-  priority: '1.00',
-}, {
-  url: '/photography/subways/1/',
-  priority: '1.00',
-}, {
-  url: '/photography/products/1/',
-  priority: '1.00',
-}, {
-  url: '/photography/products/2/',
-  priority: '1.00',
-}, {
-  url: '/photography/products/3/',
-  priority: '1.00',
-}, {
-  url: '/apps/',
-  priority: '1.00',
-}, {
-  url: '/apps/bunny-herbs/',
-  priority: '1.00',
-}, {
-  url: '/apps/yapa-photo-video-cleaner/',
-  priority: '1.00',
-}, {
-  url: '/apps/airport-weather/',
-  priority: '1.00',
-}, {
-  url: '/apps/pretty-gs1-scanner/',
-  priority: '1.00',
-}, {
-  url: '/apps/smart-gs1-barcode-generator/',
-  priority: '1.00',
-}, {
-  url: '/apps/geo-file-converter/',
-  priority: '1.00',
-}, {
-  url: '/apps/etf-saving-plan-calculator/',
-  priority: '1.00',
-}, {
-  url: '/apps/boat-speedometer/',
-  priority: '1.00',
-}, {
-  url: '/apps/curve-tracker/',
-  priority: '1.00',
-}, {
-  url: '/apps/mindful-focus/',
-  priority: '1.00',
-}, {
-  url: '/apps/nautic-converter/',
-  priority: '1.00',
-}, {
-  url: '/apps/cope-stress/',
-  priority: '1.00',
-}, {
-  url: '/development/',
-  priority: '0.8',
-}, {
-  url: '/music/',
-  priority: '0.8',
-}, {
-  url: '/contact/',
-  priority: '0.40',
-}, {
-  url: '/imprint/',
-  priority: '0.40',
-}, {
-  url: '/data-privacy/',
-  priority: '0.40',
-}];
-
-
-function chunkArray(myArray, chunk_size){
-  var index = 0;
-  var arrayLength = myArray.length;
-  var tempArray = [];
-
-  for (index = 0; index < arrayLength; index += chunk_size) {
-    var myChunk = myArray.slice(index, index + chunk_size);
-    tempArray.push(myChunk);
+  for (const album of galleryConfig.albums) {
+    const images = JSON.parse(fs.readFileSync(
+      path.join(__dirname, 'api', 'images', `${album}.json`), 'utf8'
+    ));
+    if (!Array.isArray(images) || !images.length ||
+        images.some(image => !image || typeof image.url !== 'string' || !image.url ||
+          typeof image.middleurl !== 'string' || !image.middleurl ||
+          typeof image.title !== 'string' || !image.title.trim())) {
+      throw new Error(`Invalid or empty image metadata for album ${album}`);
+    }
+    for (let offset = 0; offset < images.length; offset += galleryConfig.pageSize) {
+      sites.push({
+        url: `/photography/${album}/${offset / galleryConfig.pageSize + 1}/`,
+        priority: '1.00',
+        images: images.slice(offset, offset + galleryConfig.pageSize).map(image =>
+          `${origin}/images/${album}/full/${encodeURIComponent(image.url)}`
+        )
+      });
+    }
   }
 
-  return tempArray;
+  sites.push(
+    { url: '/apps/', priority: '1.00' },
+    ...appIds.map(id => ({ url: `/apps/${id}/`, priority: '1.00' })),
+    ...['development', 'music'].map(id => ({ url: `/${id}/`, priority: '0.8' })),
+    ...['contact', 'imprint', 'data-privacy'].map(id => ({ url: `/${id}/`, priority: '0.40' }))
+  );
+  return sites;
 }
 
-
-function loadImages(url){
-  if(!url.includes('/photography/') || url == '/photography/' ){
-    return '';
-  }
-
-
-  var album = url.slice('/photography/'.length).slice(0, -1).split('/')[0];
-  var page =  url.slice('/photography/'.length).slice(0, -1).split('/')[1] - 1;
-  var images = JSON.parse(fs.readFileSync(`../toni-hoffmann-com/api/images/${album}.json`));
-  var pageImages = chunkArray(images, 21)[page];
-console.log(album, page);
-// if(!pageImages) return '';
-  var output = pageImages.map(image =>`
-  <image:image>
-    <image:loc>https://www.toni-hoffmann.com/images/${album}/full/${image.url}</image:loc>
-    <image:caption>${image.title}</image:caption>
-  </image:image>
-`).join('');
-return output;
-}
-
-var sitesXml = sites.map(s =>{
-  return `
-  <url>
-    <loc>https://www.toni-hoffmann.com${s.url}</loc>
-    <lastmod>${dateString}</lastmod>
-    <priority>${s.priority}</priority>${loadImages(s.url)}
-  </url>`
-}).join('');
-
-var xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-            xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-${sitesXml}
-
+function buildSitemap(sites) {
+  const urls = sites.map(site => {
+    const images = (site.images || []).map(url =>
+      `    <image:image><image:loc>${escapeXml(url)}</image:loc></image:image>`
+    ).join('\n');
+    return `  <url>
+    <loc>${escapeXml(origin + site.url)}</loc>
+    <priority>${site.priority}</priority>${images ? `\n${images}` : ''}
+  </url>`;
+  }).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${urls}
 </urlset>
 `;
+}
 
+if (require.main === module) {
+  const sites = getSites();
+  fs.writeFileSync(path.join(__dirname, 'src/sitemap.xml'), buildSitemap(sites));
+  fs.writeFileSync(path.join(__dirname, 'routes.txt'),
+    sites.map(site => site.url === '/' ? '/' : site.url.slice(0, -1)).join('\n') + '\n'
+  );
+  console.log('Generated src/sitemap.xml and routes.txt');
+}
 
-fs.writeFile('src/sitemap.xml', xmlContent, function (err) {
-  if (err) throw err;
-  console.log('Generated src/sitemap.xml');
-});
-
-var txtContent = sites.map(s =>{
-  return s.url === '/' ? '/' : s.url.slice(0, -1);
-}).join('\n');
-fs.writeFile('routes.txt', txtContent, function (err) {
-  if (err) throw err;
-  console.log('Generated routes.txt');
-
-});
+module.exports = { getSites, buildSitemap };

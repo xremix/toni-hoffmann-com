@@ -7,6 +7,8 @@ import { UtilitiesService } from 'src/app/services/utilities.service';
 // import { GalleryImage } from '../../../../../../../WebProjects/ng-xGallerify/projects/x-gallerify/src/public-api';
 // import { GalleryImage } from '@xremix/ng-x-gallerify';
 import { Album } from 'src/app/models/album';
+import { GalleryPhoto } from 'src/app/models/photo';
+import galleryConfig from 'src/app/models/gallery-config.json';
 
 @Component({
     selector: 'app-album',
@@ -18,7 +20,7 @@ export class AlbumComponent implements OnInit {
 
   public title: string;
   public subTitle: string;
-  public images: Array<any>;
+  public images: GalleryPhoto[];
   public album: Album;
   public modalPhoto: any = null;
   public callToAction = 999999;//get's set in constructor
@@ -41,9 +43,8 @@ export class AlbumComponent implements OnInit {
     columns: 4
   }];
 
-  // TODO change this also in generate-sizemap.js
-  private pageSize: number = 20;
-  private page: number = 1;
+  private readonly pageSize = galleryConfig.pageSize;
+  public page: number = 1;
 
   public pages: Array<number> = [];
 
@@ -106,30 +107,38 @@ export class AlbumComponent implements OnInit {
 
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 
-        data = data.map(i =>{
-          // i.bigurl = 'https://www.toni-hoffmann.com/galleryimages/' + i.url;
-          // i.url = 'https://www.toni-hoffmann.com/galleryimages/' + i.middleurl;
-          i.bigurl = `https://www.toni-hoffmann.com/images/${albumParameter}/full/${i.url}`;
-          i.url = `https://www.toni-hoffmann.com/images/${albumParameter}/thumbnail/${i.middleurl}`;
-          return i;
-        });
+        const photos: GalleryPhoto[] = data.map(image => ({
+          ...image,
+          bigurl: `https://www.toni-hoffmann.com/images/${albumParameter}/full/${encodeURIComponent(image.url)}`,
+          url: `https://www.toni-hoffmann.com/images/${albumParameter}/thumbnail/${encodeURIComponent(image.middleurl)}`
+        }));
 
-        var pages = UtilitiesService.chunkArray(data, this.pageSize);
+        var pages = UtilitiesService.chunkArray(photos, this.pageSize);
 
         this.pages = UtilitiesService.fillArray(pages.length);
 
-        if(this.page > this.pages.length){
+        if(!Number.isInteger(this.page) || this.page < 1 || this.page > this.pages.length){
           this.router.navigate(['/404'], { relativeTo: this.route });
+          return;
         }
 
         this.album.photos = pages[this.page - 1];
 
         this.images = this.album.photos;
+        this.seoService.setGalleryImages(
+          `${this.album.title} Photography - Gallery ${this.page}`,
+          galleryDescription,
+          this.images
+        );
         this.changeDetectorRef.detectChanges();
       });
   }
 
-  showPhotoModal(photo: any){
+  showPhotoModal(photo: GalleryPhoto, event: MouseEvent){
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) {
+      return;
+    }
+    event.preventDefault();
     this.photoModal.show(photo);
   }
 

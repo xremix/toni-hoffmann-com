@@ -2,6 +2,7 @@
 import { DOCUMENT, Inject, Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { GalleryPhoto } from '../models/photo';
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +18,53 @@ export class SeoService {
   ) {}
 
   public setPageMetaData(title: string, description: string, keywords?: string): void {
+    this.document.getElementById('gallery-structured-data')?.remove();
+    this.meta.updateTag({
+      property: 'og:image',
+      content: `${this.canonicalOrigin}/assets/work3-small.webp`
+    });
+    this.meta.removeTag('property="og:image:alt"');
     this.setTitleRaw('Toni Hoffmann - ' + title);
     this.setDescription(description);
     this.setCanonicalUrl(this.getCanonicalUrl());
     if (keywords) {
       this.setKeywords(keywords);
+    }
+  }
+
+  public setGalleryImages(name: string, description: string, photos: GalleryPhoto[]): void {
+    this.document.getElementById('gallery-structured-data')?.remove();
+    const canonicalUrl = this.getCanonicalUrl();
+    const script = this.document.createElement('script');
+    script.id = 'gallery-structured-data';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ImageGallery',
+      url: canonicalUrl,
+      name,
+      description,
+      associatedMedia: photos.map(photo => ({
+        '@type': 'ImageObject',
+        contentUrl: photo.bigurl,
+        url: photo.bigurl,
+        thumbnailUrl: photo.url,
+        name: photo.title,
+        caption: photo.title,
+        creator: {
+          '@type': 'Person',
+          name: 'Toni Hoffmann',
+          url: `${this.canonicalOrigin}/`
+        },
+        creditText: 'Toni Hoffmann',
+        copyrightNotice: 'Toni Hoffmann',
+        isPartOf: { '@type': 'ImageGallery', url: canonicalUrl }
+      }))
+    }).replace(/</g, '\\u003c');
+    this.document.head.appendChild(script);
+    if (photos.length) {
+      this.meta.updateTag({ property: 'og:image', content: photos[0].bigurl });
+      this.meta.updateTag({ property: 'og:image:alt', content: photos[0].title });
     }
   }
 
