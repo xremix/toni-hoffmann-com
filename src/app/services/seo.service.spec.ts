@@ -30,6 +30,7 @@ describe('gallery image SEO', () => {
 
   afterEach(() => {
     document.getElementById('gallery-structured-data')?.remove();
+    document.getElementById('photo-structured-data')?.remove();
   });
 
   it('describes full-size images and their photographer on the canonical gallery page', () => {
@@ -69,5 +70,19 @@ describe('gallery image SEO', () => {
     const text = document.getElementById('gallery-structured-data').textContent;
     expect(text).not.toContain('<');
     expect(JSON.parse(text).associatedMedia[0].name).toBe(title);
+  });
+
+  it('describes an individual photo as the primary image and clears it when navigating away', () => {
+    const router = TestBed.inject(Router);
+    Object.defineProperty(router, 'url', { value: '/photography/landscapes/photo/sunset/', configurable: true });
+    service.setPageMetaData(photo.title, 'Sunset over Lake Ammersee.');
+    service.setPhotoMetaData(photo, 'Sunset over Lake Ammersee.');
+    const data = JSON.parse(document.getElementById('photo-structured-data').textContent);
+    expect(data.url).toBe('https://www.toni-hoffmann.com/photography/landscapes/photo/sunset/');
+    expect(data.primaryImageOfPage.contentUrl).toBe(photo.bigurl);
+    expect(data.primaryImageOfPage.description).toBe('Sunset over Lake Ammersee.');
+    expect(data.primaryImageOfPage.creator.name).toBe('Toni Hoffmann');
+    service.setPageMetaData('Contact', 'Contact Toni Hoffmann');
+    expect(document.getElementById('photo-structured-data')).toBeNull();
   });
 });

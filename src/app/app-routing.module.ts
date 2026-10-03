@@ -15,6 +15,7 @@ import { AppDetailComponent } from './components/apps/app-detail/app-detail.comp
 import { AppImprintComponent } from './components/apps/app-imprint/app-imprint.component';
 import { AppTermsComponent } from './components/apps/app-terms/app-terms.component';
 import { LayoutComponent } from './components/shared/layout/layout.component';
+import { PhotoDetailComponent } from './components/photography/photo-detail/photo-detail.component';
 
 const routes: Routes = [
 
@@ -39,7 +40,7 @@ const routes: Routes = [
       { path: 'photography', component: PhotographyComponent },
       { path: 'photography/:album', component: AlbumComponent },
       { path: 'photography/:album/:page', component: AlbumComponent },
-      { path: 'photography/:album/photo/:photoid', component: AlbumComponent },
+      { path: 'photography/:album/photo/:photoid', component: PhotoDetailComponent },
 
       { path: '', component: HomeComponent, pathMatch: 'full' }, // redirect to `home-component`,
       { path: '404', component: PageNotFoundComponent },

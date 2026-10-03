@@ -2,15 +2,27 @@
   cursor: pointer;
 }
 
-.xgallerify-container:hover .image-description{
+.xgallerify-container:hover .image-description,
+.xgallerify-container:focus-within .image-description{
   opacity: 1;
+  pointer-events: auto;
 }
 
 .image-description{
   opacity: 0;
+  pointer-events: none;
   transition: opacity .5s ease-in-out;
   font-size: 1.2em;
   // white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.image-description a{
+  text-decoration: none;
+}
+
+.image-description a:hover,
+.image-description a:focus-visible{
+  text-decoration: underline;
 }

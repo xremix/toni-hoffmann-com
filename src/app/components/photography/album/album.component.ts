@@ -9,6 +9,7 @@ import { UtilitiesService } from 'src/app/services/utilities.service';
 import { Album } from 'src/app/models/album';
 import { GalleryPhoto } from 'src/app/models/photo';
 import galleryConfig from 'src/app/models/gallery-config.json';
+import { toGalleryPhoto } from 'src/app/models/photo-utils';
 
 @Component({
     selector: 'app-album',
@@ -107,11 +108,7 @@ export class AlbumComponent implements OnInit {
 
       this.photoService.getPhotosFromAlbum(albumParameter).subscribe(data =>{
 
-        const photos: GalleryPhoto[] = data.map(image => ({
-          ...image,
-          bigurl: `https://www.toni-hoffmann.com/images/${albumParameter}/full/${encodeURIComponent(image.url)}`,
-          url: `https://www.toni-hoffmann.com/images/${albumParameter}/thumbnail/${encodeURIComponent(image.middleurl)}`
-        }));
+        const photos = data.map(image => toGalleryPhoto(albumParameter, image));
 
         var pages = UtilitiesService.chunkArray(photos, this.pageSize);
 

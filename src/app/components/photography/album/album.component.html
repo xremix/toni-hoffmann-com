@@ -4,15 +4,17 @@
     <div class="content photo-content bg-dark">
       <ui-xGallerify [images]="images" [imageTemplate]="imageTemplate" [breakPoints]="xGalleryBreakpoints" #myGallery></ui-xGallerify>
       <ng-template #imageTemplate let-image="image">
-        <a class="xgallerify-container hover-container overflow-hidden d-block" [href]="image.bigurl" (click)="showPhotoModal(image, $event)">
-          <figure class="m-0 p-0">
+        <figure class="xgallerify-container hover-container overflow-hidden m-0 p-0 position-relative">
+          <a class="d-block" [href]="image.bigurl" (click)="showPhotoModal(image, $event)">
             <picture>
               <source media="(max-width: 719px)" [srcset]="image.url" />
-              <img class="xgallerify-img hover-scale-child" [src]="image.bigurl" (load)="myGallery.imageLoaded($event, image)" [alt]="image.title" [title]="image.title" loading="lazy" decoding="async" />
+              <img class="xgallerify-img hover-scale-child" [src]="image.bigurl" (load)="myGallery.imageLoaded($event, image)" [alt]="image.alt || image.title" [title]="image.title" loading="lazy" decoding="async" />
             </picture>
-            <figcaption class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">{{image.title}}</figcaption>
-          </figure>
-        </a>
+          </a>
+          <figcaption class="absolute-bottom text-center p-3 text-white image-description bg-gradient-background">
+            <a class="text-white" [routerLink]="image.pageUrl">{{image.title}}</a>
+          </figcaption>
+        </figure>
       </ng-template>
       @if (pages && pages.length && pages.length > 1) {
         <div class="text-center p-4">

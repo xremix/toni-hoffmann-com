@@ -19,6 +19,7 @@ export class SeoService {
 
   public setPageMetaData(title: string, description: string, keywords?: string): void {
     this.document.getElementById('gallery-structured-data')?.remove();
+    this.document.getElementById('photo-structured-data')?.remove();
     this.meta.updateTag({
       property: 'og:image',
       content: `${this.canonicalOrigin}/assets/work3-small.webp`
@@ -47,10 +48,11 @@ export class SeoService {
       associatedMedia: photos.map(photo => ({
         '@type': 'ImageObject',
         contentUrl: photo.bigurl,
-        url: photo.bigurl,
+        url: photo.pageUrl ? `${this.canonicalOrigin}${photo.pageUrl}` : photo.bigurl,
         thumbnailUrl: photo.url,
         name: photo.title,
         caption: photo.title,
+        description: photo.description,
         creator: {
           '@type': 'Person',
           name: 'Toni Hoffmann',
@@ -73,7 +75,39 @@ export class SeoService {
     if (additionalKeywords && additionalKeywords.length) {
       additionalKeywordString = `, ${additionalKeywords.join(', ')}`;
     }
+
     return `Toni Hoffmann, Bavaria, Bayern, Munich, München${additionalKeywordString}`;
+  }
+
+  public setPhotoMetaData(photo: GalleryPhoto, description: string): void {
+    this.document.getElementById('photo-structured-data')?.remove();
+    const canonicalUrl = this.getCanonicalUrl();
+    const script = this.document.createElement('script');
+    script.id = 'photo-structured-data';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      url: canonicalUrl,
+      name: photo.title,
+      description,
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        '@id': `${canonicalUrl}#image`,
+        url: canonicalUrl,
+        contentUrl: photo.bigurl,
+        thumbnailUrl: photo.url,
+        name: photo.title,
+        caption: photo.title,
+        description,
+        creator: { '@type': 'Person', name: 'Toni Hoffmann', url: `${this.canonicalOrigin}/` },
+        creditText: 'Toni Hoffmann',
+        copyrightNotice: 'Toni Hoffmann'
+      }
+    }).replace(/</g, '\\u003c');
+    this.document.head.appendChild(script);
+    this.meta.updateTag({ property: 'og:image', content: photo.bigurl });
+    this.meta.updateTag({ property: 'og:image:alt', content: photo.alt || photo.title });
   }
 
   private setTitleRaw(rawTitle: string): void {

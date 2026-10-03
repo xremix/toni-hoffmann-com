@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const galleryConfig = require('./src/app/models/gallery-config.json');
+const { getPhotoPath, getPhotoId } = require('./src/app/models/photo-utils.ts');
 
 const origin = 'https://www.toni-hoffmann.com';
 const appIds = [
@@ -23,14 +24,20 @@ function getSites() {
   ];
 
   for (const album of galleryConfig.albums) {
-    const images = JSON.parse(fs.readFileSync(
+    const rawImages = JSON.parse(fs.readFileSync(
       path.join(__dirname, 'api', 'images', `${album}.json`), 'utf8'
     ));
-    if (!Array.isArray(images) || !images.length ||
-        images.some(image => !image || typeof image.url !== 'string' || !image.url ||
+    if (!Array.isArray(rawImages) || !rawImages.length ||
+        rawImages.some(image => !image || typeof image.url !== 'string' || !image.url ||
           typeof image.middleurl !== 'string' || !image.middleurl ||
           typeof image.title !== 'string' || !image.title.trim())) {
       throw new Error(`Invalid or empty image metadata for album ${album}`);
+    }
+    const images = rawImages;
+    const ids = images.map(getPhotoId);
+    if (new Set(ids).size !== ids.length ||
+        ids.some(id => !/^[a-zA-Z0-9_-]+$/.test(id))) {
+      throw new Error(`Duplicate or invalid photo page identifiers in album ${album}`);
     }
     for (let offset = 0; offset < images.length; offset += galleryConfig.pageSize) {
       sites.push({
@@ -39,6 +46,13 @@ function getSites() {
         images: images.slice(offset, offset + galleryConfig.pageSize).map(image =>
           `${origin}/images/${album}/full/${encodeURIComponent(image.url)}`
         )
+      });
+    }
+    for (const image of images) {
+      sites.push({
+        url: getPhotoPath(album, image),
+        priority: '0.8',
+        images: [`${origin}/images/${album}/full/${encodeURIComponent(image.url)}`]
       });
     }
   }

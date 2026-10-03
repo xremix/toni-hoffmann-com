@@ -58,3 +58,18 @@ Depending on the project, my favorite set up is to work with a seperate [termina
 - The sitemap deliberately omits `lastmod` rather than reporting the build date as a content change date. `robots.txt` advertises the sitemap, and pages allow large image previews.
 - After deployment, submit `https://www.toni-hoffmann.com/sitemap.xml` in Google Search Console and inspect a gallery URL's crawled HTML. Ensure `/images/` still serves actual image files without authentication or crawler-blocking headers. Google needs time to recrawl, and inclusion in image search is not guaranteed.
 - Run `node --test generate-sitemap.test.js` to check sitemap pagination and XML escaping.
+
+### Individual photo pages
+- Every gallery photo has a permanent `/photography/<album>/photo/<id>/` landing page with its own title, heading, canonical URL, full-size image, visible description, and primary-image structured data. Gallery captions link to these pages on hover or keyboard focus, without adding text below the images; lightboxes include an "About this photo" link. Photo pages link to their gallery page and adjacent photos.
+- The existing `api/images/*.json` files are the single source of photo metadata. Readable slugs are generated automatically from each title with a deterministic filename-based suffix to distinguish identical titles. Gallery order and pagination do not affect URLs.
+- Existing titles provide alternative text and subject-specific descriptions with collection and photographer attribution automatically. Optional `description`, `alt`, and permanent `slug` fields can be added directly to a photo's existing JSON entry; no separate metadata file is needed. Do not invent locations or conditions.
+- Editing a title or filename changes its automatic URL. To preserve a published URL before editing, save its current generated ID in the entry's optional `slug` field, or add a permanent redirect from the old URL.
+- `npm run prerender` also includes all photo pages in `routes.txt` and the image sitemap. Node 24 runs the shared TypeScript URL helpers directly, keeping sitemap URLs consistent with the application.
+- After building, run `node --test generate-sitemap.test.js verify-photo-pages.test.js` to verify that every image has a unique landing page and that the generated HTML actually contains the photo, description, metadata and gallery links.
+
+### Google Search Console follow-up
+After deploying, sign in to the verified property for `https://www.toni-hoffmann.com/`:
+1. Submit `sitemap.xml` in **Sitemaps** and check its processing status.
+2. Use **URL inspection** on a gallery and an individual photo page (copy its URL from the gallery caption or lightbox). Check the live test and rendered HTML for the image, caption, canonical URL and image metadata. Request indexing for representative pages, rather than all photos manually.
+3. Check **Page indexing** for blocked, duplicate or crawled-but-not-indexed pages. Google's selected canonical should match each photo page, not its gallery.
+4. In **Performance**, set **Search type: Image** and track impressions, clicks, queries and pages after recrawling. Structured data and sitemap submission do not guarantee inclusion or rankings.

@@ -35,6 +35,7 @@ import { SafePipe } from './safe-pipe';
 import { AppService } from './services/app.service';
 import { PhotoService } from './services/photo.service';
 import { SeoService } from './services/seo.service';
+import { PhotoDetailComponent } from './components/photography/photo-detail/photo-detail.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { SeoService } from './services/seo.service';
     PageNotFoundComponent,
     PhotographyComponent,
     PhotoModalComponent,
+    PhotoDetailComponent,
     SafePipe,
     SpinnerComponent
   ],
