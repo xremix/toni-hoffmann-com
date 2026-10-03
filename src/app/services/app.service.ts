@@ -8,6 +8,95 @@ export class AppService {
 
   private apps: Array<App> = [
     {
+      description: 'Know what your rabbit can safely eat - before feeding.\n' +
+        '\n' +
+        'Bunny Herbs helps rabbit owners identify plants from a photo and quickly check whether a plant is likely edible, unknown, or not safe for rabbits. It is designed for real-world moments: in the garden, on walks, and while foraging.\n' +
+        '\n' +
+        'What you can do with Bunny Herbs:\n' +
+        '\n' +
+        '- Identify plants with your camera\n' +
+        '- Check rabbit feeding safety in seconds\n' +
+        '- Spot potentially toxic or inedible plants early\n' +
+        '- Use a searchable plant library for rabbit-relevant plant info\n' +
+        '- Save plants to your favorites and picking list\n' +
+        '- Built for rabbit owners who want fast guidance and safer decisions every day.\n' +
+        '\n' +
+        'Important: Bunny Herbs is an educational support tool and does not replace veterinary advice. Always double-check uncertain matches before feeding.',
+      iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/11/22/ec/1122ecfe-ee1a-8df6-ba75-9041abfd9654/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg',
+      screenshotUrls: [
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/7f/52/9c7f52ca-13c3-e161-6451-b0091f2d0535/iPhone_Screenshot_EN_1.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/7d/eb/8c7deb36-32f7-0db2-8204-9838138437ad/iPhone_Screenshot_EN_2.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/66/19/26/66192677-4bf0-53e7-b532-822a667f1411/iPhone_Screenshot_EN_3.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7f/06/ff/7f06ffd1-eadd-92a2-7e6d-e3d4eddb9962/iPhone_Screenshot_EN_4.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/07/da/2e/07da2e1c-5e0b-2996-b7f8-0c13d3f110f2/iPhone_Screenshot_EN_5.png/1024x1024bb.png'
+      ],
+      title: 'Bunny Herbs - Identify Plants',
+      id: 'bunny-herbs',
+      appStoreUrl: 'https://apps.apple.com/us/app/bunny-herbs-identify-plants/id6774941705'
+    },
+    {
+      description: 'Photo Cleaner is the fastest way to reclaim iPhone storage by intelligently identifying and removing duplicate, blurry, low-quality, and oversized photos - all without sacrificing your best shots.\n' +
+        '\n' +
+        'Core Features:\n' +
+        'Smart Duplicate Detection – AI-powered visual fingerprinting finds exact duplicates and similar photos with adjustable sensitivity\n' +
+        '\n' +
+        'Photo Quality Analysis – Automatically identify blurry, overexposed, underexposed, and low-contrast images\n' +
+        '\n' +
+        'Storage Insights – Quickly spot large files and video bottlenecks clogging your iPhone\n' +
+        '\n' +
+        'Fast Batch Actions – Multi-select, compare side-by-side, and delete with one tap\n' +
+        '\n' +
+        'Full-Screen Comparison – View photos at full resolution to make confident deletion decisions before freeing space\n' +
+        '\n' +
+        'Smart Organization – Photos grouped by day for chronological browsing and easy bulk cleanup\n' +
+        '\n' +
+        'Swipe-to-Clean Mode – One-handed swiping for rapid photo sorting and decision-making\n' +
+        '\n' +
+        '100% Safe – Only you control what gets deleted—every action is reversible until final confirmation\n' +
+        '\n' +
+        'Perfect for:\n' +
+        'Reclaiming gigabytes of iPhone storage instantly\n' +
+        'Eliminating duplicate burst shots and photo library clutter\n' +
+        'Organizing and backing up your best memories\n' +
+        'Freeing up space without removing important photos',
+      iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/7c/19/527c1929-3292-6d80-0ed5-811cc16110d3/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg',
+      screenshotUrls: [
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/93/f6/f7/93f6f705-27e6-67c6-8479-172c71081ef7/iPhone_Screenshot_EN_1.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9a/e7/25/9ae72591-cb30-5f68-6c6a-77d7c9d21ab7/iPhone_Screenshot_EN_2.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/06/89/86/068986f8-c749-519b-03f0-7b16bc14f5ed/iPhone_Screenshot_EN_3.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/eb/d6/64/ebd66443-803c-049e-db41-d28404e120f4/iPhone_Screenshot_EN_4.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f0/90/3d/f0903d5e-7734-8eac-747e-9efef093fa14/iPhone_Screenshot_EN_5.png/1024x1024bb.png'
+      ],
+      title: 'YAPA - Photo and Video Cleaner',
+      id: 'yapa-photo-video-cleaner',
+      appStoreUrl: 'https://apps.apple.com/us/app/yapa-photo-and-video-cleaner/id6761560987'
+    },
+    {
+      description: 'Airport Weather helps pilots and aviation enthusiasts quickly check weather along planned routes. Add a departure and optional destination airport, then view current METAR conditions and TAF forecasts in a clean, flight-focused interface. Flight category indicators (VFR, MVFR, IFR, LIFR), wind, visibility, and temperature are shown at a glance so you can assess conditions faster.\n' +
+        '\n' +
+        'Feature Highlights\n' +
+        '\n' +
+        '- Search airports by ICAO, IATA, city, or airport name\n' +
+        '- Plan flights with departure plus optional destination\n' +
+        '- Save, reorder, and delete flights for quick daily access\n' +
+        '- View live METAR and TAF data per airport\n' +
+        '- Tap between departure and destination weather in one route view\n' +
+        '- See flight category status with color-coded VFR/MVFR/IFR/LIFR indicators\n' +
+        '- Open a built-in legend explaining flight category criteria\n' +
+        '- Uses cached weather as fallback for improved offline resilience',
+      iconUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/32/fc/17/32fc1717-21f3-b60e-03f7-ddc8941065cd/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg',
+      screenshotUrls: [
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ce/f9/66/cef9669a-95d9-fd69-443b-993f507bf6fb/Airport_Weather_1.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/4c/f3/b34cf328-7a9f-e875-eef3-19d0acec2978/Airport_Weather_2.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ad/32/cd/ad32cd2d-acb3-9ba5-683b-6f8c3f26faca/Airport_Weather_3.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3b/0d/f2/3b0df239-9fe6-e11a-0fef-c4689849193c/Airport_Weather_4.png/1024x1024bb.png',
+        'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bc/0a/34/bc0a3400-9629-89a0-0b8f-9c30f24332bb/Airport_Weather_5.png/1024x1024bb.png'
+      ],
+      title: 'Airport Weather - METAR TAF',
+      id: 'airport-weather',
+      appStoreUrl: 'https://apps.apple.com/us/app/airport-weather-metar-taf/id6759194897'
+    },
+    {
       description: "Track anything with style! Click Counter is an elegant and intuitive app that helps you count and track whatever matters to you. Whether you're counting repetitions at the gym, tracking daily habits, or monitoring any recurring events, Click Counter makes it effortless and enjoyable.\n" +
         '\n' +
         'Key Features:\n' +

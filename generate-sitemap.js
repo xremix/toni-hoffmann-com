@@ -62,6 +62,15 @@ var sites = [{
   url: '/apps/',
   priority: '1.00',
 }, {
+  url: '/apps/bunny-herbs/',
+  priority: '1.00',
+}, {
+  url: '/apps/yapa-photo-video-cleaner/',
+  priority: '1.00',
+}, {
+  url: '/apps/airport-weather/',
+  priority: '1.00',
+}, {
   url: '/apps/pretty-gs1-scanner/',
   priority: '1.00',
 }, {
